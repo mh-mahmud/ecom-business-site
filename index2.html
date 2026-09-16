@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Topper IT - eCommerce & Software Solutions</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #172c69;
+            --primary-dark: #08142e;
+            --blue: #246bfe;
+            --green: #16c784;
+            --text: #202636;
+            --muted: #687083;
+            --light: #f7f9ff;
+            --border: #e6e9f0;
+            --white: #fff;
+        }
+
+        body {
+            font-family: "Hind Siliguri", "Poppins", sans-serif;
+            color: var(--text);
+            background: #fff;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(1120px, calc(100% - 40px));
+            margin: auto;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: #fff;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            min-height: 68px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: Poppins, sans-serif;
+            font-weight: 700;
+            color: #ef233c;
+            font-size: 22px;
+        }
+
+        .logo-icon {
+            width: 38px;
+            height: 38px;
+            background: #ef233c;
+            color: white;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-weight: 700;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 23px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .nav-menu a {
+            transition: .25s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--blue);
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 9px 17px;
+            border-radius: 6px;
+            border: 0;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        .btn-green {
+            background: #19c86a;
+            color: #fff;
+        }
+
+        .btn-blue {
+            background: #4d5dfb;
+            color: #fff;
+        }
+
+        .btn-primary {
+            background: var(--blue);
+            color: #fff;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            opacity: .92;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 15% 40%, rgba(49, 91, 194, .35), transparent 25%),
+                radial-gradient(circle at 90% 20%, rgba(31, 64, 155, .4), transparent 30%),
+                linear-gradient(135deg, #0c1b42, #1f3d91);
+            color: #fff;
+            text-align: center;
+            padding: 75px 20px 85px;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            border: 1px solid rgba(255,255,255,.08);
+            transform: rotate(45deg);
+            left: 4%;
+            top: 25%;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            border: 1px solid rgba(255,255,255,.06);
+            transform: rotate(12deg);
+            right: 5%;
+            bottom: 20%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 780px;
+            margin: auto;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.1);
+            padding: 5px 14px;
+            border-radius: 30px;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: clamp(30px, 5vw, 48px);
+            line-height: 1.25;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 span {
+            color: #fff;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: auto;
+            color: #dbe4ff;
+            font-size: 15px;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin: 25px 0;
+            font-size: 12px;
+        }
+
+        .hero-stats span::before {
+            content: "●";
+            color: #20dc7a;
+            margin-right: 6px;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .intro {
+            padding: 80px 0;
+            background:
+                radial-gradient(circle at 0% 50%, #d9ffff, transparent 25%),
+                #fff;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 65px;
+        }
+
+        .section-tag {
+            color: var(--blue);
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .intro h2 {
+            font-size: 30px;
+            line-height: 1.4;
+            margin-bottom: 18px;
+            color: #087cba;
+        }
+
+        .intro p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .dashboard {
+            min-height: 280px;
+            background:
+                linear-gradient(145deg, #151638, #41228a);
+            border-radius: 14px;
+            padding: 28px;
+            box-shadow: 0 25px 50px rgba(25, 31, 75, .3);
+            color: #fff;
+        }
+
+        .dashboard-top {
+            display: flex;
+            justify-content: space-between;
+            font-size: 10px;
+            margin-bottom: 20px;
+            opacity: .8;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .dashboard-box {
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.05);
+            padding: 18px 10px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .dashboard-box strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        /* =========================
+           FEATURES
+        ========================= */
+
+        .features-section {
+            padding: 30px 0 80px;
+            background:
+                linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.9)),
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 39px,
+                    #e9eef5 40px
+                );
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-heading h2 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .feature-card {
+            position: relative;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            min-height: 135px;
+            box-shadow: 0 8px 20px rgba(0,0,0,.04);
+            transition: .3s;
+        }
+
+        .feature-card::before {
+            content: "";
+            position: absolute;
+            top: -1px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--card-color, #246bfe);
+            border-radius: 8px 8px 0 0;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,.08);
+        }
+
+        .feature-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 7px;
+            display: grid;
+            place-items: center;
+            background: var(--card-color, #246bfe);
+            color: white;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .feature-card h3 {
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+
+        .feature-card p {
+            font-size: 11px;
+            color: var(--muted);
+        }
+
+        /* =========================
+           SPECIAL
+        ========================= */
+
+        .special {
+            padding: 75px 0;
+            background: linear-gradient(135deg, #f9f4ff, #eef5ff);
+        }
+
+        .special-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .special-card {
+            background: #fff;
+            border-radius: 10px;
+            text-align: center;
+            padding: 30px 20px;
+            box-shadow: 0 8px 25px rgba(30,40,70,.1);
+        }
+
+        .special-icon {
+            width: 50px;
+            height: 50px;
+            margin: auto auto 12px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: #fff;
+            background: linear-gradient(135deg,#16c784,#1da1f2);
+            font-size: 20px;
+        }
+
+        .special-card h3 {
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .special-card p {
+            font-size: 12px;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            padding: 75px 0;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .service-card {
+            padding: 25px;
+            background: #fff;
+            border: 1px solid #edf0f5;
+            border-radius: 8px;
+            box-shadow: 0 5px 18px rgba(0,0,0,.03);
+        }
+
+        .service-icon {
+            width: 35px;
+            height: 35px;
+            border-radius: 6px;
+            display: grid;
+            place-items: center;
+            background: #4c62f5;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .service-card h3 {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .service-card p {
+            font-size: 11px;
+            color: var(--muted);
+        }
+
+        /* =========================
+           BANNER
+        ========================= */
+
+        .company-banner {
+            background:
+                radial-gradient(circle at 90% 50%, rgba(245,194,0,.2), transparent 25%),
+                linear-gradient(120deg,#070b13,#1a1b0d,#05070b);
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .company-banner h2 {
+            color: #ffe000;
+            font-size: 21px;
+        }
+
+        .company-banner p {
+            font-size: 12px;
+            color: #ddd;
+        }
+
+        /* =========================
+           TEAM
+        ========================= */
+
+        .team {
+            padding: 75px 0;
+            text-align: center;
+        }
+
+        .team-image {
+            max-width: 600px;
+            margin: 25px auto 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,.12);
+        }
+
+        .team-placeholder {
+            height: 300px;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(135deg,#ddd,#f5f5f5);
+            color: #777;
+            font-size: 18px;
+        }
+
+        /* =========================
+           CEO
+        ========================= */
+
+        .ceo {
+            background:
+                radial-gradient(circle at 15% 40%, #1b346f, transparent 25%),
+                linear-gradient(135deg,#060a12,#10192e);
+            color: #fff;
+            padding: 75px 0;
+        }
+
+        .ceo-grid {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 55px;
+            align-items: center;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .ceo-profile {
+            text-align: center;
+        }
+
+        .ceo-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: auto auto 12px;
+            background: linear-gradient(135deg,#555,#222);
+            display: grid;
+            place-items: center;
+            font-size: 35px;
+            border: 4px solid rgba(255,255,255,.15);
+        }
+
+        .ceo-profile h3 {
+            font-size: 15px;
+        }
+
+        .ceo-profile p {
+            font-size: 11px;
+            color: #b9c2d8;
+        }
+
+        .ceo-message {
+            background: rgba(255,255,255,.08);
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .quote {
+            font-size: 35px;
+            color: #20d5ed;
+        }
+
+        .ceo-message p {
+            color: #d5d9e4;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        /* =========================
+           AWARD
+        ========================= */
+
+        .award {
+            padding: 65px 0;
+            background: #10182c;
+            color: #fff;
+            text-align: center;
+        }
+
+        .award-badge {
+            width: 50px;
+            height: 50px;
+            margin: 15px auto;
+            border-radius: 50%;
+            background: #ffc107;
+            color: #222;
+            display: grid;
+            place-items: center;
+            font-size: 22px;
+        }
+
+        .award-box {
+            max-width: 650px;
+            margin: 25px auto 0;
+            background: #4b4530;
+            padding: 8px;
+            border-radius: 7px;
+        }
+
+        .award-image-placeholder {
+            height: 300px;
+            background: linear-gradient(135deg,#777,#c6b994);
+            display: grid;
+            place-items: center;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .award-box p {
+            font-size: 11px;
+            color: #ddd;
+            padding: 10px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #1c293b;
+            color: #fff;
+            padding: 55px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+            gap: 30px;
+        }
+
+        .footer-logo {
+            color: #ef233c;
+            font-size: 23px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .footer-column h4 {
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .footer-column p,
+        .footer-column a {
+            display: block;
+            color: #bfc7d5;
+            font-size: 11px;
+            margin-bottom: 5px;
+        }
+
+        .footer-column a:hover {
+            color: #fff;
+        }
+
+        .social {
+            display: flex;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .social a {
+            width: 27px;
+            height: 27px;
+            display: grid;
+            place-items: center;
+            background: #2775e8;
+            color: #fff;
+            border-radius: 4px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.1);
+            margin-top: 30px;
+            padding-top: 15px;
+            text-align: center;
+            color: #8e9bad;
+            font-size: 10px;
+        }
+
+        /* =========================
+           WHATSAPP
+        ========================= */
+
+        .whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #20c969;
+            color: #fff;
+            display: grid;
+            place-items: center;
+            font-size: 22px;
+            box-shadow: 0 5px 20px rgba(0,0,0,.2);
+            z-index: 999;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .nav-menu {
+                display: none;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-grid,
+            .service-grid,
+            .special-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .ceo-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: min(100% - 25px, 1120px);
+            }
+
+            .nav-buttons .btn:first-child {
+                display: none;
+            }
+
+            .hero {
+                padding: 55px 15px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-actions .btn {
+                width: 180px;
+            }
+
+            .feature-grid,
+            .service-grid,
+            .special-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .intro {
+                padding: 55px 0;
+            }
+
+            .intro h2 {
+                font-size: 25px;
+            }
+
+            .dashboard {
+                min-height: 250px;
+            }
+
+            .team-image {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+    <div class="container navbar">
+
+        <a href="#" class="logo">
+            <span class="logo-icon">T</span>
+            TOPPER IT
+        </a>
+
+        <nav class="nav-menu">
+            <a href="#">হোম</a>
+            <a href="#">আমাদের সম্পর্কে</a>
+            <a href="#">সার্ভিস</a>
+            <a href="#">ই-কমার্স</a>
+            <a href="#">যোগাযোগ</a>
+        </nav>
+
+        <div class="nav-buttons">
+            <a href="#" class="btn btn-green">WhatsApp</a>
+            <a href="#" class="btn btn-blue">Book a Meeting</a>
+        </div>
+
+    </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            🚀 আপনার ব্যবসার ডিজিটাল সঙ্গী
+        </div>
+
+        <h1>
+            দেশের সবচেয়ে সহজ <br>
+            <span>ই-কমার্স সমাধান</span>
+        </h1>
+
+        <p>
+            আপনার ব্যবসাকে অনলাইনে নিয়ে যেতে আমরা দিচ্ছি
+            সম্পূর্ণ ই-কমার্স এবং সফটওয়্যার সমাধান।
+        </p>
+
+        <div class="hero-stats">
+            <span>১০০০+ প্রজেক্ট</span>
+            <span>১০+ বছরের অভিজ্ঞতা</span>
+            <span>Support ২৪/৭</span>
+        </div>
+
+        <div class="hero-actions">
+            <a href="#" class="btn btn-primary">Talk to Us</a>
+            <a href="#" class="btn btn-green">WhatsApp</a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INTRO ================= -->
+
+<section class="intro">
+
+    <div class="container intro-grid">
+
+        <div>
+            <div class="section-tag">ই-কমার্স সলিউশন</div>
+
+            <h2>
+                ই-কমার্স ওয়েবসাইট সাপোর্ট ও
+                ফাংশনাল না হলে বিজনেস করা
+                কঠিন
+            </h2>
+
+            <p>
+                আপনার ব্যবসার জন্য একটি শক্তিশালী, দ্রুত এবং
+                নিরাপদ ই-কমার্স প্ল্যাটফর্ম তৈরি করুন।
+                আমাদের অভিজ্ঞ টিম আপনার ব্যবসার সম্পূর্ণ
+                ডিজিটাল সলিউশন তৈরি করতে প্রস্তুত।
+            </p>
+
+            <a href="#" class="btn btn-primary">
+                Live Demo & Price →
+            </a>
+        </div>
+
+        <div class="dashboard">
+
+            <div class="dashboard-top">
+                <span>● Ecommerce Core</span>
+                <span>Lightning fast</span>
+            </div>
+
+            <div class="dashboard-grid">
+
+                <div class="dashboard-box">
+                    <strong>🛒</strong>
+                    Full eCommerce
+                </div>
+
+                <div class="dashboard-box">
+                    <strong>⚡</strong>
+                    Super Fast
+                </div>
+
+                <div class="dashboard-box">
+                    <strong>📦</strong>
+                    Mobile Ready
+                </div>
+
+                <div class="dashboard-box">
+                    <strong>💳</strong>
+                    Payment Gateway
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Key Features</h2>
+            <p>আপনার ব্যবসার জন্য প্রয়োজনীয় সকল ফিচার</p>
+        </div>
+
+        <div class="feature-grid">
+
+            <div class="feature-card" style="--card-color:#13c8a0">
+                <div class="feature-icon">🛒</div>
+                <h3>Incomplete Order</h3>
+                <p>অসম্পূর্ণ অর্ডার সহজে খুঁজে বের করুন এবং কনভার্ট করুন।</p>
+            </div>
+
+            <div class="feature-card" style="--card-color:#386df5">
+                <div class="feature-icon">✓</div>
+                <h3>Fraud Checker</h3>
+                <p>অর্ডারের আগে কাস্টমারের তথ্য যাচাই করুন।</p>
+            </div>
+
+            <div class="feature-card" style="--card-color:#e83e8c">
+                <div class="feature-icon">P</div>
+                <h3>IP Ban</h3>
+                <p>সন্দেহজনক IP থেকে আসা ভিজিটর ব্লক করুন।</p>
+            </div>
+
+            <div class="feature-card" style="--card-color:#8a45f5">
+                <div class="feature-icon">▣</div>
+                <h3>Landing Page</h3>
+                <p>প্রোডাক্টের জন্য আকর্ষণীয় ল্যান্ডিং পেজ তৈরি করুন।</p>
+            </div>
+
+            <div class="feature-card" style="--card-color:#f28b00">
+                <div class="feature-icon">↔</div>
+                <h3>Courier Entry</h3>
+                <p>কুরিয়ার অর্ডার সহজে ম্যানেজ করুন।</p>
+            </div>
+
+            <div class="feature-card" style="--card-color:#49b848">
+                <div class="feature-icon">৳</div>
+                <h3>Amount Adjust</h3>
+                <p>অর্ডারের পেমেন্ট সহজে পরিবর্তন করুন।</p>
+            </div>
+
+            <div class="feature-card" style="--card-color:#2488ef">
+                <div class="feature-icon">⚡</div>
+                <h3>Foot Print</h3>
+                <p>কাস্টমারের কার্যক্রম ট্র্যাক করুন।</p>
+            </div>
+
+            <div class="feature-card" style="--card-color:#9b3cf2">
+                <div class="feature-icon">☷</div>
+                <h3>Order Management</h3>
+                <p>সব অর্ডার একটি জায়গা থেকে ম্যানেজ করুন।</p>
+            </div>
+
+            <div class="feature-card" style="--card-color:#18bb91">
+                <div class="feature-icon">▰</div>
+                <h3>Pixel Setup</h3>
+                <p>Facebook Pixel এবং Analytics সেটআপ।</p>
+            </div>
+
+            <div class="feature-card" style="--card-color:#ef8a00">
+                <div class="feature-icon">▤</div>
+                <h3>Stock</h3>
+                <p>প্রোডাক্ট স্টক ম্যানেজমেন্ট।</p>
+            </div>
+
+            <div class="feature-card" style="--card-color:#ef4267">
+                <div class="feature-icon">▤</div>
+                <h3>Invoice</h3>
+                <p>প্রফেশনাল ইনভয়েস তৈরি করুন।</p>
+            </div>
+
+            <div class="feature-card" style="--card-color:#1abf98">
+                <div class="feature-icon">⚙</div>
+                <h3>Core Features</h3>
+                <p>ব্যবসার প্রয়োজন অনুযায়ী কাস্টম ফিচার।</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SPECIAL ================= -->
+
+<section class="special">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Special for You!</h2>
+            <p>আপনার ব্যবসার সফলতার জন্য বিশেষ সুবিধা</p>
+        </div>
+
+        <div class="special-grid">
+
+            <div class="special-card">
+                <div class="special-icon">🛡</div>
+                <h3>Fully Secured</h3>
+                <p>
+                    আপনার ডেটা ও ব্যবসার নিরাপত্তার জন্য
+                    আধুনিক সিকিউরিটি ব্যবস্থা।
+                </p>
+                <a href="#" class="btn btn-green">WhatsApp</a>
+            </div>
+
+            <div class="special-card">
+                <div class="special-icon">✎</div>
+                <h3>Easy to Edit</h3>
+                <p>
+                    সহজ অ্যাডমিন প্যানেলের মাধ্যমে
+                    আপনার ওয়েবসাইট ম্যানেজ করুন।
+                </p>
+                <a href="#" class="btn btn-green">WhatsApp</a>
+            </div>
+
+            <div class="special-card">
+                <div class="special-icon">◉</div>
+                <h3>Technical Support</h3>
+                <p>
+                    যেকোনো সমস্যায় দ্রুত টেকনিক্যাল
+                    সাপোর্ট পান।
+                </p>
+                <a href="#" class="btn btn-green">WhatsApp</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Ready for your digital success?</h2>
+            <p>আপনার ব্যবসার জন্য আমাদের সম্পূর্ণ ডিজিটাল সার্ভিস</p>
+        </div>
+
+        <div class="service-grid">
+
+            <div class="service-card">
+                <div class="service-icon">▣</div>
+                <h3>eCommerce Solution</h3>
+                <p>
+                    সম্পূর্ণ ই-কমার্স ওয়েবসাইট,
+                    অর্ডার এবং পেমেন্ট ম্যানেজমেন্ট।
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">⚙</div>
+                <h3>Web Development</h3>
+                <p>
+                    আধুনিক ও স্কেলেবল ওয়েব অ্যাপ্লিকেশন
+                    ডেভেলপমেন্ট।
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">▯</div>
+                <h3>Mobile Apps</h3>
+                <p>
+                    Android এবং iOS এর জন্য
+                    আধুনিক মোবাইল অ্যাপ।
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">⚑</div>
+                <h3>Digital Marketing</h3>
+                <p>
+                    Facebook Ads, Google Ads এবং
+                    SEO সার্ভিস।
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">▤</div>
+                <h3>Domain Hosting</h3>
+                <p>
+                    দ্রুত এবং নিরাপদ ডোমেইন ও
+                    হোস্টিং সলিউশন।
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">◉</div>
+                <h3>Graphics, UI/UX</h3>
+                <p>
+                    আপনার ব্র্যান্ডের জন্য আধুনিক
+                    UI/UX ও গ্রাফিক্স ডিজাইন।
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= COMPANY BANNER ================= -->
+
+<section class="company-banner">
+
+    <div class="container">
+
+        <h2>Recognized as Bangladesh's #1 IT Company</h2>
+
+        <p>
+            আমাদের সফলতার পেছনে রয়েছে হাজারো সন্তুষ্ট
+            কাস্টমার এবং অসংখ্য সফল প্রজেক্ট।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TEAM ================= -->
+
+<section class="team">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Our Team</h2>
+            <p>Meet the amazing people behind our success</p>
+        </div>
+
+        <div class="team-image">
+
+            <!-- Replace this div with your team image -->
+            <div class="team-placeholder">
+                Your Team Photo
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CEO ================= -->
+
+<section class="ceo">
+
+    <div class="container">
+
+        <div class="section-heading" style="color:white">
+            <h2>Message From CEO</h2>
+        </div>
+
+        <div class="ceo-grid">
+
+            <div class="ceo-profile">
+
+                <div class="ceo-photo">
+                    👨‍💼
+                </div>
+
+                <h3>CEO Name</h3>
+
+                <p>
+                    Chief Executive Officer
+                </p>
+
+            </div>
+
+            <div class="ceo-message">
+
+                <div class="quote">“</div>
+
+                <p>
+                    প্রযুক্তির মাধ্যমে বাংলাদেশের ব্যবসাগুলোকে
+                    আরও শক্তিশালী ও আধুনিক করে তোলাই আমাদের
+                    প্রধান লক্ষ্য। আমরা প্রতিটি ক্লায়েন্টের জন্য
+                    মানসম্পন্ন এবং দীর্ঘমেয়াদি সমাধান তৈরি করতে
+                    প্রতিশ্রুতিবদ্ধ।
+                </p>
+
+                <a href="#" class="btn btn-blue">
+                    Meet with CEO
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= AWARD ================= -->
+
+<section class="award">
+
+    <div class="container">
+
+        <div class="section-heading" style="color:white">
+            <h2>🏆 Rising Young Award 2023</h2>
+            <p style="color:#aaa">
+                আমাদের অর্জনের একটি বিশেষ মুহূর্ত
+            </p>
+        </div>
+
+        <div class="award-badge">
+            ★
+        </div>
+
+        <div class="award-box">
+
+            <!-- Replace with your award image -->
+            <div class="award-image-placeholder">
+                Award Photo
+            </div>
+
+            <p>
+                সফলতার স্বীকৃতি হিসেবে আমাদের এই অর্জন
+                আমাদের আরও ভালো কাজ করার অনুপ্রেরণা দেয়।
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-column">
+
+                <div class="footer-logo">
+                    TOPPER IT
+                </div>
+
+                <p>
+                    আধুনিক প্রযুক্তির মাধ্যমে আপনার ব্যবসাকে
+                    ডিজিটাল করার জন্য আমরা কাজ করছি।
+                </p>
+
+                <div class="social">
+                    <a href="#">f</a>
+                    <a href="#">in</a>
+                    <a href="#">▶</a>
+                    <a href="#">◎</a>
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Address</h4>
+
+                <p>
+                    House #10, Road #5,
+                    Dhaka, Bangladesh
+                </p>
+
+                <p>📞 +880 1700-000000</p>
+                <p>✉ info@example.com</p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Quick Links</h4>
+
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">FAQ</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Services</h4>
+
+                <a href="#">eCommerce</a>
+                <a href="#">Web Development</a>
+                <a href="#">Mobile App</a>
+                <a href="#">Digital Marketing</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Important Links</h4>
+
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Refund Policy</a>
+                <a href="#">Support</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 Topper IT. All Rights Reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= WHATSAPP ================= -->
+
+<a href="https://wa.me/8801700000000"
+   target="_blank"
+   class="whatsapp">
+    ☎
+</a>
+
+
+</body>
+</html>
