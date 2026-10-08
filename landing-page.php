@@ -42,6 +42,7 @@
                 </h1>
                 <p
                     class="text-base sm:text-lg md:text-xl text-blue-100 max-w-4xl mx-auto mb-8 sm:mb-10 leading-relaxed">
+                    ল্যান্ডিং পেজ হলো এমন একটি নির্দিষ্ট ওয়েব পেজ, যেখানে কোনো বিজ্ঞাপন, প্রচারণা বা মার্কেটিং লিংকে ক্লিক করার পর একজন ভিজিটরকে নিয়ে আসা হয়।
                     একটি কিংবা একদম সিমিলার ২-৩ টি প্রোডাক্ট যারা সেল করে থাকে তাদের জন্য ল্যান্ডিং পেজ গুরুত্বপূর্ণ।
                     খরচের পরিমাণ কম কিন্তু সেল অনেক বেশি।
                 </p>
@@ -117,174 +118,237 @@
 
 
                     
-        <section class="py-12 sm:py-16 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="flex justify-center">
-            
-            <!-- Plan 1 -->
-            <div class="bg-white rounded-xl shadow-lg p-6 sm:p-8 card-hover border-t-4 border-blue-500 max-w-md w-full">
+    <section class="py-12 sm:py-16 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-center">
                 
-                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 sm:mb-6">
-                    <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-2 sm:mb-0">
-                        ল্যান্ডিং পেজ প্যাকেজ
-                    </h3>
+                <!-- Plan 1 -->
+                <div style="margin-right:10px;" class="bg-white rounded-xl shadow-lg p-6 sm:p-8 card-hover border-t-4 border-blue-500 max-w-md w-full">
+                    
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 sm:mb-6">
+                            <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-2 sm:mb-0">
+                                ল্যান্ডিং পেজ প্যাকেজ
+                            </h3>
 
-                    <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold self-start">
-                        Basic
-                    </span>
-                </div>
-
-                <div class="mb-4 sm:mb-6">
-                    <div class="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">
-                        ৫,০০০ টাকা
-                    </div>
-                </div>
-
-
-                   <ul class="space-y-3 mb-8">
-                <li class="flex items-start space-x-3">
-                    <i class="fas fa-check text-green-500 mt-1"></i>
-                    <span>১ টি সুপারফাস্ট ই-কমার্স ল্যান্ডিং পেজ</span>
-                </li>
-                <li class="flex items-start space-x-3">
-                    <i class="fas fa-check text-green-500 mt-1"></i>
-                    <span>ওকমার্স সিএমএস</span>
-                </li>
-                <li class="flex items-start space-x-3">
-                    <i class="fas fa-check text-green-500 mt-1"></i>
-                    <span>১০ জিবি হোস্টিং + ডোমেইন ( ১ বছর মেয়াদী) , আপনার নামে কেনা হবে এবং একসেস আপনার কাছেই থাকবে।</span>
-                </li>
-                <li class="flex items-start space-x-3">
-                    <i class="fas fa-check text-green-500 mt-1"></i>
-                    <span>৩ মাস টেকনিক্যাল সাপোর্ট</span>
-                </li>
-            
-                <!-- NEW LINE -->
-                <li class="flex items-start space-x-3">
-                    <i class="fas fa-star text-yellow-500 mt-1"></i>
-                    <span class="font-bold text-red-400">
-                        ল্যান্ডিং পেজ থেকে একটি প্রোডাক্ট সেল করা যায়, যাদের প্রোডাক্ট একটি তাদের জন্য ল্যান্ডিং পেজ
-                    </span>
-                </li>
-</ul>
-
-                    <div class="mb-4 sm:mb-6">
-                        <h4 class="font-semibold mb-3 text-sm sm:text-base">Live Demos:</h4>
-                        <div class="flex flex-wrap gap-2 demo-scroll">
-                            <a href="https://landing.topperit.com.bd/step/modhu/"
-                                class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
-                                > মধু </a>
-                            <a href="https://landing.topperit.com.bd/step/modhucombo/"
-                                class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap">মধু কম্বো</a>
-                            <a href="https://landing.topperit.com.bd/step/modhucombo/"
-                                class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
-                                > আম </a>
-                            <a href="https://landing.topperit.com.bd/step/sukkari-khejur/"
-                                class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
-                                > খেজুর </a>
-                            <a href="https://landing.topperit.com.bd/step/khejurgur/"
-                                class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
-                                > খেজুর গুড় </a>
-                                
-                            <a href="https://landing.topperit.com.bd/step/lalchaul/"
-                                class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
-                                > লাল চাউল </a>
-                            <a href="https://landing.topperit.com.bd/step/ghee/"
-                                class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap">খাঁটি ঘি </a>
-                            <a href="https://landing.topperit.com.bd/step/t-shirt/"
-                                class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
-                                > টি শার্ট কম্বো </a>
-                            <a href="https://landing.topperit.com.bd/step/premium-classic-polo/"
-                                class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
-                                > পলো শার্ট </a>
-                            <a href="https://landing.topperit.com.bd/step/shirt/"
-                                class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
-                                > শার্ট </a>
-                                
-                                
-                            <a href="https://landing.topperit.com.bd/step/trouserformen/"
-                                class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
-                                > ট্রাউজার (পুরুষ) </a>
-                                
-                            <a href="https://landing.topperit.com.bd/step/hoodiesformen/"
-                                class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
-                             > হুডি (পুরুষ) </a>
-                                
-                             <a href="https://landing.topperit.com.bd/step/jacketformen/"
-                                class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
-                                > জ্যাকেট (পুরুষ) </a>
-                                
-                            <a href="https://landing.topperit.com.bd/step/panjabi/"
-                                class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
-                                > পাঞ্জাবি </a>
-                            <a href="https://landing.topperit.com.bd/step/three-piece/"
-                                class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
-                                > থ্রি-পিছ </a>
-                            <a href="https://landing.topperit.com.bd/step/three-piece-2/"
-                                class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
-                                > থ্রি-পিছ ২ </a>
-                                
-                            <a href="https://landing.topperit.com.bd/step/premium-sari/"
-                                class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
-                               > শাড়ি </a>
-                                
-                            <a href="https://landing.topperit.com.bd/step/watch/"
-                                class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
-                                > ঘড়ি </a>
-                                
-                            <a href="https://landing.topperit.com.bd/step/casual-shoes/"
-                                class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
-                               > ক্যাজুয়াল জুতা </a>
-                               
-                               
-                               <a href="https://landing.topperit.com.bd/step/intelligence-book/"
-                                class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
-                               > ইন্টেলিজেন্স বুক </a>
-                               
-                               <a href="https://landing.topperit.com.bd/step/organic-store-checkout/"
-                                class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
-                               > চায়না প্রোডাক্ট </a>
-                               
-                               
-                              <a href="https://landing.topperit.com.bd/step/intelligence-book/"
-                                class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
-                               > চায়না প্রোডাক্ট -২ </a>
-                               
-                               <a href="https://landing.topperit.com.bd/step/intelligence-book/"
-                                class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
-                               > ইন্টেলিজেন্স বুক </a>
-                               
-                               <a href="https://landing.topperit.com.bd/step/flying-doll/"
-                                class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
-                             > বাচ্চাদের খেলনা </a>
-                             
-                              <a href="https://landing.topperit.com.bd/step/cosmetices/"
-                                class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
-                            > বিউটি প্রোডাক্ট </a>
-                            
-                             <a href="https://landing.topperit.com.bd/step/store-checkout-02-2/"
-                                class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
-                            > কসমেটিক্স </a>
-                            
-                                
+                            <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold self-start">
+                                Basic
+                            </span>
                         </div>
-                    </div>
-                    <div class="space-y-3">
 
-                        <a href="https://wa.link/saqf1s"
-                            class="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-semibold transition text-center block">
-                            <i class="fab fa-whatsapp mr-2"></i> WhatsApp
-                        </a>
+                        <div class="mb-4 sm:mb-6">
+                            <div class="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">
+                                ৫,০০০ টাকা
+                            </div>
+                        </div>
 
-                    </div>
+
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start space-x-3">
+                                <i class="fas fa-check text-green-500 mt-1"></i>
+                                <span>১ টি সুপারফাস্ট ই-কমার্স ল্যান্ডিং পেজ</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i class="fas fa-check text-green-500 mt-1"></i>
+                                <span>ওকমার্স সিএমএস</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i class="fas fa-check text-green-500 mt-1"></i>
+                                <span>১০ জিবি হোস্টিং + ডোমেইন ( ১ বছর মেয়াদী) , আপনার নামে কেনা হবে এবং একসেস আপনার কাছেই থাকবে।</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i class="fas fa-check text-green-500 mt-1"></i>
+                                <span>৩ মাস টেকনিক্যাল সাপোর্ট</span>
+                            </li>
+                        
+                            <!-- NEW LINE -->
+                            <li class="flex items-start space-x-3">
+                                <i class="fas fa-star text-yellow-500 mt-1"></i>
+                                <span class="font-bold text-red-400">
+                                    ল্যান্ডিং পেজ থেকে একটি প্রোডাক্ট সেল করা যায়, যাদের প্রোডাক্ট একটি তাদের জন্য ল্যান্ডিং পেজ
+                                </span>
+                            </li>
+                        </ul>
+
+                        <div class="space-y-3">
+
+                            <a href="https://wa.link/saqf1s"
+                                class="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-semibold transition text-center block">
+                                <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                            </a>
+
+                        </div>
                 </div>
-                
-                
-                
-                
-                
-            </section>
+
+                <!-- Plan 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 sm:p-8 card-hover border-t-4 border-blue-500 max-w-md w-full">
+                    
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 sm:mb-6">
+                            <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-2 sm:mb-0">
+                                ল্যান্ডিং পেজ প্যাকেজ
+                            </h3>
+
+                            <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold self-start">
+                                Basic
+                            </span>
+                        </div>
+
+                        <div class="mb-4 sm:mb-6">
+                            <div class="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">
+                                ৫,০০০ টাকা
+                            </div>
+                        </div>
+
+
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start space-x-3">
+                                <i class="fas fa-check text-green-500 mt-1"></i>
+                                <span>১ টি সুপারফাস্ট ই-কমার্স ল্যান্ডিং পেজ</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i class="fas fa-check text-green-500 mt-1"></i>
+                                <span>ওকমার্স সিএমএস</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i class="fas fa-check text-green-500 mt-1"></i>
+                                <span>১০ জিবি হোস্টিং + ডোমেইন ( ১ বছর মেয়াদী) , আপনার নামে কেনা হবে এবং একসেস আপনার কাছেই থাকবে।</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i class="fas fa-check text-green-500 mt-1"></i>
+                                <span>৩ মাস টেকনিক্যাল সাপোর্ট</span>
+                            </li>
+                        
+                            <!-- NEW LINE -->
+                            <li class="flex items-start space-x-3">
+                                <i class="fas fa-star text-yellow-500 mt-1"></i>
+                                <span class="font-bold text-red-400">
+                                    ল্যান্ডিং পেজ থেকে একটি প্রোডাক্ট সেল করা যায়, যাদের প্রোডাক্ট একটি তাদের জন্য ল্যান্ডিং পেজ
+                                </span>
+                            </li>
+                        </ul>
+
+                        <div class="space-y-3">
+
+                            <a href="https://wa.link/saqf1s"
+                                class="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-semibold transition text-center block">
+                                <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                            </a>
+
+                        </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container mt-20 mx-auto px-4 relative z-10 max-w-full">
+            <div class="mx-auto max-w-4xl bg-white border border-gray-200 rounded-2xl shadow-lg p-6 sm:p-8">
+                <!-- <div class="bg-white rounded-3xl shadow-lg p-6 sm:p-8 card-hover border-t-4 border-blue-500 max-w-md w-full"> -->
+                    
+                        <div class="mb-4 sm:mb-6">
+                            <h4 class="font-semibold mb-3 text-sm sm:text-base">Live Demos:</h4>
+                            <div class="flex flex-wrap gap-2 demo-scroll">
+                                <a href="https://landing.topperit.com.bd/step/modhu/"
+                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                    > মধু </a>
+                                <a href="https://landing.topperit.com.bd/step/modhucombo/"
+                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap">মধু কম্বো</a>
+                                <a href="https://landing.topperit.com.bd/step/modhucombo/"
+                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                    > আম </a>
+                                <a href="https://landing.topperit.com.bd/step/sukkari-khejur/"
+                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                    > খেজুর </a>
+                                <a href="https://landing.topperit.com.bd/step/khejurgur/"
+                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                    > খেজুর গুড় </a>
+                                    
+                                <a href="https://landing.topperit.com.bd/step/lalchaul/"
+                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                    > লাল চাউল </a>
+                                <a href="https://landing.topperit.com.bd/step/ghee/"
+                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap">খাঁটি ঘি </a>
+                                <a href="https://landing.topperit.com.bd/step/t-shirt/"
+                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                    > টি শার্ট কম্বো </a>
+                                <a href="https://landing.topperit.com.bd/step/premium-classic-polo/"
+                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                    > পলো শার্ট </a>
+                                <a href="https://landing.topperit.com.bd/step/shirt/"
+                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                    > শার্ট </a>
+                                    
+                                    
+                                <a href="https://landing.topperit.com.bd/step/trouserformen/"
+                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                    > ট্রাউজার (পুরুষ) </a>
+                                    
+                                <a href="https://landing.topperit.com.bd/step/hoodiesformen/"
+                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                 > হুডি (পুরুষ) </a>
+                                    
+                                 <a href="https://landing.topperit.com.bd/step/jacketformen/"
+                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                    > জ্যাকেট (পুরুষ) </a>
+                                    
+                                <a href="https://landing.topperit.com.bd/step/panjabi/"
+                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                    > পাঞ্জাবি </a>
+                                <a href="https://landing.topperit.com.bd/step/three-piece/"
+                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                    > থ্রি-পিছ </a>
+                                <a href="https://landing.topperit.com.bd/step/three-piece-2/"
+                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                    > থ্রি-পিছ ২ </a>
+                                    
+                                <a href="https://landing.topperit.com.bd/step/premium-sari/"
+                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                   > শাড়ি </a>
+                                    
+                                <a href="https://landing.topperit.com.bd/step/watch/"
+                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                    > ঘড়ি </a>
+                                    
+                                <a href="https://landing.topperit.com.bd/step/casual-shoes/"
+                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                   > ক্যাজুয়াল জুতা </a>
+                                   
+                                   
+                                   <a href="https://landing.topperit.com.bd/step/intelligence-book/"
+                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                   > ইন্টেলিজেন্স বুক </a>
+                                   
+                                   <a href="https://landing.topperit.com.bd/step/organic-store-checkout/"
+                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                   > চায়না প্রোডাক্ট </a>
+                                   
+                                   
+                                  <a href="https://landing.topperit.com.bd/step/intelligence-book/"
+                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                   > চায়না প্রোডাক্ট -২ </a>
+                                   
+                                   <a href="https://landing.topperit.com.bd/step/intelligence-book/"
+                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                   > ইন্টেলিজেন্স বুক </a>
+                                   
+                                   <a href="https://landing.topperit.com.bd/step/flying-doll/"
+                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                 > বাচ্চাদের খেলনা </a>
+                                 
+                                  <a href="https://landing.topperit.com.bd/step/cosmetices/"
+                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                > বিউটি প্রোডাক্ট </a>
+                                
+                                 <a href="https://landing.topperit.com.bd/step/store-checkout-02-2/"
+                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                > কসমেটিক্স </a>
+                                
+                                    
+                            </div>
+                        </div>
+                <!-- </div> -->
+            </div>
+        </div>
+
+    </section>
 
 
 
