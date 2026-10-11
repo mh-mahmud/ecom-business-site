@@ -14,13 +14,13 @@
         <!-- Geometric Background -->
         <div class="absolute inset-0 overflow-hidden">
             <div class="absolute top-0 left-0 w-full h-full">
-                <!-- Shapes -->
+    
                 <div class="absolute top-20 left-10 w-32 h-32 border border-blue-400/20 rotate-45"></div>
                 <div class="absolute top-40 right-20 w-24 h-24 border border-white/10 rotate-12"></div>
                 <div class="absolute bottom-20 left-1/4 w-16 h-16 border border-blue-300/15 rotate-45"></div>
                 <div class="absolute bottom-32 right-1/3 w-20 h-20 border border-white/10 -rotate-12"></div>
 
-                <!-- Dim circles -->
+             
                 <div class="absolute inset-0 flex items-center justify-center opacity-10">
                     <div class="grid grid-cols-5 gap-8">
                         <div class="w-16 h-16 bg-white/20 rounded-full"></div>
@@ -32,6 +32,9 @@
                 </div>
             </div>
         </div>
+
+
+
 
         <!-- Content -->
         <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
@@ -45,19 +48,18 @@
             <!-- Title -->
             <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
                 যোগাযোগ করুন <br>
-                <span class="text-blue-300">TOPPER IT</span>
             </h1>
 
             <!-- Divider -->
             <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto rounded-full mb-6"></div>
 
             <!-- Subtitle -->
-            <p class="text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto mb-8">
+            <!-- <p class="text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto mb-8">
                 বাংলাদেশের সেরা আইটি কোম্পানী
-            </p>
+            </p> -->
 
             <!-- Buttons -->
-            <div class="flex flex-col sm:flex-row gap-3 justify-center">
+            <!-- <div class="flex flex-col sm:flex-row gap-3 justify-center">
                 <a href="tel:01730724300"
                     class="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 px-6 py-3 rounded-lg font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 transition">
                     <i class="fas fa-phone"></i> <span>Call Now</span>
@@ -67,11 +69,27 @@
                     target="_blank" rel="noopener">
                     <i class="fab fa-whatsapp"></i> <span>WhatsApp</span>
                 </a>
-            </div>
+            </div> -->
         </div>
     </section>
 
-
+    <!-- <div class="page-header parallaxie">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="page-header-box">
+                        <h1 class="wow fadeInUp" data-cursor="-opaque" style="color:#fff;visibility: visible; animation-name: fadeInUp;">যোগাযোগ করুন</h1>
+                        <nav class="wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="./">home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">about us</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
 
     <!-- DIRECT CONTACT -->
     <section
@@ -161,7 +179,7 @@
                 </div>
 
                 <!-- Line 3 (full width on md+) -->
-                <div
+                <!-- <div
                     class="md:col-span-2 rounded-2xl p-5 sm:p-6 text-white shadow-xl bg-gradient-to-br from-rose-600 to-pink-700 ring-1 ring-white/10 transition hover:scale-[1.01]">
                     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                         <div class="flex items-center gap-4">
@@ -188,17 +206,14 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <!-- office address -->
             <div class="max-w-4xl mx-auto mt-10 sm:mt-14">
                 <div class="rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xl bg-white/90 backdrop-blur border border-slate-200">
                     <div class="text-center mb-6">
-                        <div
-                            class="inline-flex items-center gap-2 bg-rose-100 text-rose-700 px-4 py-2 rounded-full font-medium">
-                            <i class="fas fa-map-marker-alt"></i> Office Address
-                        </div>
+                        
                         <h3 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 mt-4">আমাদের অফিস</h3>
                     </div>
 
@@ -209,8 +224,8 @@
                             </div>
                             <div class="flex-1">
                                 <p id="officeAddress" class="text-base sm:text-lg text-slate-800 leading-relaxed mb-4">
-                                    Rabet Al-Hasan Shopping Center, Floor #3, Bhulta-Gawsia, Rupganj (300 Feet Purbachal),
-                                    Narayanganj.
+                                    China Town, 16th Floor <br>
+                                    Naya Paltan, Dhaka
                                 </p>
                                 <div class="flex flex-col sm:flex-row gap-3 sm:items-center">
                                     <div class="inline-flex items-center text-blue-700 font-semibold">
@@ -223,6 +238,22 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="max-w-4xl mx-auto mt-10 sm:mt-14">
+                <div class="rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xl bg-white/90 backdrop-blur border border-slate-200">
+                    <div class="text-center mb-6">
+                        <h3 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 mt-4">অফিস ম্যাপ
+                        </h3>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-5 sm:p-6 rounded-xl">
+                        <!-- <div class="flex items-start gap-4"> -->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.3233440156287!2d90.41247207589676!3d23.73584628933386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b9002135f5dd%3A0xda876f64488b0902!2sPaltan%20China%20Town!5e0!3m2!1sen!2sbd!4v1791565451437!5m2!1sen!2sbd" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                        <!-- </div> -->
                     </div>
                 </div>
             </div>

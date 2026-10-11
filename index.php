@@ -11,86 +11,190 @@
 <div class="h-16 lg:h-20"></div>
 
 
-    <section id="home"
-        class="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 pt-16 lg:pt-20 pb-20 lg:pb-24">
-        <!-- Professional geometric background -->
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute top-0 left-0 w-full h-full">
-                <!-- Subtle geometric patterns -->
-                <div class="absolute top-20 left-10 w-32 h-32 border border-blue-400/20 rotate-45"></div>
-                <div class="absolute top-40 right-20 w-24 h-24 border border-white/10 rotate-12"></div>
-                <div class="absolute bottom-20 left-1/4 w-16 h-16 border border-blue-300/15 rotate-45"></div>
-                <div class="absolute bottom-32 right-1/3 w-20 h-20 border border-white/10 -rotate-12"></div>
 
-                <!-- Professional team representation -->
-                <div class="absolute inset-0 flex items-center justify-center opacity-10">
-                    <div class="grid grid-cols-5 gap-8">
-                        <div class="w-16 h-16 bg-white/20 rounded-full"></div>
-                        <div class="w-16 h-16 bg-blue-300/30 rounded-full"></div>
-                        <div class="w-16 h-16 bg-white/25 rounded-full"></div>
-                        <div class="w-16 h-16 bg-blue-200/20 rounded-full"></div>
-                        <div class="w-16 h-16 bg-white/20 rounded-full"></div>
-                    </div>
-                </div>
+    <style>
+        .hero-slider {
+            position: relative;
+            width: 100%;
+            height: 550px;
+            overflow: hidden;
+        }
+
+        .slides,
+        .slide {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.6s ease;
+        }
+
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .slider-arrow {
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 44px;
+            height: 44px;
+            border: 0;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.4);
+            color: white;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        .slider-arrow.prev {
+            left: 20px;
+        }
+
+        .slider-arrow.next {
+            right: 20px;
+        }
+
+        .slider-dots {
+            position: absolute;
+            z-index: 2;
+            bottom: 20px;
+            left: 50%;
+            display: flex;
+            gap: 10px;
+            transform: translateX(-50%);
+        }
+
+        .dot {
+            width: 11px;
+            height: 11px;
+            border: none;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .hero-slider {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-slider {
+                height: 220px;
+            }
+
+            .slider-arrow {
+                width: 34px;
+                height: 34px;
+            }
+        }
+    </style>
+
+<!-- <style>
+    /* Full-width responsive slider */
+    .hero-slider {
+        position: relative;
+        width: 100%;
+        height: clamp(220px, 35vw, 600px);
+        overflow: hidden;
+    }
+
+    /* Slides container */
+    .hero-slider .slides {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Individual slide */
+    .hero-slider .slide {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.6s ease;
+    }
+
+    /* Active slide */
+    .hero-slider .slide.active {
+        opacity: 1;
+        visibility: visible;
+        z-index: 1;
+    }
+
+    /* Responsive image */
+    .hero-slider .slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* Tablet */
+    @media (max-width: 768px) {
+        .hero-slider {
+            height: 300px;
+        }
+    }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+        .hero-slider {
+            height: 200px;
+        }
+    }
+</style> -->
+
+    <section class="hero-slider" id="heroSlider">
+
+        <div class="slides">
+
+            <div class="slide active">
+                <img src="images/banner-2.jpeg" alt="Digital Wave Tech Banner">
+            </div>
+
+            <div class="slide">
+                <img src="images/banner-1.jpeg" alt="Digital Wave Tech Banner">
+            </div>
+
+            <div class="slide">
+                <img src="images/banner-3.jpeg" alt="Digital Wave Tech Banner">
             </div>
         </div>
 
-        <div class="relative container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto text-center text-white">
-                <!-- Company Badge -->
-                <div
-                    class="inline-flex items-center bg-blue-600/20 backdrop-blur-sm border border-blue-400/30 rounded-full px-6 py-2 mb-8">
-                    <i class="fas fa-award text-yellow-400 mr-2"></i>
-                    <span class="text-sm font-medium">Award Winning IT Company</span>
-                </div>
+        <button class="slider-arrow prev" aria-label="Previous slide">&#10094;</button>
+        <button class="slider-arrow next" aria-label="Next slide">&#10095;</button>
 
-                <h1 class="text-4xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                    দেশের সবচেয়ে এক্সপার্ট ই-কমার্স<br>
-                    <span class="text-yellow-300 text-2xl">ওয়েবসাইট ডেভেলপার কোম্পানী</span>
-                </h1>
-
-                <div class="mb-6">
-                    <div class="text-xl font-bold text-white mb-2">4400+ ওয়েবসাইট ডেভেলপ করেছি</div>
-                    <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto rounded-full"></div>
-                </div>
-
-         
-                <div class="flex flex-wrap justify-center gap-6 text-sm text-blue-200">
-                    <div class="flex items-center">
-                        <i class="fas fa-certificate mr-2 text-green-400"></i>
-                        <span>RJSC Registered</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-trophy mr-2 text-yellow-400"></i>
-                        <span>Award Winner 2023</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-users mr-2 text-blue-400"></i>
-                        <span>Expert Team</span>
-                    </div>
-                </div>
-
-
-
-                <div class="mt-6 flex items-center justify-center gap-3">
-                    <a href="tel:8801730724300" target="_blank" rel="noopener"
-                        class="px-5 py-2.5 rounded-lg font-semibold border border-white/20 hover:bg-white/10 transition-colors">
-                        Talk to us
-                    </a>
-                    <a href="https://wa.link/saqf1s"
-                        class="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1fb457] active:bg-[#189246] text-white px-4 py-2.5 rounded-lg font-semibold text-[15px] shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1fb457] transition"
-                        target="_blank" rel="noopener">
-                        <i class="fab fa-whatsapp"></i>
-                        <span>WhatsApp</span>
-                    </a>
-
-                </div>
-
-
-
-
-            </div>
+        <div class="slider-dots">
+            <button class="dot active" aria-label="Slide 1"></button>
+            <button class="dot" aria-label="Slide 2"></button>
+            <button class="dot" aria-label="Slide 3"></button>
         </div>
+
     </section>
 
 
@@ -115,7 +219,7 @@
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold mb-4 sm:mb-6 leading-tight">
                     <span
                         class="leading-normal bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 via-cyan-600 to-blue-600">
-                        ই-কমার্স ওয়েবসাইট সুপারফাস্ট ও ফাংশনাল না হলে বিজনেস করা ইমপসিবল
+                        আমরাই দিচ্ছি সুপারফাস্ট ই-কমার্স ওয়েবসাইট এবং ল্যান্ডিং পেজ। যে কোন ধরনের ওয়েবসাইট এবং কাস্টম সফটওয়ারে আমরাই সেরা।
                     </span>
                 </h2>
 
@@ -237,7 +341,286 @@
 </section>
 
 
+<style>
+    /* Common card settings */
+    .effect-card {
+        position: relative;
+        isolation: isolate;
+        transition:
+            transform 0.4s ease,
+            box-shadow 0.4s ease,
+            border-color 0.4s ease;
+    }
 
+    /* 1. Lift up */
+    .effect-1:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 25px 45px -15px rgba(16, 185, 129, .3);
+    }
+
+    /* 2. 3D tilt */
+    .effect-2 {
+        transform-style: preserve-3d;
+    }
+    .effect-2:hover {
+        transform: perspective(900px) rotateX(5deg) rotateY(-6deg)
+                   translateY(-6px);
+    }
+
+    /* 3. Glowing border */
+    .effect-3:hover {
+        border-color: #34d399;
+        box-shadow: 0 0 0 2px rgba(52, 211, 153, .35),
+                    0 0 30px rgba(20, 184, 166, .25);
+    }
+
+    /* 4. Shine sweep */
+    .effect-4 {
+        overflow: hidden;
+    }
+    .effect-4::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -75%;
+        width: 45%;
+        height: 200%;
+        transform: rotate(25deg);
+        background: linear-gradient(
+            90deg, transparent, rgba(255,255,255,.75), transparent
+        );
+        transition: left .7s ease;
+        pointer-events: none;
+        z-index: 2;
+    }
+    .effect-4:hover::after {
+        left: 140%;
+    }
+
+    /* 5. Border draws attention */
+    .effect-5:hover {
+        border-color: #8b5cf6;
+        box-shadow: inset 0 0 0 1px #8b5cf6,
+                    0 12px 30px rgba(139, 92, 246, .15);
+    }
+
+    /* 6. Icon bounce */
+    .effect-6:hover .card-icon {
+        animation: iconBounce .65s ease;
+    }
+    @keyframes iconBounce {
+        0%, 100% { transform: translateY(0); }
+        35% { transform: translateY(-10px) rotate(-5deg); }
+        65% { transform: translateY(-3px) rotate(5deg); }
+    }
+
+    /* 7. Gradient background reveal */
+    .effect-7 {
+        background: linear-gradient(135deg, #ecfdf5, #fff, #cffafe);
+        background-size: 200% 200%;
+        transition: background-position .5s ease, transform .4s ease;
+    }
+    .effect-7:hover {
+        background-position: 100% 100%;
+        transform: translateY(-7px);
+    }
+
+    /* 8. Soft zoom */
+    .effect-8:hover {
+        transform: scale(1.035);
+        box-shadow: 0 18px 40px rgba(15, 23, 42, .12);
+    }
+
+    /* 9. Side slide */
+    .effect-9:hover {
+        transform: translateX(8px);
+        border-color: #06b6d4;
+    }
+
+    /* 10. Icon rotation */
+    .effect-10:hover .card-icon {
+        transform: rotate(12deg) scale(1.12);
+    }
+    .effect-10 .card-icon {
+        transition: transform .4s ease;
+    }
+
+    /* 11. Animated top accent */
+    .effect-11::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #8b5cf6, #ec4899, #f59e0b);
+        transition: width .5s ease;
+        z-index: 3;
+    }
+    .effect-11:hover::before {
+        width: 100%;
+    }
+
+    /* 12. Floating card */
+    .effect-12:hover {
+        transform: translateY(-7px);
+        animation: cardFloat 2s ease-in-out .4s infinite alternate;
+        box-shadow: 0 20px 40px rgba(59, 130, 246, .17);
+    }
+    @keyframes cardFloat {
+        from { transform: translateY(-7px); }
+        to   { transform: translateY(-13px); }
+    }
+
+    /* Accessibility */
+    @media (prefers-reduced-motion: reduce) {
+        .effect-card,
+        .effect-card::before,
+        .effect-card::after,
+        .effect-card .card-icon {
+            animation: none !important;
+            transition: none !important;
+        }
+
+        .effect-card:hover {
+            transform: none !important;
+        }
+    }
+
+
+    /*********************/
+    /* Common setup */
+    .color-card {
+        position: relative;
+        isolation: isolate;
+        transition: background 0.4s ease, box-shadow 0.4s ease,
+                    border-color 0.4s ease, transform 0.4s ease;
+    }
+
+    /* 1. Emerald color glow */
+    .color-1:hover {
+        background: linear-gradient(135deg, #ecfdf5, #ccfbf1, #ffffff);
+        border-color: #34d399;
+        box-shadow: 0 15px 40px rgba(16, 185, 129, 0.25);
+    }
+
+    /* 2. Blue ocean */
+    .color-2:hover {
+        background: linear-gradient(135deg, #eff6ff, #bfdbfe, #e0f2fe);
+        border-color: #60a5fa;
+        box-shadow: 0 15px 40px rgba(59, 130, 246, 0.25);
+    }
+
+    /* 3. Purple aura */
+    .color-3:hover {
+        background: linear-gradient(135deg, #f5f3ff, #ddd6fe, #fae8ff);
+        border-color: #a78bfa;
+        box-shadow: 0 15px 40px rgba(139, 92, 246, 0.25);
+    }
+
+    /* 4. Sunset */
+    .color-4:hover {
+        background: linear-gradient(135deg, #fff7ed, #fed7aa, #ffe4e6);
+        border-color: #fb923c;
+        box-shadow: 0 15px 40px rgba(249, 115, 22, 0.25);
+    }
+
+    /* 5. Rose pink */
+    .color-5:hover {
+        background: linear-gradient(135deg, #fff1f2, #fecdd3, #fce7f3);
+        border-color: #fb7185;
+        box-shadow: 0 15px 40px rgba(244, 63, 94, 0.22);
+    }
+
+    /* 6. Neon cyan */
+    .color-6:hover {
+        background: linear-gradient(135deg, #ecfeff, #a5f3fc, #cffafe);
+        border-color: #22d3ee;
+        box-shadow: 0 0 12px rgba(34, 211, 238, 0.25),
+                    0 0 30px rgba(34, 211, 238, 0.2);
+    }
+
+    /* 7. Golden shine */
+    .color-7:hover {
+        background: linear-gradient(120deg, #fffbeb, #fde68a, #fef3c7);
+        border-color: #fbbf24;
+        box-shadow: 0 15px 35px rgba(245, 158, 11, 0.25);
+    }
+
+    /* 8. Lime freshness */
+    .color-8:hover {
+        background: linear-gradient(135deg, #f7fee7, #d9f99d, #ecfccb);
+        border-color: #a3e635;
+        box-shadow: 0 15px 35px rgba(132, 204, 22, 0.22);
+    }
+
+    /* 9. Indigo night */
+    .color-9:hover {
+        background: linear-gradient(135deg, #eef2ff, #c7d2fe, #e0e7ff);
+        border-color: #818cf8;
+        box-shadow: 0 15px 40px rgba(99, 102, 241, 0.25);
+    }
+
+    /* 10. Rose-red glow */
+    .color-10:hover {
+        background: linear-gradient(135deg, #fff1f2, #fecaca, #ffe4e6);
+        border-color: #f87171;
+        box-shadow: 0 0 25px rgba(239, 68, 68, 0.22);
+    }
+
+    /* 11. Animated rainbow border */
+    .color-11::before {
+        content: "";
+        position: absolute;
+        inset: -2px;
+        border-radius: inherit;
+        background: linear-gradient(
+            90deg,
+            #10b981, #06b6d4, #6366f1, #d946ef, #f59e0b, #10b981
+        );
+        background-size: 300% 100%;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.35s ease;
+        animation: rainbowMove 4s linear infinite;
+    }
+
+    .color-11:hover::before {
+        opacity: 1;
+    }
+
+    @keyframes rainbowMove {
+        to {
+            background-position: 300% 0;
+        }
+    }
+
+    /* 12. Animated gradient */
+    .color-12:hover {
+        background: linear-gradient(
+            120deg, #dbeafe, #f3e8ff, #fce7f3, #d1fae5
+        );
+        background-size: 250% 250%;
+        animation: colorWave 4s ease infinite;
+        border-color: #a78bfa;
+        box-shadow: 0 15px 40px rgba(124, 58, 237, 0.2);
+    }
+
+    @keyframes colorWave {
+        0%   { background-position: 0% 50%; }
+        50%  { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* Respect accessibility preferences */
+    @media (prefers-reduced-motion: reduce) {
+        .color-card,
+        .color-card::before {
+            animation: none !important;
+            transition: none !important;
+        }
+    }
+</style>
 
     <section class="relative py-20 lg:py-24 overflow-hidden bg-gradient-to-b from-gray-50 via-white to-gray-50">
         <!-- Background layers -->
@@ -267,204 +650,204 @@
           <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-3 sm:mb-4">Key Features</h2>
       </div>
 
-      <!-- Cards Grid -->
- <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-    <!-- Card 1 -->
-    <article
-        class="group relative rounded-2xl bg-white/70 backdrop-blur-xl border border-gray-200/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.2)] transition-all duration-500 overflow-hidden">
-        <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400"></div>
-        <div class="p-7">
-            <div
-                class="w-14 h-14 rounded-2xl grid place-items-center bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-lg mb-5 group-hover:scale-105 transition">
-                <i class="fas fa-shopping-cart text-2xl text-white"></i>
+    <!-- Cards Grid -->
+    <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <!-- Card 1 -->
+        <article
+            class="color-card color-1 effect-card effect-1 group relative rounded-2xl bg-white/70 backdrop-blur-xl border border-gray-200/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.2)] transition-all duration-500 overflow-hidden">
+            <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400"></div>
+            <div class="p-7">
+                <div
+                    class="w-14 h-14 rounded-2xl grid place-items-center bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-lg mb-5 group-hover:scale-105 transition">
+                    <i class="fas fa-shopping-cart text-2xl text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Incomplete Order</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    ইনকমপ্লিট অর্ডার ডাটা, যা সেল বাড়াবে 10x
+                </p>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Incomplete Order</h3>
-            <p class="text-gray-600 leading-relaxed">
-                ইনকমপ্লিট অর্ডার ডাটা, যা সেল বাড়াবে 10x
-            </p>
-        </div>
-    </article>
+        </article>
 
-    <!-- Card 2 -->
-    <article
-        class="group relative rounded-2xl bg-white/70 backdrop-blur-xl border border-gray-200/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.2)] transition-all duration-500 overflow-hidden">
-        <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500"></div>
-        <div class="p-7">
-            <div
-                class="w-14 h-14 rounded-2xl grid place-items-center bg-gradient-to-br from-sky-500 to-indigo-600 text-white shadow-lg mb-5 group-hover:scale-105 transition">
-                <i class="fas fa-user-shield text-2xl text-white"></i>
+        <!-- Card 2 -->
+        <article
+            class="color-card color-2 effect-card effect-2 group relative rounded-2xl bg-white/70 backdrop-blur-xl border border-gray-200/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.2)] transition-all duration-500 overflow-hidden">
+            <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500"></div>
+            <div class="p-7">
+                <div
+                    class="w-14 h-14 rounded-2xl grid place-items-center bg-gradient-to-br from-sky-500 to-indigo-600 text-white shadow-lg mb-5 group-hover:scale-105 transition">
+                    <i class="fas fa-user-shield text-2xl text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Fraud Checker</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    কোন কাস্টোমার প্রোডাক্ট পাঠানোর পর রিসিভ করবে না তা আগেই জেনে যাবেন
+                </p>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Fraud Checker</h3>
-            <p class="text-gray-600 leading-relaxed">
-                কোন কাস্টোমার প্রোডাক্ট পাঠানোর পর রিসিভ করবে না তা আগেই জেনে যাবেন
-            </p>
-        </div>
-    </article>
+        </article>
 
-    <!-- Card 3 -->
-    <article
-        class="group relative rounded-2xl bg-white/70 backdrop-blur-xl border border-gray-200/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.2)] transition-all duration-500 overflow-hidden">
-        <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-rose-400 via-pink-500 to-fuchsia-500"></div>
-        <div class="p-7">
-            <div
-                class="w-14 h-14 rounded-2xl grid place-items-center bg-gradient-to-br from-rose-500 to-fuchsia-600 text-white shadow-lg mb-5 group-hover:scale-105 transition">
-                <i class="fas fa-ban text-2xl text-white"></i>
+        <!-- Card 3 -->
+        <article
+            class="color-card color-3 effect-card effect-3 group relative rounded-2xl bg-white/70 backdrop-blur-xl border border-gray-200/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.2)] transition-all duration-500 overflow-hidden">
+            <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-rose-400 via-pink-500 to-fuchsia-500"></div>
+            <div class="p-7">
+                <div
+                    class="w-14 h-14 rounded-2xl grid place-items-center bg-gradient-to-br from-rose-500 to-fuchsia-600 text-white shadow-lg mb-5 group-hover:scale-105 transition">
+                    <i class="fas fa-ban text-2xl text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">IP Ban</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    ফ্রড কাস্টোমারের আইপি ব্যান করার সুবিধা
+                </p>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">IP Ban</h3>
-            <p class="text-gray-600 leading-relaxed">
-                ফ্রড কাস্টোমারের আইপি ব্যান করার সুবিধা
-            </p>
-        </div>
-    </article>
+        </article>
 
-    <!-- Card 4 -->
-    <article
-        class="group relative rounded-2xl bg-white/70 backdrop-blur-xl border border-gray-200/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.2)] transition-all duration-500 overflow-hidden">
-        <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500"></div>
-        <div class="p-7">
-            <div
-                class="w-14 h-14 rounded-2xl grid place-items-center bg-gradient-to-br from-indigo-500 to-purple-600 text-white shadow-lg mb-5 group-hover:scale-105 transition">
-                <i class="fas fa-file-alt text-2xl text-white"></i>
+        <!-- Card 4 -->
+        <article
+            class="color-card color-4 effect-card effect-4 group relative rounded-2xl bg-white/70 backdrop-blur-xl border border-gray-200/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.2)] transition-all duration-500 overflow-hidden">
+            <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500"></div>
+            <div class="p-7">
+                <div
+                    class="w-14 h-14 rounded-2xl grid place-items-center bg-gradient-to-br from-indigo-500 to-purple-600 text-white shadow-lg mb-5 group-hover:scale-105 transition">
+                    <i class="fas fa-file-alt text-2xl text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Stylist Landing Page</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    ইকমার্স ওয়েবসাইটে বিশেষ প্রোডাক্টের মার্কেটিংয়ের জন্য স্পেশাল ল্যান্ডিং পেজ
+                </p>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Landing Page</h3>
-            <p class="text-gray-600 leading-relaxed">
-                ইকমার্স ওয়েবসাইটে বিশেষ প্রোডাক্টের মার্কেটিংয়ের জন্য স্পেশাল ল্যান্ডিং পেজ
-            </p>
-        </div>
-    </article>
+        </article>
 
-    <!-- Card 5 -->
-    <article
-        class="group relative rounded-2xl bg-white/70 backdrop-blur-xl border border-gray-200/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.2)] transition-all duration-500 overflow-hidden">
-        <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500"></div>
-        <div class="p-7">
-            <div
-                class="w-14 h-14 rounded-2xl grid place-items-center bg-gradient-to-br from-yellow-500 to-orange-600 text-white shadow-lg mb-5 group-hover:scale-105 transition">
-                <i class="fas fa-truck text-2xl text-white"></i>
+        <!-- Card 5 -->
+        <article
+            class="color-card color-5 effect-card effect-5 group relative rounded-2xl bg-white/70 backdrop-blur-xl border border-gray-200/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.2)] transition-all duration-500 overflow-hidden">
+            <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500"></div>
+            <div class="p-7">
+                <div
+                    class="w-14 h-14 rounded-2xl grid place-items-center bg-gradient-to-br from-yellow-500 to-orange-600 text-white shadow-lg mb-5 group-hover:scale-105 transition">
+                    <i class="fas fa-truck text-2xl text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Courier API Integration</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    স্টিডফাস্ট, পাঠাও এবং রেডেক্স কুরিয়ারে এক ক্লিকে অর্ডার ডিটেইল এন্ট্রি
+                </p>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Courier Entry</h3>
-            <p class="text-gray-600 leading-relaxed">
-                স্টিডফাস্ট, পাঠাও এবং রেডেক্স কুরিয়ারে এক ক্লিকে অর্ডার ডিটেইল এন্ট্রি
-            </p>
-        </div>
-    </article>
+        </article>
 
-    <!-- Card 6 -->
-    <article
-        class="group relative rounded-2xl bg-white/70 backdrop-blur-xl border border-gray-200/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.2)] transition-all duration-500 overflow-hidden">
-        <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-green-400 via-lime-500 to-yellow-400"></div>
-        <div class="p-7">
-            <div
-                class="w-14 h-14 rounded-2xl grid place-items-center bg-gradient-to-br from-green-500 to-lime-600 text-white shadow-lg mb-5 group-hover:scale-105 transition">
-                <i class="fas fa-calculator text-2xl text-white"></i>
+        <!-- Card 6 -->
+        <article
+            class="color-card color-6 effect-card effect-6 group relative rounded-2xl bg-white/70 backdrop-blur-xl border border-gray-200/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.2)] transition-all duration-500 overflow-hidden">
+            <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-green-400 via-lime-500 to-yellow-400"></div>
+            <div class="p-7">
+                <div
+                    class="w-14 h-14 rounded-2xl grid place-items-center bg-gradient-to-br from-green-500 to-lime-600 text-white shadow-lg mb-5 group-hover:scale-105 transition">
+                    <i class="fas fa-calculator text-2xl text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Amount Adjust</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    কুরিয়ারে এন্ট্রির আগে অর্ডার অ্যামাউন্ট এডজাস্ট করা যায়
+                </p>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Amount Adjust</h3>
-            <p class="text-gray-600 leading-relaxed">
-                কুরিয়ারে এন্ট্রির আগে অর্ডার অ্যামাউন্ট এডজাস্ট করা যায়
-            </p>
-        </div>
-    </article>
+        </article>
 
-    <!-- Card 7 -->
-    <article
-        class="group relative rounded-2xl bg-white/70 backdrop-blur-xl border border-gray-200/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.2)] transition-all duration-500 overflow-hidden">
-        <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-cyan-400 via-sky-500 to-indigo-500"></div>
-        <div class="p-7">
-            <div
-                class="w-14 h-14 rounded-2xl grid place-items-center bg-gradient-to-br from-cyan-500 to-sky-600 text-white shadow-lg mb-5 group-hover:scale-105 transition">
-                <i class="fas fa-shoe-prints text-2xl text-white"></i>
+        <!-- Card 7 -->
+        <article
+            class="color-card color-7 effect-card effect-7 group relative rounded-2xl bg-white/70 backdrop-blur-xl border border-gray-200/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.2)] transition-all duration-500 overflow-hidden">
+            <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-cyan-400 via-sky-500 to-indigo-500"></div>
+            <div class="p-7">
+                <div
+                    class="w-14 h-14 rounded-2xl grid place-items-center bg-gradient-to-br from-cyan-500 to-sky-600 text-white shadow-lg mb-5 group-hover:scale-105 transition">
+                    <i class="fas fa-shoe-prints text-2xl text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Foot Print / SEO</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    যারা ওয়েবসাইটে ফুট ‍প্রিন্ট রেখে যাবে তাদের রিটাগেটিং করে আপনার সেলস বাড়াতে পারবেন
+                </p>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Foot Print</h3>
-            <p class="text-gray-600 leading-relaxed">
-                যারা ওয়েবসাইটে ফুট ‍প্রিন্ট রেখে যাবে তাদের রিটাগেটিং করে আপনার সেলস বাড়াতে পারবেন
-            </p>
-        </div>
-    </article>
+        </article>
 
-    <!-- Card 8 -->
-    <article
-        class="group relative rounded-2xl bg-white/70 backdrop-blur-xl border border-gray-200/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.2)] transition-all duration-500 overflow-hidden">
-        <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-fuchsia-400 via-purple-500 to-indigo-500"></div>
-        <div class="p-7">
-            <div
-                class="w-14 h-14 rounded-2xl grid place-items-center bg-gradient-to-br from-fuchsia-500 to-purple-600 text-white shadow-lg mb-5 group-hover:scale-105 transition">
-                <i class="fas fa-tasks text-2xl text-white"></i>
+        <!-- Card 8 -->
+        <article
+            class="color-card color-8 effect-card effect-8 group relative rounded-2xl bg-white/70 backdrop-blur-xl border border-gray-200/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.2)] transition-all duration-500 overflow-hidden">
+            <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-fuchsia-400 via-purple-500 to-indigo-500"></div>
+            <div class="p-7">
+                <div
+                    class="w-14 h-14 rounded-2xl grid place-items-center bg-gradient-to-br from-fuchsia-500 to-purple-600 text-white shadow-lg mb-5 group-hover:scale-105 transition">
+                    <i class="fas fa-tasks text-2xl text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Easy Order Management</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    অর্ডার সহজে ম্যানেজ করতে পারবেন
+                </p>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Order Management</h3>
-            <p class="text-gray-600 leading-relaxed">
-                অর্ডার সহজে ম্যানেজ করতে পারবেন
-            </p>
-        </div>
-    </article>
+        </article>
 
-    <!-- Card 9 -->
-    <article
-        class="group relative rounded-2xl bg-white/70 backdrop-blur-xl border border-gray-200/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.2)] transition-all duration-500 overflow-hidden">
-        <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-teal-400 via-emerald-500 to-green-500"></div>
-        <div class="p-7">
-            <div
-                class="w-14 h-14 rounded-2xl grid place-items-center bg-gradient-to-br from-teal-500 to-emerald-600 text-white shadow-lg mb-5 group-hover:scale-105 transition">
-                <i class="fas fa-chart-line text-2xl text-white"></i>
+        <!-- Card 9 -->
+        <article
+            class="color-card color-9 effect-card effect-9 group relative rounded-2xl bg-white/70 backdrop-blur-xl border border-gray-200/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.2)] transition-all duration-500 overflow-hidden">
+            <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-teal-400 via-emerald-500 to-green-500"></div>
+            <div class="p-7">
+                <div
+                    class="w-14 h-14 rounded-2xl grid place-items-center bg-gradient-to-br from-teal-500 to-emerald-600 text-white shadow-lg mb-5 group-hover:scale-105 transition">
+                    <i class="fas fa-chart-line text-2xl text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Pixel/GTM Setup</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    সার্ভার সাইড ট্র্যাকিং সহ পিক্সেল সেটাপ করে এড রান করে প্রচুর সেল করতে পারবেন
+                </p>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Pixel Setup</h3>
-            <p class="text-gray-600 leading-relaxed">
-                সার্ভার সাইড ট্র্যাকিং সহ পিক্সেল সেটাপ করে এড রান করে প্রচুর সেল করতে পারবেন
-            </p>
-        </div>
-    </article>
+        </article>
 
-    <!-- Card 10 -->
-    <article
-        class="group relative rounded-2xl bg-white/70 backdrop-blur-xl border border-gray-200/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.2)] transition-all duration-500 overflow-hidden">
-        <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-orange-400 via-amber-500 to-yellow-500"></div>
-        <div class="p-7">
-            <div
-                class="w-14 h-14 rounded-2xl grid place-items-center bg-gradient-to-br from-orange-500 to-amber-600 text-white shadow-lg mb-5 group-hover:scale-105 transition">
-                <i class="fas fa-warehouse text-2xl text-white"></i>
+        <!-- Card 10 -->
+        <article
+            class="color-card color-10 effect-card effect-10 group relative rounded-2xl bg-white/70 backdrop-blur-xl border border-gray-200/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.2)] transition-all duration-500 overflow-hidden">
+            <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-orange-400 via-amber-500 to-yellow-500"></div>
+            <div class="p-7">
+                <div
+                    class="w-14 h-14 rounded-2xl grid place-items-center bg-gradient-to-br from-orange-500 to-amber-600 text-white shadow-lg mb-5 group-hover:scale-105 transition">
+                    <i class="fas fa-warehouse text-2xl text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Stock Management</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    স্টক ম্যানেজ করার সুবিধাও থাকছে
+                </p>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Stock</h3>
-            <p class="text-gray-600 leading-relaxed">
-                স্টক ম্যানেজ করার সুবিধাও থাকছে
-            </p>
-        </div>
-    </article>
+        </article>
 
-    <!-- Card 11 -->
-    <article
-        class="group relative rounded-2xl bg-white/70 backdrop-blur-xl border border-gray-200/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.2)] transition-all duration-500 overflow-hidden">
-        <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-red-400 via-pink-500 to-rose-500"></div>
-        <div class="p-7">
-            <div
-                class="w-14 h-14 rounded-2xl grid place-items-center bg-gradient-to-br from-red-500 to-pink-600 text-white shadow-lg mb-5 group-hover:scale-105 transition">
-                <i class="fas fa-file-invoice text-2xl text-white"></i>
+        <!-- Card 11 -->
+        <article
+            class="color-card color-6 effect-card effect-11 group relative rounded-2xl bg-white/70 backdrop-blur-xl border border-gray-200/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.2)] transition-all duration-500 overflow-hidden">
+            <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-red-400 via-pink-500 to-rose-500"></div>
+            <div class="p-7">
+                <div
+                    class="w-14 h-14 rounded-2xl grid place-items-center bg-gradient-to-br from-red-500 to-pink-600 text-white shadow-lg mb-5 group-hover:scale-105 transition">
+                    <i class="fas fa-file-invoice text-2xl text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Invoice Management</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    ইনভয়েস প্রিন্ট / ডাউনলোড
+                </p>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Invoice</h3>
-            <p class="text-gray-600 leading-relaxed">
-                ইনভয়েস প্রিন্ট / ডাউনলোড
-            </p>
-        </div>
-    </article>
+        </article>
 
-    <!-- Card 12 -->
-    <article
-        class="group relative rounded-2xl bg-white/70 backdrop-blur-xl border border-gray-200/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.2)] transition-all duration-500 overflow-hidden">
-        <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-green-400 via-teal-500 to-cyan-500"></div>
-        <div class="p-7">
-            <div
-                class="w-14 h-14 rounded-2xl grid place-items-center bg-gradient-to-br from-green-500 to-teal-600 text-white shadow-lg mb-5 group-hover:scale-105 transition">
-                <i class="fas fa-star text-2xl text-white"></i>
+        <!-- Card 12 -->
+        <article
+            class="color-card color-12 effect-card effect-12 group relative rounded-2xl bg-white/70 backdrop-blur-xl border border-gray-200/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.2)] transition-all duration-500 overflow-hidden">
+            <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-green-400 via-teal-500 to-cyan-500"></div>
+            <div class="p-7">
+                <div
+                    class="w-14 h-14 rounded-2xl grid place-items-center bg-gradient-to-br from-green-500 to-teal-600 text-white shadow-lg mb-5 group-hover:scale-105 transition">
+                    <i class="fas fa-star text-2xl text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Updated Features</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    তাছাড়া প্রয়োজনীয় ৪১ টি কি-ফিচার ইনবিল্ট করা হয়ে থাকে
+                </p>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Core Features</h3>
-            <p class="text-gray-600 leading-relaxed">
-                তাছাড়া প্রয়োজনীয় ৪১ টি কি-ফিচার ইনবিল্ট করা হয়ে থাকে
-            </p>
-        </div>
-    </article>
-</div>
+        </article>
+    </div>
 
-
+ 
       <div class="mt-10 sm:mt-12 text-center">
-          <a href="https://wa.link/saqf1s"
+          <a href="https://wa.me/message/S2B2PMXA3COGB1"
               class="inline-flex items-center gap-2 rounded-full bg-green-500 px-6 py-3 font-semibold text-white shadow-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
               aria-label="Chat with us on WhatsApp" target="_blank" rel="noopener">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"
@@ -508,7 +891,7 @@
                         কাস্টোমারদের ওয়েবসাইটকে নিরাপদ রাখার জন্য আমরা সবচেয়ে সেইফ টেকনোলজি ইউজ করি
                     </p>
                     <div class="text-center">
-                        <a href="https://wa.link/saqf1s" target="_blank" rel="noopener"
+                        <a href="https://wa.me/message/S2B2PMXA3COGB1" target="_blank" rel="noopener"
                             class="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1fb457] active:bg-[#189246] text-white px-6 py-3 rounded-xl font-bold text-[16px] shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1fb457] transition">
                             <i class="fab fa-whatsapp"></i>
                             <span>WhatsApp</span>
@@ -528,7 +911,7 @@
                         আপনি নিজের ওয়েবসাইটকে প্রয়োজন অনুযায়ী ইডিট করে নিতে পারবেন। আমরা শতভাগ ডায়নামিক ওয়েবসাইট তৈরী করি
                     </p>
                     <div class="text-center">
-                        <a href="https://wa.link/saqf1s" target="_blank" rel="noopener"
+                        <a href="https://wa.me/message/S2B2PMXA3COGB1" target="_blank" rel="noopener"
                             class="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1fb457] active:bg-[#189246] text-white px-6 py-3 rounded-xl font-bold text-[16px] shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1fb457] transition">
                             <i class="fab fa-whatsapp"></i>
                             <span>WhatsApp</span>
@@ -548,7 +931,7 @@
                         ইউজার ফ্রেন্ডলি ডিজাইনের ওয়েবসাইট ও অ্যাপ ডেভেলপ করার পরবর্তী ১২ মাস টেকনিক্যাল সাপোর্ট ফ্রি
                     </p>
                     <div class="text-center">
-                        <a href="https://wa.link/saqf1s" target="_blank" rel="noopener"
+                        <a href="https://wa.me/message/S2B2PMXA3COGB1" target="_blank" rel="noopener"
                             class="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1fb457] active:bg-[#189246] text-white px-6 py-3 rounded-xl font-bold text-[16px] shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1fb457] transition">
                             <i class="fab fa-whatsapp"></i>
                             <span>WhatsApp</span>
@@ -558,6 +941,201 @@
             </div>
         </div>
     </section>
+
+
+<style>
+
+    .clients-section {
+        width: 100%;
+        padding: 95px 0 55px;
+        border-bottom: 8px solid #edf0f1;
+        overflow: hidden;
+    }
+
+    .clients-container {
+        width: 85%;
+        max-width: 1650px;
+        margin: 0 auto;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(28px, 3vw, 40px);
+        font-weight: 800;
+        line-height: 1.2;
+        letter-spacing: -1px;
+        margin-bottom: 5px;
+    }
+
+    .section-heading p {
+        color: #a0b1bc;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .clients-grid {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 30px;
+        transition: opacity 0.3s ease;
+    }
+
+    .client-card {
+        height: 160px;
+        padding: 25px;
+        background: #fff;
+        box-shadow: 0 5px 35px rgba(0, 0, 0, 0.09);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .client-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.14);
+    }
+
+    .client-card img {
+        display: block;
+        max-width: 100%;
+        max-height: 85px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .client-name-fallback {
+        display: none;
+        color: #333;
+        font-size: 17px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .slider-pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 65px;
+    }
+
+    .pagination-dot {
+        width: 8px;
+        height: 8px;
+        padding: 0;
+        border: none;
+        border-radius: 50%;
+        background: #d1d1d1;
+        cursor: pointer;
+        transition: width 0.25s ease, background 0.25s ease;
+    }
+
+    .pagination-dot.active {
+        width: 20px;
+        border-radius: 10px;
+        background: #009f7a;
+    }
+
+    .pagination-dot:focus-visible {
+        outline: 2px solid #009f7a;
+        outline-offset: 4px;
+    }
+
+    /* Laptop */
+    @media (max-width: 1200px) {
+        .clients-container {
+            width: 90%;
+        }
+
+        .clients-grid {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .client-card {
+            height: 145px;
+        }
+    }
+
+    /* Tablet */
+    @media (max-width: 768px) {
+        .clients-section {
+            padding: 60px 0 40px;
+        }
+
+        .clients-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .client-card {
+            height: 125px;
+            padding: 15px;
+        }
+
+        .client-card img {
+            max-height: 65px;
+        }
+
+        .section-heading {
+            margin-bottom: 28px;
+        }
+
+        .slider-pagination {
+            margin-top: 40px;
+        }
+    }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+        .clients-container {
+            width: 90%;
+        }
+
+        .clients-section {
+            padding: 45px 0 35px;
+        }
+
+        .clients-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px;
+        }
+
+        .client-card {
+            height: 115px;
+            padding: 12px;
+        }
+
+        .section-heading p {
+            font-size: 14px;
+        }
+
+        .slider-pagination {
+            margin-top: 32px;
+        }
+    }
+
+</style>
+<section class="clients-section">
+    <div class="clients-container">
+
+        <div class="section-heading">
+            <h2>OUR CLIENTS</h2>
+            <p>Our reputation branches across different industries and far beyond the borders</p>
+        </div>
+
+        <div class="clients-grid" id="clientsGrid"></div>
+
+        <div class="slider-pagination" id="sliderPagination"></div>
+
+    </div>
+</section>
 
     <section id="services" class="section-padding bg-white">
         <div class="container mx-auto px-6 py-12">
@@ -569,81 +1147,75 @@
 
             <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
 
-                <article class="bg-gray-50 rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow">
+                <article class="color-card color-1 bg-gray-50 rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow">
                     <div
                         class="w-16 h-16 bg-gradient-to-br from-fuchsia-500 to-rose-500 rounded-xl flex items-center justify-center mb-6">
                         <i class="fas fa-store text-white text-2xl" aria-hidden="true"></i>
                     </div>
                     <h3 class="text-2xl font-semibold text-gray-900 mb-3">eCommerce Solution</h3>
                     <p class="text-gray-700 leading-relaxed">
-                        দারাজ, ইভ্যালি, আলি-এক্সপ্রেস বা এ্যামাজনের মতো ফাংশনালিটির ই-কমার্স ওয়েবসাইট ডেভেলপমেন্ট নিয়ে কাজ
-                        করার জন্য আমাদের নিজস্ব ৩০ জন ডেভেলপার রয়েছে। দক্ষতা ও সততার সাথে আমরা সার্ভিস দিয়ে থাকি।
+                        আপনার ব্যবসাকে অনলাইনে নতুন উচ্চতায় নিয়ে যেতে আমরা তৈরি করি আধুনিক, দ্রুতগতির ও সম্পূর্ণ কাস্টমাইজড ই-কমার্স ওয়েবসাইট। মাল্টি-ভেন্ডর মার্কেটপ্লেস থেকে শুরু করে নিজস্ব অনলাইন স্টোর—প্রতিটি প্ল্যাটফর্মে থাকে স্মার্ট প্রোডাক্ট ম্যানেজমেন্ট, নিরাপদ পেমেন্ট গেটওয়ে, অটোমেটেড অর্ডার প্রসেসিং, ইনভেন্টরি ম্যানেজমেন্ট এবং উন্নত রিপোর্টিং সুবিধা। আমাদের অভিজ্ঞ ডেভেলপমেন্ট টিম আপনার ব্যবসার চাহিদা অনুযায়ী তৈরি করে স্কেলেবল ও ব্যবহারবান্ধব ই-কমার্স সলিউশন, যা কাস্টমারদের কেনাকাটার অভিজ্ঞতা উন্নত করে এবং ব্যবসার প্রবৃদ্ধিতে সহায়তা করে।
                     </p>
                 </article>
 
-                <article class="bg-gray-50 rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow">
+                <article class="color-card color-2 bg-gray-50 rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow">
                     <div
                         class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-xl flex items-center justify-center mb-6">
                         <i class="fas fa-globe text-white text-2xl" aria-hidden="true"></i>
                     </div>
                     <h3 class="text-2xl font-semibold text-gray-900 mb-3">Web Development</h3>
                     <p class="text-gray-700 leading-relaxed">
-                        সব ধরনের কর্পোরেট লেভেলের ওয়েবসাইট ডেভেলপমেন্ট সার্ভিস দিয়ে থাকি আমরা। নিরাপদ ও ফাস্টেষ্ট ওয়েবসাইট
-                        ডেভেলপমেন্টের জন্য আমাদের উপর আস্থা রাখছে বাংলাদেশ সরকার সহ বসুন্ধরা, আকিজ, বেঙ্গলের মতো বড়
-                        প্রতিষ্ঠানগুলো।
+                        আপনার ব্যবসার ডিজিটাল পরিচিতিকে আরও শক্তিশালী করতে আমরা তৈরি করি আধুনিক, নিরাপদ, দ্রুতগতির ও ব্যবহারবান্ধব ওয়েবসাইট। কর্পোরেট ওয়েবসাইট, বিজনেস পোর্টাল থেকে শুরু করে কাস্টম ওয়েব অ্যাপ্লিকেশন—প্রতিটি সলিউশন তৈরি করা হয় প্রতিষ্ঠানের নির্দিষ্ট চাহিদা, উন্নত প্রযুক্তি এবং সর্বোত্তম পারফরম্যান্সের কথা মাথায় রেখে। আমাদের লক্ষ্য হলো এমন ওয়েবসাইট তৈরি করা, যা শুধু আপনার ব্র্যান্ডের পরিচিতি বাড়াবে না, বরং গ্রাহকদের আস্থা অর্জন, ব্যবসায়িক কার্যক্রম সহজ করা এবং দীর্ঘমেয়াদি প্রবৃদ্ধিতেও ভূমিকা রাখবে।
                     </p>
                 </article>
 
-                <article class="bg-gray-50 rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow">
+                <article class="color-card color-3 bg-gray-50 rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow">
                     <div
                         class="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-600 rounded-xl flex items-center justify-center mb-6">
                         <i class="fas fa-mobile-alt text-white text-2xl" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">Mobile Apps</h3>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">Software Development</h3>
                     <p class="text-gray-700 leading-relaxed">
-                        সব ধরনের ওয়েব ভিউ মোবাইল এ্যাপস সহ আমরা ডেভেলপ করে থাকি নেটিভ এ্যাপস। এ্যাপসের কারনে আমরা সার্ভিস
-                        প্রমোট করতে সুবিধা হবে + বিজনেস কয়েকগুন বেড়ে যাবে। প্লেস্টোরে এ্যাপস পাবলিশড করে দিয়ে থাকি আমরা।
+                        আপনার প্রতিষ্ঠানের কাজকে আরও সহজ, দ্রুত ও দক্ষ করে তুলতে আমরা তৈরি করি আধুনিক, নিরাপদ এবং কাস্টমাইজড সফটওয়্যার সলিউশন। বিজনেস ম্যানেজমেন্ট সফটওয়্যার, ERP, CRM, ইনভেন্টরি ও অ্যাকাউন্টিং সিস্টেম থেকে শুরু করে HRM, POS, অটোমেশন টুলস এবং জটিল এন্টারপ্রাইজ অ্যাপ্লিকেশন—আপনার ব্যবসার নির্দিষ্ট চাহিদা অনুযায়ী আমরা ডেভেলপ করি কার্যকর প্রযুক্তিনির্ভর সমাধান।
+
+                        আমাদের লক্ষ্য শুধু সফটওয়্যার তৈরি করা নয়, বরং আপনার প্রতিষ্ঠানের দৈনন্দিন কার্যক্রমকে আরও সুশৃঙ্খল করা, ম্যানুয়াল কাজ কমানো, তথ্য ব্যবস্থাপনায় নির্ভুলতা বাড়ানো এবং উৎপাদনশীলতা উন্নত করা। আধুনিক প্রযুক্তি, ব্যবহারবান্ধব ইন্টারফেস ও ভবিষ্যতে সম্প্রসারণযোগ্য আর্কিটেকচারের সমন্বয়ে আমরা তৈরি করি আপনার ব্যবসার দীর্ঘমেয়াদি প্রযুক্তিগত ভিত্তি।
                     </p>
                 </article>
 
-                <article class="bg-gray-50 rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow">
+                <article class="color-card color-4 bg-gray-50 rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow">
                     <div
                         class="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-xl flex items-center justify-center mb-6">
                         <i class="fas fa-bullhorn text-white text-2xl" aria-hidden="true"></i>
                     </div>
                     <h3 class="text-2xl font-semibold text-gray-900 mb-3">Digital Marketing</h3>
                     <p class="text-gray-700 leading-relaxed">
-                        প্রচারেই প্রসার শুধু কি তাই? প্রচার তো যেভাবে খুশি সেভাবে করলে চলবে না। তাই আমাদের একটি সুদক্ষ টিম
-                        রয়েছে যারা আপনার বিজনেসকে রিসার্চ করে অডিয়েন্স টার্গেট করবে। আপনার প্রোডাক্ট বা সার্ভিসের সেল
-                        জেনারেট নিশ্চিত করবে আমাদের একটি টিম।
+                        শুধু প্রচার নয়, চাই সঠিক কৌশলে ব্যবসার প্রসার! ডিজিটাল মার্কেটিংয়ে সফল হতে হলে প্রয়োজন সঠিক অডিয়েন্স নির্বাচন, বাজার বিশ্লেষণ এবং কার্যকর মার্কেটিং স্ট্র্যাটেজি। আমাদের দক্ষ ডিজিটাল মার্কেটিং টিম আপনার ব্যবসা, পণ্য ও সার্ভিস নিয়ে বিস্তারিত রিসার্চ করে সম্ভাব্য গ্রাহকদের কাছে পৌঁছানোর উপযুক্ত পরিকল্পনা তৈরি করে। Facebook ও Instagram Ads, Google Ads, কনটেন্ট মার্কেটিং এবং ডেটা-ভিত্তিক ক্যাম্পেইনের মাধ্যমে আমরা ব্র্যান্ডের পরিচিতি বৃদ্ধি, সম্ভাব্য কাস্টমার সংগ্রহ এবং বিক্রয় বৃদ্ধিতে সহায়তা করি। প্রতিটি ক্যাম্পেইনের পারফরম্যান্স বিশ্লেষণ করে মার্কেটিং বাজেটের সর্বোত্তম ব্যবহার ও আরও ভালো ফলাফলের জন্য কাজ করি।
                     </p>
                 </article>
 
 
-                <article class="bg-gray-50 rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow">
+                <article class="color-card color-5 bg-gray-50 rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow">
                     <div
                         class="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
                         <i class="fas fa-server text-white text-2xl" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">Domain Hosting</h3>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">AI Video Content</h3>
                     <p class="text-gray-700 leading-relaxed">
-                        আমরা বিটিসিএল সহ সব ধরনের ডোমেইন রেজিষ্ট্রেশন এবং ওয়েব হোস্টিং প্রোভাইড করে থাকি। হাজার বছর ধরে
-                        আপনার ডাটা থাকবে নিরাপদ ও সাইটের লোড ব্যালান্সিং করা হবে। এজন্য আমাদের ডেডিকেটেড একটি প্রতিষ্ঠান
-                        রয়েছে যার নাম <span class="font-semibold">ইউরহোস্ট বিডি</span>।
+                        আপনার ব্যবসার প্রচারকে আরও আকর্ষণীয় ও কার্যকর করতে আমরা তৈরি করি আধুনিক AI-নির্ভর ভিডিও কনটেন্ট। প্রোডাক্ট প্রমোশন, ব্র্যান্ড অ্যাডভার্টাইজমেন্ট, সোশ্যাল মিডিয়া রিলস, কর্পোরেট প্রেজেন্টেশন কিংবা প্রমোশনাল ভিডিও—আপনার প্রয়োজন অনুযায়ী তৈরি করা হয় সৃজনশীল ও দৃষ্টিনন্দন ভিডিও। AI প্রযুক্তির সহায়তায় আকর্ষণীয় ভিজ্যুয়াল, বাস্তবসম্মত ভয়েসওভার, অ্যানিমেশন ও স্টোরিটেলিংয়ের সমন্বয়ে আপনার ব্র্যান্ডের বার্তা পৌঁছে দিই দর্শকদের কাছে আরও সহজ ও আকর্ষণীয়ভাবে। Facebook, YouTube, TikTok এবং অন্যান্য ডিজিটাল প্ল্যাটফর্মের উপযোগী ভিডিও কনটেন্টের মাধ্যমে ব্র্যান্ডের পরিচিতি বৃদ্ধি ও মার্কেটিং কার্যক্রমকে আরও গতিশীল করতে আমরা সহায়তা করি।
                     </p>
                 </article>
 
 
-                <article class="bg-gray-50 rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow">
+                <article class="color-card color-6 bg-gray-50 rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow">
                     <div
                         class="w-16 h-16 bg-gradient-to-br from-sky-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6">
                         <i class="fas fa-palette text-white text-2xl" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">Graphics, UI/ UX</h3>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">Facebook Sales Support</h3>
                     <p class="text-gray-700 leading-relaxed">
-                        আমাদের একটি টিম রয়েছে যারা আমাদের ডেভেলপারদের কাছে গ্রাফিক্যাল কন্টেন্ট প্রোভাইড করে থাকে। আপনার
-                        ওয়েবসাইটের ফ্রন্টলুক , লোগো ডিজাইন, এ্যাপসের ডিজাইন সহ সব ধরনের এনিমেশন কন্টেন্ট নিয়ে কাজ করে আমাদের
-                        এই টিম।
+                        Facebook-এ শুধু পেজ পরিচালনা নয়, সঠিক কৌশলে গ্রাহকদের সঙ্গে যোগাযোগ তৈরি করে বিক্রয় বাড়ানোই আমাদের লক্ষ্য। আপনার ব্যবসার Facebook Page-এর ইনবক্স ম্যানেজমেন্ট, কাস্টমারের প্রশ্নের উত্তর, পণ্য ও সার্ভিস সম্পর্কে বিস্তারিত তথ্য প্রদান, অর্ডার সংগ্রহ এবং কাস্টমার ফলোআপসহ বিক্রয় কার্যক্রমে আমরা দিই প্রফেশনাল সাপোর্ট। দ্রুত সাড়া প্রদান, আন্তরিক কাস্টমার সার্ভিস এবং সুশৃঙ্খল অর্ডার ম্যানেজমেন্টের মাধ্যমে গ্রাহকদের আস্থা অর্জন ও কেনাকাটার অভিজ্ঞতা উন্নত করতে আমরা কাজ করি।
+
+                        আপনি অনলাইন শপ, ই-কমার্স ব্যবসা কিংবা যেকোনো সার্ভিস-ভিত্তিক প্রতিষ্ঠান পরিচালনা করুন—আমাদের Facebook Sales Support টিম আপনার ব্যবসার বিক্রয় কার্যক্রমকে আরও সহজ ও গতিশীল করতে সহায়তা করবে।
                     </p>
                 </article>
 
@@ -674,163 +1246,190 @@
 
         <div class="container mx-auto px-6 text-center relative z-10">
             <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white drop-shadow-lg">
-                <span class="text-yellow-400">Recognized</span> as Bangladesh's
-                <span class="text-yellow-300">#1 IT Company</span>
+                <span class="text-red-400">Recognized</span> as Bangladesh's
+                <span class="text-red-300">Best IT Company</span>
             </h2>
             <p class="text-xl text-gray-100 drop-shadow-md">
-                ৮ বছরের অভিজ্ঞতা এবং
-                <span class="text-yellow-400 font-extrabold">৪৪০০+</span> সফল প্রোজেক্টের সাথে বাংলাদেশের শীর্ষ আইটি কোম্পানী
+                ১২+ বছরের অভিজ্ঞতা এবং
+                <span class="text-green-400 font-extrabold">৬৫০০+</span> সফল প্রোজেক্টের সাথে বাংলাদেশের শীর্ষ আইটি কোম্পানী
             </p>
         </div>
     </section>
 
 
-
-    <section class="py-12 bg-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Section Header -->
-            <div class="text-center mb-12 sm:mb-16">
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-800 mb-4">Our Team</h2>
-                <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-                    Meet the amazing people behind our success
-                </p>
-            </div>
-
-            <!-- Group Photo -->
-            <div class="flex justify-center">
-                <div
-                    class="w-full max-w-5xl rounded-3xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-500">
-                    <img src="https://topperit.com/images/teamtit.jpg"
-                        alt="Our Team" class="w-full h-auto object-cover">
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Message From CEO Section -->
-
-    <section
-        class="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white relative overflow-hidden">
-   
-        <div class="pointer-events-none absolute -top-24 -left-24 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"></div>
-        <div class="pointer-events-none absolute -bottom-28 -right-28 w-80 h-80 bg-indigo-500/20 rounded-full blur-3xl">
-        </div>
-
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-8 sm:mb-12">
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight">Message From CEO</h2>
-                <div class="w-16 sm:w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full mt-3"></div>
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-          
-                <div class="text-center order-1 lg:order-1">
-                    <div class="w-40 sm:w-48 md:w-56 mx-auto mb-4 sm:mb-6 relative">
-                      
-                        <div
-                            class="absolute inset-0 rounded-full p-[3px] bg-gradient-to-tr from-cyan-400 via-blue-500 to-indigo-500">
-                            <div class="w-full h-full rounded-full bg-black"></div>
-                        </div>
-                        <img src="https://topperit.com/images/ceo.jpg" alt="CEO portrait"
-                            class="relative rounded-full w-full h-auto object-cover ring-1 ring-white/10" />
-                    </div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-cyan-300 mb-1">দিগন্ত হাসান রুবেল</h3>
-                    <p class="text-base sm:text-lg text-gray-300">ফাউন্ডার & সিইও</p>
-                    <p class="text-gray-400 mt-1 sm:mt-2 text-sm sm:text-base">টপার আইটি লিমিটেড</p>
-
-                    <div class="mt-4 flex items-center justify-center gap-3 text-xs sm:text-sm">
-                        <span class="px-3 py-1 rounded-full bg-white/5 text-white/90 ring-1 ring-white/10">৮ বছর</span>
-                        <span class="px-3 py-1 rounded-full bg-white/5 text-white/90 ring-1 ring-white/10">৪৪০০+ ওয়েবসাইট</span>
-                    </div>
-                </div>
-
-                <div class="order-2 lg:order-2">
-                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 ring-1 ring-white/10 shadow-xl">
-                     
-                        <div
-                            class="text-5xl sm:text-6xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-blue-400 mb-2">
-                            “</div>
-
-                        <p class="text-sm sm:text-base lg:text-lg leading-relaxed mb-4 sm:mb-6 text-gray-100">
-                            প্রযুক্তিগত বিষয়গুলোর দিকে নজর দিতে গিয়ে আপনার ব্যবসায়ের আসল জায়গায় ফোকাস করতে পারছেন না হয়তো,
-                            তাই আপনি আপনার ব্যবসায়ে পূর্ণ মনযোগ দিন আর আপনার ব্যবসার প্রযুক্তি বিষয়ক ৩৬০ ডিগ্রি সল্যুশনের
-                            জন্য আমাদেরকে দায়িত্ব দিন।
-                        </p>
-
-
-                        <a href="https://topperit.com/meeting-with-ceo"
-                            class="inline-flex items-center justify-center gap-2 bg-gradient-to-br from-cyan-600 via-blue-600 to-indigo-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold text-base sm:text-lg shadow-lg shadow-blue-600/20 hover:shadow-xl hover:opacity-95 active:opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-cyan-400 w-full sm:w-auto">
-                            <i class="fas fa-calendar-alt"></i>
-                            <span>Meeting with CEO</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        
-    </section>
-    
-    <!-- Awards Section – Premium (Single Column with Image) -->
-<section class="py-16 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 text-white relative overflow-hidden">
-  
-  <!-- soft orbs -->
-  <div class="pointer-events-none absolute -top-24 -left-24 w-72 h-72 bg-amber-400/10 rounded-full blur-3xl"></div>
-  <div class="pointer-events-none absolute -bottom-28 -right-28 w-80 h-80 bg-yellow-400/10 rounded-full blur-3xl"></div>
-
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    
-    <!-- Heading -->
-    <div class="text-center mb-12">
-      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-300 ring-1 ring-amber-300/30 mb-3">
-        National Recognition
-      </span>
-
-      <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
-        <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-300 via-yellow-300 to-amber-200">
-          রাইজিং ইয়ুথ অ্যাওয়ার্ড ২০২৩
-        </span>
-      </h2>
-
-      <div class="flex justify-center mt-6">
-        <div class="w-20 h-20 rounded-full bg-gradient-to-br from-amber-400 to-yellow-500 shadow-2xl ring-4 ring-white/10 grid place-items-center">
-          <i class="fas fa-trophy text-white text-3xl"></i>
-        </div>
-      </div>
-    </div>
-
-    <!-- Single Award Card -->
-    <div class="max-w-3xl mx-auto p-[1px] rounded-2xl bg-gradient-to-br from-amber-400/60 to-yellow-500/60 shadow-xl">
-      
-      <div class="bg-slate-900/60 backdrop-blur-sm rounded-2xl p-6 text-center">
-
-        <!-- Real Image -->
-        <div class="mb-6">
-          <img src="https://topperit.com/images/nationalaward.jpg" 
-               alt="Rising Youth Award 2023 Topper IT" 
-               class="mx-auto rounded-xl shadow-lg w-full max-h-[400px] object-contain">
-        </div>
-
-        <!-- Text -->
-        <h3 class="text-xl font-semibold text-amber-300 mb-2">
-          Rising Youth Award 2023
-        </h3>
-
-        <p class="text-amber-100">
-          Topper IT has been honored with the Rising Youth Award 2023 for excellence in IT and digital innovation in Bangladesh.
-        </p>
-
-      </div>
-    </div>
-
-  </div>
-</section>
     
 
     <!-- Footer -->
     <?php require_once('footer.php'); ?>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const slider = document.querySelector('#heroSlider');
+    const slides = slider.querySelectorAll('.slide');
+    const dots = slider.querySelectorAll('.dot');
 
+    let current = 0;
+    let timer;
+
+    function showSlide(index) {
+        current = (index + slides.length) % slides.length;
+
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === current);
+        });
+
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === current);
+        });
+    }
+
+    function startAutoSlide() {
+        clearInterval(timer);
+        timer = setInterval(() => showSlide(current + 1), 5000);
+    }
+
+    slider.querySelector('.next').addEventListener('click', () => {
+        showSlide(current + 1);
+        startAutoSlide();
+    });
+
+    slider.querySelector('.prev').addEventListener('click', () => {
+        showSlide(current - 1);
+        startAutoSlide();
+    });
+
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+            showSlide(i);
+            startAutoSlide();
+        });
+    });
+
+    showSlide(0);
+    startAutoSlide();
+});
+
+
+const clients = [
+    { name: "Bangladesh Government", logo: "images/clients/bangladesh-gov.png" },
+    { name: "United Group", logo: "images/clients/united-group.png" },
+    { name: "Shanta Holdings", logo: "images/clients/shanta.png" },
+    { name: "United Hospital", logo: "images/clients/united-hospital.png" },
+    { name: "Partex Group", logo: "images/clients/partex.png" },
+    { name: "Spectra Group", logo: "images/clients/spectra.png" },
+    { name: "Pickaboo", logo: "images/clients/pickaboo.png" },
+    { name: "A2i", logo: "images/clients/a2i.png" },
+    { name: "Mobil", logo: "images/clients/mobil.png" },
+    { name: "Concord", logo: "images/clients/concord.png" },
+    { name: "Rangs Properties", logo: "images/clients/rangs.png" },
+    { name: "Plan International", logo: "images/clients/plan.png" },
+
+    { name: "Client 13", logo: "images/clients/client-13.png" },
+    { name: "Client 14", logo: "images/clients/client-14.png" },
+    { name: "Client 15", logo: "images/clients/client-15.png" },
+    { name: "Client 16", logo: "images/clients/client-16.png" },
+    { name: "Client 17", logo: "images/clients/client-17.png" },
+    { name: "Client 18", logo: "images/clients/client-18.png" },
+    { name: "Client 19", logo: "images/clients/client-19.png" },
+    { name: "Client 20", logo: "images/clients/client-20.png" },
+    { name: "Client 21", logo: "images/clients/client-21.png" },
+    { name: "Client 22", logo: "images/clients/client-22.png" },
+    { name: "Client 23", logo: "images/clients/client-23.png" },
+    { name: "Client 24", logo: "images/clients/client-24.png" }
+];
+
+const clientsGrid = document.getElementById("clientsGrid");
+const pagination = document.getElementById("sliderPagination");
+
+let currentPage = 0;
+let itemsPerPage = getItemsPerPage();
+
+function getItemsPerPage() {
+    if (window.innerWidth <= 480) return 6;
+    if (window.innerWidth <= 768) return 6;
+    if (window.innerWidth <= 1200) return 8;
+    return 12;
+}
+
+function renderClients() {
+    itemsPerPage = getItemsPerPage();
+
+    const totalPages = Math.ceil(clients.length / itemsPerPage);
+
+    if (currentPage >= totalPages) {
+        currentPage = totalPages - 1;
+    }
+
+    const start = currentPage * itemsPerPage;
+    const visibleClients = clients.slice(start, start + itemsPerPage);
+
+    clientsGrid.style.opacity = "0";
+
+    setTimeout(() => {
+        clientsGrid.innerHTML = visibleClients.map(client => `
+            <div class="client-card">
+                <img
+                    src="${client.logo}"
+                    alt="${client.name}"
+                    loading="lazy"
+                >
+                <span class="client-name-fallback">
+                    ${client.name}
+                </span>
+            </div>
+        `).join("");
+
+        clientsGrid.querySelectorAll("img").forEach(img => {
+            img.addEventListener("error", () => {
+                img.style.display = "none";
+                const fallback = img.nextElementSibling;
+                fallback.style.display = "block";
+            });
+        });
+
+        clientsGrid.style.opacity = "1";
+    }, 150);
+
+    renderPagination(totalPages);
+}
+
+function renderPagination(totalPages) {
+    pagination.innerHTML = "";
+
+    for (let i = 0; i < totalPages; i++) {
+        const dot = document.createElement("button");
+
+        dot.type = "button";
+        dot.className = "pagination-dot";
+        dot.setAttribute("aria-label", `Show client page ${i + 1}`);
+
+        if (i === currentPage) {
+            dot.classList.add("active");
+            dot.setAttribute("aria-current", "page");
+        }
+
+        dot.addEventListener("click", () => {
+            currentPage = i;
+            renderClients();
+        });
+
+        pagination.appendChild(dot);
+    }
+}
+
+let resizeTimer;
+
+window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+
+    resizeTimer = setTimeout(() => {
+        currentPage = 0;
+        renderClients();
+    }, 200);
+});
+
+renderClients();
+
+</script>
 
 
 

@@ -154,7 +154,7 @@
         <div class="flex h-16 lg:h-20 items-center justify-between">
             
             <a href="index.php" class="flex items-center gap-2 sm:gap-3 group" aria-label="TOPPER IT — Home">
-                <img src="https://topperit.com/images/logo.png" alt="TOPPER IT Logo"
+                <img src="images/digital-wave-tech-logo.jpg" alt="Digital Wave Tech Logo"
                     class="h-14 lg:h-16 w-auto object-contain" loading="lazy" />
                 <span class="sr-only">Digital Webtech</span>
             </a>

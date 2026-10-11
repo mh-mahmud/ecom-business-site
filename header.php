@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Title -->
-    <title>TOPPER IT - বাংলাদেশের সেরা আইটি কোম্পানী</title>
+    <title>Digital Wave Tech - বাংলাদেশের সেরা আইটি কোম্পানী</title>
 
     <!-- SEO Meta -->
-    <meta name="description" content="Topper IT provides web design, ecommerce development, SEO and digital marketing services in Bangladesh.">
+    <meta name="description" content="Digital Wave Tech provides web design, ecommerce development, SEO and digital marketing services in Bangladesh.">
     <meta name="keywords" content="web design Bangladesh, ecommerce website, SEO service">
 
     <!-- Facebook Verification -->
@@ -23,16 +23,16 @@
     <link rel="manifest" href="https://topperit.com/site.webmanifest">
 
     <!-- Open Graph (Facebook SEO) -->
-    <meta property="og:title" content="Topper IT">
-    <meta property="og:description" content="Topper IT - Web Development Company">
+    <meta property="og:title" content="Digital Wave Tech">
+    <meta property="og:description" content="Digital Wave Tech - Web Development Company">
     <meta property="og:image" content="https://topperit.com/default.jpg">
     <meta property="og:url" content="https://topperit.com">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Topper IT">
-    <meta name="twitter:description" content="Topper IT - Web Development Company">
+    <meta name="twitter:title" content="Digital Wave Tech">
+    <meta name="twitter:description" content="Digital Wave Tech - Web Development Company">
     <meta name="twitter:image" content="https://topperit.com/default.jpg">
 
     <!-- Canonical -->
