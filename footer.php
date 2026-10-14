@@ -146,3 +146,51 @@
             </div>
         </div>
     </footer>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    let currentPage = window.location.pathname
+        .split("/")
+        .pop()
+        .replace(/\.(php|html)$/i, "");
+
+    if (!currentPage) {
+        currentPage = "index";
+    }
+
+    const pageMap = {
+        "": "index",
+        "index": "index",
+        "ecommerce-website": "ecommerce",
+        "landing-page": "landing-page",
+        "about": "about",
+        "pricing": "pricing",
+        "contact": "contact"
+    };
+
+    currentPage = pageMap[currentPage] || currentPage;
+
+    document.querySelectorAll(".navbar a[data-page]").forEach(function (link) {
+        const active = link.dataset.page === currentPage;
+        link.classList.toggle("active", active);
+
+        // Active menu text color
+        link.classList.toggle("text-orange-600", active);
+        link.classList.toggle("text-gray-700", !active);
+
+        // Underline gradient
+        const underline = link.querySelector("span:last-child");
+
+        if (underline) {
+            underline.classList.toggle("scale-x-100", active);
+            underline.classList.toggle("scale-x-0", !active);
+        }
+
+        if (active) {
+            link.setAttribute("aria-current", "page");
+        } else {
+            link.removeAttribute("aria-current");
+        }
+    });
+});
+    </script>

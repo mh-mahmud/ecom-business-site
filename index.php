@@ -1141,7 +1141,7 @@
         <div class="container mx-auto px-6 py-12">
 
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Ready for your digital success ?</h2>
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
 
             </div>
 

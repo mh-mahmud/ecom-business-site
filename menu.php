@@ -146,6 +146,26 @@
             }
         })();
     </script>
+<style>
+.navbar a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+/*    color: #007bff;*/
+}
+
+.navbar a.active {
+    /*color: #007bff;
+    font-weight: 600;
+    border-bottom: 3px solid #007bff;*/
+    color: #007bff;
+}
+</style>
 
 <header class="fixed top-0 z-50 w-full bg-white backdrop-blur-lg border-b border-gray-200 shadow-sm">
     
@@ -160,12 +180,11 @@
             </a>
 
             
-                        <nav class="hidden lg:block">
+            <nav class="hidden lg:block navbar">
                 <ul class="flex items-center gap-5 2xl:gap-7">
                     <li>
                         <a href="index.php"
-                            class="group inline-flex flex-col items-start justify-center text-gray-700 hover:text-orange-600 transition-colors font-bold text-sm lg:text-base text-orange-600"
-                             aria-current="page" >
+                            class="group inline-flex flex-col items-start justify-center text-gray-700 hover:text-orange-600 transition-colors font-bold text-sm lg:text-base" data-page="index">
                             <span>হোম</span>
                             <span
                                 class="mt-1 block h-0.5 rounded bg-gradient-to-r from-orange-500 to-amber-500 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 scale-x-100"></span>
@@ -173,8 +192,7 @@
                     </li>
                     <li>
                         <a href="ecommerce-website.php"
-                            class="group inline-flex flex-col items-start justify-center text-gray-700 hover:text-orange-600 transition-colors font-bold text-sm lg:text-base "
-                            >
+                            class="group inline-flex flex-col items-start justify-center text-gray-700 hover:text-orange-600 transition-colors font-bold text-sm lg:text-base" data-page="ecommerce">
                             <span>ই-কমার্স</span>
                             <span
                                 class="mt-1 block h-0.5 rounded bg-gradient-to-r from-orange-500 to-amber-500 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 "></span>
@@ -182,8 +200,7 @@
                     </li>
                     <li>
                         <a href="landing-page.php"
-                            class="group inline-flex flex-col items-start justify-center text-gray-700 hover:text-orange-600 transition-colors font-bold text-sm lg:text-base "
-                            >
+                            class="group inline-flex flex-col items-start justify-center text-gray-700 hover:text-orange-600 transition-colors font-bold text-sm lg:text-base" data-page="landing-page">
                             <span>ল্যান্ডিং পেজ</span>
                             <span
                                 class="mt-1 block h-0.5 rounded bg-gradient-to-r from-orange-500 to-amber-500 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 "></span>
@@ -191,17 +208,15 @@
                     </li>
                     <li>
                         <a href="about.php"
-                            class="group inline-flex flex-col items-start justify-center text-gray-700 hover:text-orange-600 transition-colors font-bold text-sm lg:text-base "
-                            >
+                            class="group inline-flex flex-col items-start justify-center text-gray-700 hover:text-orange-600 transition-colors font-bold text-sm lg:text-base" data-page="about">
                             <span>আমাদের সম্পর্কে</span>
                             <span
-                                class="mt-1 block h-0.5 rounded bg-gradient-to-r from-orange-500 to-amber-500 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 "></span>
+                                class="mt-1 block h-0.5 rounded bg-gradient-to-r from-orange-500 to-amber-500 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                         </a>
                     </li>
                     <li>
                         <a href="pricing.php"
-                            class="group inline-flex flex-col items-start justify-center text-gray-700 hover:text-orange-600 transition-colors font-bold text-sm lg:text-base "
-                            >
+                            class="group inline-flex flex-col items-start justify-center text-gray-700 hover:text-orange-600 transition-colors font-bold text-sm lg:text-base" data-page="pricing">
                             <span>প্রাইসিং</span>
                             <span
                                 class="mt-1 block h-0.5 rounded bg-gradient-to-r from-orange-500 to-amber-500 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 "></span>
@@ -209,8 +224,7 @@
                     </li>
                     <li>
                         <a href="contact.php"
-                            class="group inline-flex flex-col items-start justify-center text-gray-700 hover:text-orange-600 transition-colors font-bold text-sm lg:text-base "
-                            >
+                            class="group inline-flex flex-col items-start justify-center text-gray-700 hover:text-orange-600 transition-colors font-bold text-sm lg:text-base" data-page="contact">
                             <span>যোগাযোগ</span>
                             <span
                                 class="mt-1 block h-0.5 rounded bg-gradient-to-r from-orange-500 to-amber-500 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 "></span>

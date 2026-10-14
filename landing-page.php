@@ -54,68 +54,31 @@
         </div>
     </section>
     <!-- Compact Stat Section (Light Version — with CTA) -->
-    <section class="relative bg-gray-50 py-12 sm:py-16 md:py-20 overflow-hidden">
-        <!-- soft accents -->
-        <div class="pointer-events-none absolute -top-24 -left-24 w-72 h-72 bg-emerald-300/20 rounded-full blur-3xl">
-        </div>
-        <div class="pointer-events-none absolute -bottom-28 -right-28 w-80 h-80 bg-cyan-300/20 rounded-full blur-3xl">
-        </div>
 
-        <div class="container mx-auto px-4 relative z-10 max-w-full">
-            <div class="mx-auto max-w-4xl bg-white border border-gray-200 rounded-2xl shadow-lg p-6 sm:p-8">
 
-                <!-- Text/KPI -->
-                <div class="text-center mb-8">
-                    <div class="flex justify-center gap-3 mb-4">
-                        <div
-                            class="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-emerald-100 flex items-center justify-center">
-                            <i class="fas fa-chart-line text-emerald-600 text-xl sm:text-2xl" aria-hidden="true"></i>
-                        </div>
-                        <span
-                            class="inline-flex items-center text-xs font-semibold uppercase tracking-wide text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full">
-                            CPA Improvement
-                        </span>
-                    </div>
-
-                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-2">
-                        ছবিতে দেখুন — ১৪৪০ টাকা দামের প্রোডাক্ট সেল করতে খরচ হচ্ছে মাত্র ১০৫ টাকা
-                    </h3>
-
-                    <div class="mt-4">
-
-                        <p class="mt-2 text-sm sm:text-base md:text-lg text-gray-600">
-                            স্মার্ট ল্যান্ডিং + স্ট্র্যাটেজি = কম কস্টে সেল
-                        </p>
-                    </div>
-
-                    <!-- small helper note -->
-                    <p class="mt-4 text-xs text-gray-500">
-                        *ডেটা উদাহরণস্বরূপ; ইন্ডাস্ট্রি/ক্যাম্পেইন ভেদে ভিন্ন হতে পারে।
-                    </p>
+    <section class="py-12 sm:py-16 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-center">
+                
+                <!-- Plan 1 -->
+                <div style="margin-right:10px;" class="bg-white rounded-xl shadow-lg p-6 sm:p-8 card-hover border-t-4 border-blue-500 max-w-md w-full">
+                    <img style="border:1px solid #ddd;padding:10px;" src="images/demo/s_10.png" alt=""><br>
+                    <img style="border:1px solid #ddd;padding:10px;" src="images/demo/s_11.png" alt=""><br>
+                    <img style="border:1px solid #ddd;padding:10px;" src="images/demo/s_13.png" alt=""><br>
+                    <img style="border:1px solid #ddd;padding:10px;" src="images/demo/s_14.png" alt=""><br>
                 </div>
 
-                <!-- Visual proof (image full row) -->
-                <figure class="mb-8">
-                    <img src="https://topperit.com/images/peacock.webp"
-                        alt="ক্যাম্পেইন রিপোর্ট যেখানে ১৪৪০ টাকার প্রোডাক্ট সেল করতে কম খরচ (CPA) প্রদর্শিত"
-                        class="w-full h-auto rounded-xl ring-1 ring-gray-200/60 shadow-sm" loading="lazy"
-                        decoding="async" />
-                    <figcaption class="mt-3 text-xs text-gray-700 text-center">
-                        ক্যাম্পেইন রিপোর্টের স্ক্রিনশট (উদাহরণ)
-                    </figcaption>
-                </figure>
-
-                <!-- CTA Button -->
-                <div class="text-center">
-                    <a href="#benifits"
-                        class="inline-block bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-8 py-4 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105">
-                        ল্যান্ডিং পেজে কি পাবেন দেখতে ক্লিক করুন
-                    </a>
+                <!-- Plan 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 sm:p-8 card-hover border-t-4 border-blue-500 max-w-md w-full">
+                    <img style="border:1px solid #ddd;padding:10px;" src="images/demo/s_15.png" alt=""><br>
+                    <img style="border:1px solid #ddd;padding:10px;" src="images/demo/s_16.png" alt=""><br>
+                    <img style="border:1px solid #ddd;padding:10px;" src="images/demo/s_17.png" alt=""><br>
+                    <img style="border:1px solid #ddd;padding:10px;" src="images/demo/s_18.png" alt=""><br>
                 </div>
+
             </div>
         </div>
     </section>
-
 
                     
     <section class="py-12 sm:py-16 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50">
@@ -130,13 +93,13 @@
                                 ল্যান্ডিং পেজ প্যাকেজ
                             </h3>
 
-                            <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold self-start">
-                                Basic
+                            <span class="bg-red-100 text-blue-600 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold self-start">
+                                Advanced
                             </span>
                         </div>
 
                         <div class="mb-4 sm:mb-6">
-                            <div class="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">
+                            <div class="text-2xl sm:text-3xl font-bold text-green-600 mb-2">
                                 ৫,০০০ টাকা
                             </div>
                         </div>
@@ -149,34 +112,53 @@
                             </li>
                             <li class="flex items-start space-x-3">
                                 <i class="fas fa-check text-green-500 mt-1"></i>
-                                <span>ওকমার্স সিএমএস</span>
+                                <span>লারাভেল ফ্রেম ওয়ার্ক</span>
+                            </li>
+
+                            <li class="flex items-start space-x-3">
+                                <i class="fas fa-check text-green-500 mt-1"></i>
+                                <span>১ টি অর্ডার প্যানেল</span>
                             </li>
                             <li class="flex items-start space-x-3">
                                 <i class="fas fa-check text-green-500 mt-1"></i>
-                                <span>১০ জিবি হোস্টিং + ডোমেইন ( ১ বছর মেয়াদী) , আপনার নামে কেনা হবে এবং একসেস আপনার কাছেই থাকবে।</span>
+                                <span>কাস্টমার এর অর্ডার সরাসরি ইমেইল করা হবে</span>
                             </li>
+
                             <li class="flex items-start space-x-3">
                                 <i class="fas fa-check text-green-500 mt-1"></i>
-                                <span>৩ মাস টেকনিক্যাল সাপোর্ট</span>
+                                <span>কুরিয়ারে এক ক্লিকে অর্ডার ডিটেইল অটোমেটিক এন্ট্রি</span>
+                            </li>
+                            
+                            <li class="flex items-start space-x-3">
+                                <i class="fas fa-check text-green-500 mt-1"></i>
+                                <span>১০ জিবি হোস্টিং + ডোমেইন ( ১ বছর মেয়াদী)</span>
+                            </li>
+                            <!-- <li class="flex items-start space-x-3">
+                                <i class="fas fa-check text-green-500 mt-1"></i>
+                                <span>১ মাস টেকনিক্যাল সাপোর্ট</span>
+                            </li> -->
+                            <li class="flex items-start space-x-3">
+                                <i class="fas fa-check text-green-500 mt-1"></i>
+                                <span>কাস্টম ফিচার অ্যাড করার সুযোগ রয়েছে। (চার্জ প্রযোজ্য)</span>
                             </li>
                         
                             <!-- NEW LINE -->
-                            <li class="flex items-start space-x-3">
+                            <!-- <li class="flex items-start space-x-3">
                                 <i class="fas fa-star text-yellow-500 mt-1"></i>
                                 <span class="font-bold text-red-400">
                                     ল্যান্ডিং পেজ থেকে একটি প্রোডাক্ট সেল করা যায়, যাদের প্রোডাক্ট একটি তাদের জন্য ল্যান্ডিং পেজ
                                 </span>
-                            </li>
+                            </li> -->
                         </ul>
 
-                        <div class="space-y-3">
+                        <!-- <div class="space-y-3">
 
-                            <a href="https://wa.link/saqf1s"
+                            <a href="https://wa.me/message/S2B2PMXA3COGB1"
                                 class="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-semibold transition text-center block">
                                 <i class="fab fa-whatsapp mr-2"></i> WhatsApp
                             </a>
 
-                        </div>
+                        </div> -->
                 </div>
 
                 <!-- Plan 1 -->
@@ -194,7 +176,7 @@
 
                         <div class="mb-4 sm:mb-6">
                             <div class="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">
-                                ৫,০০০ টাকা
+                                ৩,০০০ টাকা
                             </div>
                         </div>
 
@@ -206,40 +188,43 @@
                             </li>
                             <li class="flex items-start space-x-3">
                                 <i class="fas fa-check text-green-500 mt-1"></i>
-                                <span>ওকমার্স সিএমএস</span>
+                                <span>লারাভেল ফ্রেম ওয়ার্ক</span>
                             </li>
+
                             <li class="flex items-start space-x-3">
                                 <i class="fas fa-check text-green-500 mt-1"></i>
-                                <span>১০ জিবি হোস্টিং + ডোমেইন ( ১ বছর মেয়াদী) , আপনার নামে কেনা হবে এবং একসেস আপনার কাছেই থাকবে।</span>
+                                <span>১ টি অর্ডার প্যানেল</span>
                             </li>
                             <li class="flex items-start space-x-3">
                                 <i class="fas fa-check text-green-500 mt-1"></i>
                                 <span>৩ মাস টেকনিক্যাল সাপোর্ট</span>
                             </li>
+                            <li class="flex items-start space-x-3">
+                                <i class="fas fa-check text-green-500 mt-1"></i>
+                                <span>কাস্টম ফিচার অ্যাড করার সুযোগ রয়েছে। (চার্জ প্রযোজ্য)</span>
+                            </li>
                         
                             <!-- NEW LINE -->
-                            <li class="flex items-start space-x-3">
+                            <!-- <li class="flex items-start space-x-3">
                                 <i class="fas fa-star text-yellow-500 mt-1"></i>
                                 <span class="font-bold text-red-400">
                                     ল্যান্ডিং পেজ থেকে একটি প্রোডাক্ট সেল করা যায়, যাদের প্রোডাক্ট একটি তাদের জন্য ল্যান্ডিং পেজ
                                 </span>
-                            </li>
+                            </li> -->
                         </ul>
 
-                        <div class="space-y-3">
-
-                            <a href="https://wa.link/saqf1s"
+                        <!-- <div class="space-y-3">
+                            <a href="https://wa.me/message/S2B2PMXA3COGB1"
                                 class="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-semibold transition text-center block">
                                 <i class="fab fa-whatsapp mr-2"></i> WhatsApp
                             </a>
-
-                        </div>
+                        </div> -->
                 </div>
 
             </div>
         </div>
 
-        <div class="container mt-20 mx-auto px-4 relative z-10 max-w-full">
+        <div class="container mt-10 mx-auto px-4 relative z-10 max-w-full">
             <div class="mx-auto max-w-4xl bg-white border border-gray-200 rounded-2xl shadow-lg p-6 sm:p-8">
                 <!-- <div class="bg-white rounded-3xl shadow-lg p-6 sm:p-8 card-hover border-t-4 border-blue-500 max-w-md w-full"> -->
                     
@@ -492,7 +477,7 @@
                 <!-- CTAs -->
                 <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
                     <!-- WhatsApp -->
-                    <a href="https://wa.link/saqf1sাই।"
+                    <a href="https://wa.me/message/S2B2PMXA3COGB1"
                         class="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1fb457] active:bg-[#189246] text-white px-6 py-3 rounded-xl font-bold text-base sm:text-lg shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1fb457] transition"
                         aria-label="WhatsApp">
                         <i class="fab fa-whatsapp text-lg"></i>
@@ -502,9 +487,9 @@
                     <!-- Call -->
                     <a href="tel:+8801730724300"
                         class="inline-flex items-center gap-2 bg-indigo-500 border border-gray-300 hover:bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold text-base sm:text-lg shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 transition"
-                        aria-label="Call 01730-724300">
+                        aria-label="Call 01819-396959">
                         <i class="fas fa-phone text-base"></i>
-                        <span>কল করুন: 01730-724300</span>
+                        <span>কল করুন: 01819-396959</span>
                     </a>
                 </div>
             </div>
