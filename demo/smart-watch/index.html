@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fly n fair - Premium Luxury Smart Watch</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Hind Siliguri -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Tailwind Configuration & Custom Styles -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#051332',
+                            darkBlue: '#0A2540',
+                            gold: '#D4AF37',
+                            accentGold: '#F3C623',
+                            orange: '#FF5722',
+                            green: '#10B981',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Hind Siliguri', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            scroll-behavior: smooth;
+        }
+        @keyframes pulse-slow {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .animate-bounce-slow {
+            animation: pulse-slow 2s infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased pb-20 md:pb-0">
+
+    <!-- Top Announcement Bar / Countdown Header -->
+    <div class="bg-gradient-to-r from-red-600 to-brand-orange text-white text-center py-2 px-4 shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center text-sm md:text-base font-semibold">
+            <span class="flex items-center gap-2">
+                <i class="fa-solid fa-fire text-yellow-300 text-lg animate-bounce"></i> 
+                আজকের স্পেশাল ডিসকাউন্ট অফার! ৫০% ছাড়! 
+            </span>
+            <div class="flex items-center gap-2 mt-1 sm:mt-0 bg-black/20 px-3 py-1 rounded-full text-xs md:text-sm">
+                <span>অফারের সময় বাকি:</span>
+                <span id="countdown" class="font-bold text-yellow-300 font-mono text-sm">05:42:10</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="bg-brand-navy border-b border-brand-gold/30 py-3 px-4 shadow-lg">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center p-1.5 shadow-md">
+                    <svg viewBox="0 0 100 100" class="w-full h-full fill-brand-navy">
+                        <circle cx="50" cy="50" r="45" fill="#0A2540"/>
+                        <path d="M20 50 L80 20 L55 50 L80 80 Z" fill="#FFFFFF"/>
+                        <path d="M45 40 L65 15 L45 30 Z" fill="#D4AF37"/>
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-white font-bold text-xl leading-tight tracking-wide">Fly n fair</span>
+                    <span class="text-brand-gold text-xs font-light">E-Commerce & Smart Gadgets</span>
+                </div>
+            </a>
+
+            <!-- Fast Call / Order CTA Header -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="tel:01819396959" class="text-white flex items-center gap-2 text-sm hover:text-brand-gold transition">
+                    <i class="fa-solid fa-phone-volume text-brand-gold text-lg"></i>
+                    <span class="font-semibold">01819 396959</span>
+                </a>
+                <a href="#order-form" class="bg-brand-gold hover:bg-brand-accentGold text-brand-navy font-bold px-5 py-2 rounded-full shadow-lg transition transform hover:scale-105">
+                    অর্ডার করুন
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-brand-navy via-brand-darkBlue to-slate-900 text-white py-8 md:py-14 px-4 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            
+            <!-- Hero Text Content -->
+            <div class="space-y-4 text-center md:text-left">
+                <span class="inline-block bg-brand-gold/20 text-brand-gold border border-brand-gold/40 px-4 py-1 rounded-full text-xs md:text-sm font-semibold tracking-wider uppercase">
+                    ⭐ প্রিমিয়াম লাক্সারি স্মার্ট ওয়াচ 2026
+                </span>
+                <h1 class="text-2xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-white">
+                    আপনার পার্সোনালিটি আরও আকর্ষণীয় করতে সেরা <span class="text-brand-gold">AMOLED স্মার্ট ওয়াচ!</span>
+                </h1>
+                <p class="text-gray-300 text-sm md:text-base leading-relaxed">
+                    ব্লুটুথ কলিং, হার্ট রেট মনিটর, ফুল টাচ এইচডি স্ক্রিন এবং দীর্ঘস্থায়ী ব্যাটারি সহ প্রিমিয়াম ডিজাইনের প্রিমিয়াম মেটালিক চেইন স্ট্র্যাপ ঘড়ি।
+                </p>
+
+                <!-- Pricing Highlight -->
+                <div class="flex items-center justify-center md:justify-start gap-4 py-2">
+                    <div class="text-gray-400 line-through text-lg md:text-xl font-medium">৳২,৫০০</div>
+                    <div class="text-yellow-400 text-3xl md:text-4xl font-extrabold">৳১,২৯০</div>
+                    <span class="bg-red-600 text-white text-xs font-bold px-2.5 py-1 rounded-md animate-pulse">
+                        ৫০% সেভ
+                    </span>
+                </div>
+
+                <!-- Features Checklist Quick View -->
+                <div class="grid grid-cols-2 gap-2 text-xs md:text-sm text-gray-200 pt-2 text-left max-w-md mx-auto md:mx-0">
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-400"></i> এইচডি ফুল টাচ ডিসপ্লে</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-400"></i> ব্লুটুথ এইচডি কলিং</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-400"></i> ওয়াটারপ্রুফ মেটাল বডি</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-400"></i> ৭ দিন ব্যাটারি ব্যাকআপ</div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="pt-4">
+                    <a href="#order-form" class="inline-block w-full sm:w-auto bg-gradient-to-r from-red-600 to-orange-500 hover:from-red-700 hover:to-orange-600 text-white font-extrabold text-lg md:text-xl px-8 py-4 rounded-xl shadow-2xl transform hover:scale-105 transition duration-300 text-center animate-bounce-slow">
+                        <i class="fa-solid fa-cart-shopping mr-2"></i> এখনই অর্ডার করুন (Cash on Delivery)
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product Image Gallery / Main Image Showcase -->
+            <div class="space-y-4">
+                <div class="relative bg-gradient-to-tr from-brand-gold/10 to-white/5 p-4 rounded-2xl border border-brand-gold/30 shadow-2xl">
+                    <img id="main-product-img" src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=800&q=80" alt="Luxury Smart Watch" class="w-full h-72 md:h-96 object-cover rounded-xl shadow-lg border border-white/10">
+                    <span class="absolute top-6 right-6 bg-red-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md">
+                        স্টক সীমিত!
+                    </span>
+                </div>
+
+                <!-- Thumbnails -->
+                <div class="flex justify-center gap-3">
+                    <img onclick="changeImage(this.src)" src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=800&q=80" class="w-16 h-16 object-cover rounded-lg border-2 border-brand-gold cursor-pointer hover:opacity-80 transition">
+                    <img onclick="changeImage(this.src)" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80" class="w-16 h-16 object-cover rounded-lg border-2 border-gray-600 hover:border-brand-gold cursor-pointer hover:opacity-80 transition">
+                    <img onclick="changeImage(this.src)" src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=800&q=80" class="w-16 h-16 object-cover rounded-lg border-2 border-gray-600 hover:border-brand-gold cursor-pointer hover:opacity-80 transition">
+                    <img onclick="changeImage(this.src)" src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=800&q=80" class="w-16 h-16 object-cover rounded-lg border-2 border-gray-600 hover:border-brand-gold cursor-pointer hover:opacity-80 transition">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Trust Badges Bar -->
+    <section class="bg-white border-y border-gray-200 py-6 px-4 shadow-sm">
+        <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div class="p-3 rounded-lg bg-gray-50 flex flex-col items-center">
+                <i class="fa-solid fa-truck-fast text-2xl md:text-3xl text-brand-navy mb-2"></i>
+                <h4 class="font-bold text-sm md:text-base text-gray-900">ক্যাশ অন ডেলিভারি</h4>
+                <p class="text-xs text-gray-500">সমগ্র বাংলাদেশে প্রোডাক্ট হাতে পেয়ে মূল্য দিন</p>
+            </div>
+            <div class="p-3 rounded-lg bg-gray-50 flex flex-col items-center">
+                <i class="fa-solid fa-box-open text-2xl md:text-3xl text-brand-navy mb-2"></i>
+                <h4 class="font-bold text-sm md:text-base text-gray-900">দেখে নেওয়ার সুযোগ</h4>
+                <p class="text-xs text-gray-500">ডেলিভারিম্যানের সামনে ঘড়ি চেক করে নেওয়ার সুবিধা</p>
+            </div>
+            <div class="p-3 rounded-lg bg-gray-50 flex flex-col items-center">
+                <i class="fa-solid fa-shield-halved text-2xl md:text-3xl text-brand-navy mb-2"></i>
+                <h4 class="font-bold text-sm md:text-base text-gray-900">৭ দিনের রিপ্লেসমেন্ট</h4>
+                <p class="text-xs text-gray-500">কোন সমস্যা থাকলে ৭ দিনের মধ্যে পরিবর্তনযোগ্য</p>
+            </div>
+            <div class="p-3 rounded-lg bg-gray-50 flex flex-col items-center">
+                <i class="fa-solid fa-headset text-2xl md:text-3xl text-brand-navy mb-2"></i>
+                <h4 class="font-bold text-sm md:text-base text-gray-900">২৪/৭ কাস্টমার সাপোর্ট</h4>
+                <p class="text-xs text-gray-500">যেকোনো প্রয়োজনে ফোন করুন 01819 396959</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Highlights & Detailed Features Grid -->
+    <section class="py-12 px-4 max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-brand-navy mb-2">
+                কেন এই স্মার্ট ওয়াচটি আপনার সেরা পছন্দ হবে?
+            </h2>
+            <p class="text-gray-600 text-sm md:text-base">
+                আধুনিক প্রযুক্তি ও অভিজাত প্রিমিয়াম লুক নিয়ে তৈরি এই ঘড়িটিতে রয়েছে আকর্ষণীয় সব স্মার্ট ফিচার।
+            </p>
+            <div class="w-20 h-1 bg-brand-gold mx-auto mt-3 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Feature 1 -->
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-md hover:shadow-xl transition">
+                <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 text-2xl mb-4">
+                    <i class="fa-solid fa-desktop"></i>
+                </div>
+                <h3 class="font-bold text-lg text-gray-900 mb-2">HD AMOLED ফুল টাচ স্ক্রিন</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    উচ্চ রেজোলিউশন ব্রাইটনেস যুক্ত স্ক্রিন যা তীব্র রোদেও একদম পরিষ্কার দেখা যায়। বিভিন্ন কাস্টম ওয়াচ ফেস ব্যবহার করা সম্ভব।
+                </p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-md hover:shadow-xl transition">
+                <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-green-600 text-2xl mb-4">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <h3 class="font-bold text-lg text-gray-900 mb-2">HD ব্লুটুথ কলিং সিস্টেম</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    সরাসরি ঘড়ি থেকেই কল রিসিভ ও ডায়াল করার সুবিধা। বিল্ট-ইন হাই কোয়ালিটি স্পিকার ও নয়েজ ক্যানসেলেশন মাইক্রোফোন।
+                </p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-md hover:shadow-xl transition">
+                <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-red-600 text-2xl mb-4">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <h3 class="font-bold text-lg text-gray-900 mb-2">হেলথ ও ফিটনেস ট্র্যাকিং</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    ২৪ ঘণ্টা হার্ট রেট, রক্তের অক্সিজেন (SpO2), ব্লাড প্রেশার ও স্লিপ মনিটরিং করার আধুনিক সেন্সর টেকনোলজি।
+                </p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-md hover:shadow-xl transition">
+                <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 text-2xl mb-4">
+                    <i class="fa-solid fa-battery-full"></i>
+                </div>
+                <h3 class="font-bold text-lg text-gray-900 mb-2">দীর্ঘস্থায়ী ব্যাটারি ব্যাকআপ</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    একবার চার্জ দিলে ৫-৭ দিন পর্যন্ত অনায়াসে নরমাল ইউজ এবং সর্বোচ্চ ১৫ দিন স্ট্যান্ডবাই টাইম পাওয়া যায়।
+                </p>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-md hover:shadow-xl transition">
+                <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center text-cyan-600 text-2xl mb-4">
+                    <i class="fa-solid fa-droplet"></i>
+                </div>
+                <h3 class="font-bold text-lg text-gray-900 mb-2">IP68 ওয়াটারপ্রুফ রেটিং</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    বৃষ্টি বা হাত ধোয়ার পানিতে নষ্ট হওয়ার ভয় নেই। সম্পূর্ণ ওয়াটার রেজিস্ট্যান্ট বডি স্ট্রাকচার।
+                </p>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-md hover:shadow-xl transition">
+                <div class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center text-yellow-600 text-2xl mb-4">
+                    <i class="fa-solid fa-gem"></i>
+                </div>
+                <h3 class="font-bold text-lg text-gray-900 mb-2">প্রিমিয়াম মেটালিক বডি ও স্ট্র্যাপ</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    মজবুত স্টেইনলেস স্টিল মেটাল চেইন এবং স্লিম ফিনিশিং যা যেকোনো প্রফেশনাল আউটিং বা পার্টি ড্রেসের সাথে মানানসই।
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Review / Visual Showcase Section -->
+    <section class="bg-brand-navy py-10 px-4 text-white">
+        <div class="max-w-4xl mx-auto text-center space-y-4">
+            <h2 class="text-xl md:text-3xl font-extrabold text-brand-gold">ঘড়িটির রিয়েল রিভিউ ভিডিও দেখুন</h2>
+            <p class="text-gray-300 text-xs md:text-sm">কেনার আগে ঘড়িটির অরিজিনাল লুক এবং টাচ রেসপন্স দেখে নিন</p>
+            <div class="relative aspect-video rounded-2xl overflow-hidden border-2 border-brand-gold/40 shadow-2xl bg-black">
+                <!-- Video Mock / Responsive Frame -->
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ?controls=1" title="Product Showcase" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews / Testimonials -->
+    <section class="py-12 px-4 max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-brand-navy">আমাদের সম্মানিত কাস্টমারদের রিভিউ</h2>
+            <p class="text-gray-600 text-sm">হাজারো সন্তুষ্ট কাস্টমারের মধ্য থেকে কিছু অনুভূতি</p>
+            <div class="w-20 h-1 bg-brand-gold mx-auto mt-3 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Review 1 -->
+            <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-3">
+                <div class="flex items-center gap-1 text-yellow-400">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-gray-700 text-sm italic">
+                    "ঘড়িটি ১ দিনে ডেলিভারি পেয়েছি। প্রোডাক্টের ফিনিশিং ও ব্লুটুথ কলিং একদম ক্লিয়ার। ধন্যবাদ Fly n fair কে সঠিক জিনিস দেওয়ার জন্য।"
+                </p>
+                <div class="flex items-center gap-3 pt-2">
+                    <div class="w-10 h-10 rounded-full bg-brand-navy text-white font-bold flex items-center justify-center">
+                        র
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm text-gray-900">রহিমুল ইসলাম</h4>
+                        <span class="text-xs text-gray-500">মিরপুর, ঢাকা (Verified Buyer)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-3">
+                <div class="flex items-center gap-1 text-yellow-400">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-gray-700 text-sm italic">
+                    "দাম অনুযায়ী প্রোডাক্ট কোয়ালিটি সত্যিই চমৎকার। ব্যাটারি ব্যাকআপ প্রায় ৬ দিন পেয়েছি। পার্সোনালি খুব পছন্দ হয়েছে।"
+                </p>
+                <div class="flex items-center gap-3 pt-2">
+                    <div class="w-10 h-10 rounded-full bg-brand-navy text-white font-bold flex items-center justify-center">
+                        আ
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm text-gray-900">আরিফ চৌধুরী</h4>
+                        <span class="text-xs text-gray-500">চট্টগ্রাম (Verified Buyer)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-3">
+                <div class="flex items-center gap-1 text-yellow-400">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p class="text-gray-700 text-sm italic">
+                    "ডেলিভারিম্যানের সামনে চেক করে নিতে পেরেছি। একদম জেনুইন জিনিস। ক্যাশ অন ডেলিভারি হওয়ায় অনেক রিলাক্স লেগেছে।"
+                </p>
+                <div class="flex items-center gap-3 pt-2">
+                    <div class="w-10 h-10 rounded-full bg-brand-navy text-white font-bold flex items-center justify-center">
+                        ত
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm text-gray-900">তানভীর আহমেদ</h4>
+                        <span class="text-xs text-gray-500">সিলেট (Verified Buyer)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout / Order Form Section -->
+    <section id="order-form" class="py-12 px-4 bg-slate-100">
+        <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden">
+            
+            <div class="bg-brand-navy text-white p-6 md:p-8 text-center space-y-2">
+                <span class="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">
+                    ৫০% স্পেশাল ছাড় প্রযোজ্য
+                </span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-brand-gold">
+                    অর্ডার করতে নিচের ফর্মটি সঠিকভাবে পূরণ করুন
+                </h2>
+                <p class="text-gray-300 text-sm">
+                    কোন অগ্রিম টাকা দেওয়া লাগবে না, প্রোডাক্ট হাতে পেয়ে টাকা পরিশোধ করবেন।
+                </p>
+            </div>
+
+            <div class="p-6 md:p-10">
+                <form id="checkoutForm" onsubmit="handleOrderSubmit(event)" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <!-- Customer Information Inputs -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-bold text-gray-900 border-b pb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-user text-brand-navy"></i> আপনার তথ্য দিন
+                        </h3>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">
+                                আপনার নাম <span class="text-red-500">*</span>
+                            </label>
+                            <input type="text" id="customerName" required placeholder="আপনার পূর্ণ নাম লিখুন" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-navy focus:border-brand-navy outline-none text-sm">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">
+                                মোবাইল নম্বর <span class="text-red-500">*</span>
+                            </label>
+                            <input type="tel" id="customerPhone" required pattern="[0-9]{11}" placeholder="১১ ডিজিটের মোবাইল নম্বর" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-navy focus:border-brand-navy outline-none text-sm">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">
+                                পূর্ণাঙ্গ ঠিকানা <span class="text-red-500">*</span>
+                            </label>
+                            <textarea id="customerAddress" required rows="3" placeholder="জেলা, থানা, এলাকা/বাড়ির নম্বর লিখুন" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-navy focus:border-brand-navy outline-none text-sm"></textarea>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                ডেলিভারি এলাকা নির্বাচন করুন <span class="text-red-500">*</span>
+                            </label>
+                            <div class="space-y-2">
+                                <label class="flex items-center justify-between p-3 border rounded-xl cursor-pointer hover:bg-gray-50 border-brand-navy bg-blue-50/50">
+                                    <div class="flex items-center gap-2">
+                                        <input type="radio" name="delivery" value="70" checked onclick="calculateTotal()" class="w-4 h-4 text-brand-navy">
+                                        <span class="text-sm font-medium text-gray-800">ঢাকার ভিতরে</span>
+                                    </div>
+                                    <span class="font-bold text-sm text-gray-900">৳৭০</span>
+                                </label>
+                                <label class="flex items-center justify-between p-3 border rounded-xl cursor-pointer hover:bg-gray-50">
+                                    <div class="flex items-center gap-2">
+                                        <input type="radio" name="delivery" value="130" onclick="calculateTotal()" class="w-4 h-4 text-brand-navy">
+                                        <span class="text-sm font-medium text-gray-800">ঢাকার বাইরে</span>
+                                    </div>
+                                    <span class="font-bold text-sm text-gray-900">৳১৩০</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Order Summary & Calculation -->
+                    <div class="space-y-4 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 border-b pb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-receipt text-brand-navy"></i> অর্ডারের বিবরণ
+                            </h3>
+
+                            <div class="mt-4 p-4 bg-gray-50 rounded-2xl border border-gray-200 space-y-3">
+                                <div class="flex items-center gap-3 border-b pb-3">
+                                    <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=800&q=80" class="w-14 h-14 object-cover rounded-lg">
+                                    <div class="flex-1">
+                                        <h4 class="font-bold text-sm text-gray-900">Premium Luxury Smart Watch</h4>
+                                        <span class="text-xs text-gray-500">মেটালিক চেইন স্ট্র্যাপ</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="font-bold text-sm text-gray-900">৳১,২৯০</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex justify-between text-sm text-gray-600">
+                                    <span>প্রোডাক্ট সাবটোটাল:</span>
+                                    <span id="subtotal" class="font-semibold text-gray-800">৳১,২৯০</span>
+                                </div>
+                                <div class="flex justify-between text-sm text-gray-600">
+                                    <span>ডেলিভারি চার্জ:</span>
+                                    <span id="delivery-charge" class="font-semibold text-gray-800">৳৭০</span>
+                                </div>
+
+                                <div class="border-t pt-2 flex justify-between text-base md:text-lg font-extrabold text-brand-navy">
+                                    <span>সর্বমোট মূল্য:</span>
+                                    <span id="grand-total" class="text-red-600">৳১,৩৬০</span>
+                                </div>
+                            </div>
+
+                            <!-- Payment Method Default -->
+                            <div class="mt-4 p-3 bg-green-50 border border-green-200 rounded-xl flex items-center gap-3">
+                                <i class="fa-solid fa-money-bill-wave text-green-600 text-xl"></i>
+                                <div class="text-xs text-gray-700">
+                                    <span class="font-bold block text-green-800">ক্যাশ অন ডেলিভারি</span>
+                                    প্রোডাক্ট হাতে পেয়ে সম্পূর্ণ টাকা পরিশোধ করবেন।
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="w-full bg-gradient-to-r from-green-600 to-emerald-500 hover:from-green-700 hover:to-emerald-600 text-white font-extrabold text-xl py-4 rounded-xl shadow-xl transform hover:scale-[1.02] transition duration-200 mt-4 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-check-circle"></i> অর্ডার কনফার্ম করুন
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-navy text-white pt-10 pb-6 border-t border-brand-gold/20">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- About / Branding -->
+            <div class="space-y-3">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center p-1">
+                        <svg viewBox="0 0 100 100" class="w-full h-full fill-brand-navy">
+                            <circle cx="50" cy="50" r="45" fill="#0A2540"/>
+                            <path d="M20 50 L80 20 L55 50 L80 80 Z" fill="#FFFFFF"/>
+                        </svg>
+                    </div>
+                    <span class="font-bold text-xl text-white">Fly n fair</span>
+                </div>
+                <p class="text-gray-400 text-xs leading-relaxed">
+                    আমরা সর্বোচ্চ মানের অরিজিনাল প্রিমিয়াম প্রোডাক্ট গ্যারান্টি সহ সরবরাহ করি। বাংলাদেশজুড়ে ক্যাশ অন ডেলিভারি সুবিধা।
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="font-bold text-brand-gold text-sm mb-3">গুরুত্বপূর্ণ লিংক</h4>
+                <ul class="text-xs text-gray-300 space-y-2">
+                    <li><a href="#" class="hover:text-brand-gold">প্রাইভেসি পলিসি</a></li>
+                    <li><a href="#" class="hover:text-brand-gold">রিটার্ন ও রিফান্ড পলিসি</a></li>
+                    <li><a href="#" class="hover:text-brand-gold">টার্মস এবং কন্ডিশনস</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Address -->
+            <div class="space-y-2 text-xs text-gray-300">
+                <h4 class="font-bold text-brand-gold text-sm mb-3">যোগাযোগের ঠিকানা</h4>
+                <p><i class="fa-solid fa-headset text-brand-gold mr-2"></i> হটলাইন: <span class="font-bold text-white">01819 396959</span></p>
+                <p><i class="fa-solid fa-location-dot text-brand-gold mr-2"></i> China Town (16th floor), Naya Paltan, Dhaka</p>
+                <p><i class="fa-solid fa-globe text-brand-gold mr-2"></i> www.flynfair.com</p>
+            </div>
+
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-4 text-center text-xs text-gray-500">
+            © 2026 Fly n fair. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky Floating Order Button -->
+    <div class="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 p-3 z-40 shadow-2xl flex items-center justify-between gap-3">
+        <a href="tel:01819396959" class="bg-gray-100 text-brand-navy p-3 rounded-xl font-bold flex items-center justify-center">
+            <i class="fa-solid fa-phone text-lg"></i>
+        </a>
+        <a href="#order-form" class="flex-1 bg-gradient-to-r from-red-600 to-orange-500 text-white font-extrabold py-3 rounded-xl text-center shadow-md text-base">
+            অর্ডার করুন (৳১,২৯০)
+        </a>
+    </div>
+
+    <!-- Order Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 text-center space-y-4 animate-bounce-slow">
+            <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-3xl mx-auto">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="text-2xl font-extrabold text-gray-900">ধন্যবাদ! আপনার অর্ডারটি সফল হয়েছে।</h3>
+            <p class="text-gray-600 text-sm">
+                আমাদের প্রতিনিধি খুব শীঘ্রই কল করে আপনার অর্ডারটি কনফার্ম করবেন।
+            </p>
+            <div class="bg-gray-50 p-4 rounded-xl text-left text-xs space-y-1 border">
+                <p><strong>কাস্টমার নাম:</strong> <span id="modalName"></span></p>
+                <p><strong>মোবাইল:</strong> <span id="modalPhone"></span></p>
+                <p><strong>সর্বমোট পরিশোধযোগ্য:</strong> <span id="modalTotal" class="text-red-600 font-bold"></span></p>
+            </div>
+            <button onclick="closeModal()" class="w-full bg-brand-navy text-white font-bold py-3 rounded-xl hover:bg-brand-darkBlue transition">
+                ঠিক আছে
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Gallery Image Switcher
+        function changeImage(src) {
+            document.getElementById('main-product-img').src = src;
+        }
+
+        // Countdown Timer
+        function startTimer(duration, display) {
+            let timer = duration, hours, minutes, seconds;
+            setInterval(function () {
+                hours = parseInt(timer / 3600, 10);
+                minutes = parseInt((timer % 3600) / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = hours + ":" + minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            let fiveHours = 5 * 3600 + 42 * 60 + 10;
+            let display = document.querySelector('#countdown');
+            startTimer(fiveHours, display);
+        };
+
+        // Price Calculation Logic
+        const itemPrice = 1290;
+
+        function calculateTotal() {
+            const deliveryRadios = document.getElementsByName('delivery');
+            let deliveryCharge = 70;
+
+            for (let radio of deliveryRadios) {
+                if (radio.checked) {
+                    deliveryCharge = parseInt(radio.value);
+                    break;
+                }
+            }
+
+            const grandTotal = itemPrice + deliveryCharge;
+
+            document.getElementById('delivery-charge').innerText = '৳' + deliveryCharge.toLocaleString('bn-BD');
+            document.getElementById('grand-total').innerText = '৳' + grandTotal.toLocaleString('bn-BD');
+        }
+
+        // Form Submit Handler
+        function handleOrderSubmit(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('customerName').value;
+            const phone = document.getElementById('customerPhone').value;
+            const grandTotalText = document.getElementById('grand-total').innerText;
+
+            document.getElementById('modalName').innerText = name;
+            document.getElementById('modalPhone').innerText = phone;
+            document.getElementById('modalTotal').innerText = grandTotalText;
+
+            const modal = document.getElementById('successModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('successModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.getElementById('checkoutForm').reset();
+            calculateTotal();
+        }
+    </script>
+</body>
+</html>

@@ -55,30 +55,422 @@
     </section>
     <!-- Compact Stat Section (Light Version — with CTA) -->
 
+<style>
+    .portfolio {
+      width: min(1150px, calc(100% - 40px));
+      margin: 26px auto;
+    }
 
-    <section class="py-12 sm:py-16 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-center">
-                
-                <!-- Plan 1 -->
-                <div style="margin-right:10px;" class="bg-white rounded-xl shadow-lg p-6 sm:p-8 card-hover border-t-4 border-blue-500 max-w-md w-full">
-                    <img style="border:1px solid #ddd;padding:10px;" src="images/demo/s_10.png" alt=""><br>
-                    <img style="border:1px solid #ddd;padding:10px;" src="images/demo/s_11.png" alt=""><br>
-                    <img style="border:1px solid #ddd;padding:10px;" src="images/demo/s_13.png" alt=""><br>
-                    <img style="border:1px solid #ddd;padding:10px;" src="images/demo/s_14.png" alt=""><br>
-                </div>
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      column-gap: 34px;
+      row-gap: 58px;
+    }
 
-                <!-- Plan 1 -->
-                <div class="bg-white rounded-xl shadow-lg p-6 sm:p-8 card-hover border-t-4 border-blue-500 max-w-md w-full">
-                    <img style="border:1px solid #ddd;padding:10px;" src="images/demo/s_15.png" alt=""><br>
-                    <img style="border:1px solid #ddd;padding:10px;" src="images/demo/s_16.png" alt=""><br>
-                    <img style="border:1px solid #ddd;padding:10px;" src="images/demo/s_17.png" alt=""><br>
-                    <img style="border:1px solid #ddd;padding:10px;" src="images/demo/s_18.png" alt=""><br>
-                </div>
+    .project-card {
+      min-width: 0;
+      overflow: hidden;
+      background: var(--card-bg);
+      border-radius: 9px;
+      box-shadow: 0 5px 12px rgba(24, 34, 50, 0.13);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
 
-            </div>
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 9px 20px rgba(24, 34, 50, 0.17);
+    }
+
+    .preview {
+      display: block;
+      height: 282px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .preview img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform .35s ease;
+    }
+
+    .project-card:hover .preview img {
+      transform: scale(1.025);
+    }
+
+    .card-footer {
+      min-height: 94px;
+      padding: 12px 8px 15px;
+      text-align: center;
+      background: #1E3A89;
+    }
+
+    .card-footer h2 {
+      margin: 0 0 14px;
+      color: #FFF;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .card-actions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .action-btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 28px;
+      padding: 5px 9px;
+      border: 0;
+      border-radius: 4px;
+      background: var(--blue);
+      color: #fff;
+      font: 600 12px Arial, sans-serif;
+      text-decoration: none;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background .2s ease;
+    }
+
+    .action-btn:hover {
+      background: var(--blue-hover);
+    }
+
+    /* Features popup */
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal.open {
+      display: flex;
+    }
+
+    .modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(12, 22, 38, .58);
+    }
+
+    .modal-panel {
+      position: relative;
+      z-index: 1;
+      width: min(430px, 100%);
+      padding: 28px;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
+    }
+
+    .modal-panel h2 {
+      margin: 0 35px 18px 0;
+      color: #26364a;
+      font-size: 21px;
+    }
+
+    .modal-panel ul {
+      margin: 0;
+      padding-left: 21px;
+      color: #526176;
+      line-height: 1.9;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      border: 0;
+      background: transparent;
+      color: #53677f;
+      font-size: 29px;
+      cursor: pointer;
+    }
+
+    /* Tablet */
+    @media (max-width: 1050px) {
+      .project-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 34px 24px;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 720px) {
+      .portfolio {
+        width: min(100% - 28px, 520px);
+        margin: 18px auto;
+      }
+
+      .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px 16px;
+      }
+
+      .preview {
+        height: 235px;
+      }
+
+      .card-footer {
+        min-height: 100px;
+      }
+
+      .card-footer h2 {
+        font-size: 14px;
+      }
+
+      .action-btn {
+        padding: 5px 7px;
+        font-size: 11px;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .project-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .preview {
+        height: auto;
+        aspect-ratio: 1 / 1.05;
+      }
+
+      .card-footer {
+        min-height: 94px;
+      }
+    }
+</style>
+
+<section>
+  <main class="portfolio">
+    <section class="project-grid" id="projectGrid" aria-label="Website projects">
+      <!-- Replace each preview image and demo URL with your own. -->
+
+      <article class="project-card">
+        <a class="preview" href="https://priyodairy.com/" target="_blank" rel="noopener">
+          <img src="images/demo/ghee-1.png" alt="Ghee website preview" loading="lazy">
+        </a>
+        <div class="card-footer">
+          <h2>Ghee</h2>
+          <div class="card-actions">
+            <button class="action-btn features-btn" type="button"
+              data-title="Tooth Paste" data-features="সুপারফাস্ট ই-কমার্স ল্যান্ডিং পেজ|লারাভেল ফ্রেম ওয়ার্ক|মোবাইল
+              রেস্পন্সিভ|১ টি অর্ডার প্যানেল|কুরিয়ারে এক ক্লিকে অর্ডার ডিটেইল অটোমেটিক এন্ট্রি">🔗 Features</button>
+            <a class="action-btn" href="https://priyodairy.com/" target="_blank" rel="noopener">◉ Live Demo</a>
+          </div>
         </div>
+      </article>
+
+      <article class="project-card">
+        <a class="preview" href="https://puredentbd.com/" target="_blank" rel="noopener">
+          <img src="images/demo/s_16.png" alt="Tooth Paste website preview" loading="lazy">
+        </a>
+        <div class="card-footer">
+          <h2>Tooth Paste</h2>
+          <div class="card-actions">
+            <button class="action-btn features-btn" type="button"
+              data-title="Tooth Paste" data-features="সুপারফাস্ট ই-কমার্স ল্যান্ডিং পেজ|লারাভেল ফ্রেম ওয়ার্ক|মোবাইল
+              রেস্পন্সিভ|১ টি অর্ডার প্যানেল|কুরিয়ারে এক ক্লিকে অর্ডার ডিটেইল অটোমেটিক এন্ট্রি">🔗 Features</button>
+            <a class="action-btn" href="https://puredentbd.com/" target="_blank" rel="noopener">◉ Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <a class="preview" href="https://hairoil.prithaenterprise.io/" target="_blank" rel="noopener">
+          <img src="images/demo/s_18.png" alt="Hair Oil website preview" loading="lazy">
+        </a>
+        <div class="card-footer">
+          <h2>Hair Oil</h2>
+          <div class="card-actions">
+            <button class="action-btn features-btn" type="button"
+              data-title="Tooth Paste" data-features="সুপারফাস্ট ই-কমার্স ল্যান্ডিং পেজ|লারাভেল ফ্রেম ওয়ার্ক|মোবাইল
+              রেস্পন্সিভ|১ টি অর্ডার প্যানেল|কুরিয়ারে এক ক্লিকে অর্ডার ডিটেইল অটোমেটিক এন্ট্রি">🔗 Features</button>
+            <a class="action-btn" href="https://hairoil.prithaenterprise.io/" target="_blank" rel="noopener">◉ Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <a class="preview" href="https://baghabari.com/" target="_blank" rel="noopener">
+          <img src="images/demo/ghee-2.png" alt="Ghee website preview" loading="lazy">
+        </a>
+        <div class="card-footer">
+          <h2>Ghee - 2</h2>
+          <div class="card-actions">
+            <button class="action-btn features-btn" type="button"
+              data-title="Tooth Paste" data-features="সুপারফাস্ট ই-কমার্স ল্যান্ডিং পেজ|লারাভেল ফ্রেম ওয়ার্ক|মোবাইল
+              রেস্পন্সিভ|১ টি অর্ডার প্যানেল|কুরিয়ারে এক ক্লিকে অর্ডার ডিটেইল অটোমেটিক এন্ট্রি">🔗 Features</button>
+            <a class="action-btn" href="https://baghabari.com/" target="_blank" rel="noopener">◉ Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <a class="preview" href="https://example.com/believersmark" target="_blank" rel="noopener">
+          <img src="images/believersmark.jpg" alt="Believersmark website preview" loading="lazy">
+        </a>
+        <div class="card-footer">
+          <h2>Believersmark</h2>
+          <div class="card-actions">
+            <button class="action-btn features-btn" type="button"
+              data-title="Believersmark" data-features="Modern ecommerce homepage|Category-based product discovery|Promotional banners and offers">🔗 Features</button>
+            <a class="action-btn" href="https://example.com/believersmark" target="_blank" rel="noopener">◉ Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <a class="preview" href="https://example.com/startechmart" target="_blank" rel="noopener">
+          <img src="images/star-tech-mart.jpg" alt="Star Tech Mart website preview" loading="lazy">
+        </a>
+        <div class="card-footer">
+          <h2>Star Tech Mart</h2>
+          <div class="card-actions">
+            <button class="action-btn features-btn" type="button"
+              data-title="Star Tech Mart" data-features="Electronics product catalog|Featured brands and categories|Responsive product browsing">🔗 Features</button>
+            <a class="action-btn" href="https://example.com/startechmart" target="_blank" rel="noopener">◉ Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <a class="preview" href="https://example.com/mtbazar" target="_blank" rel="noopener">
+          <img src="images/mt-bazar.jpg" alt="MT Bazar website preview" loading="lazy">
+        </a>
+        <div class="card-footer">
+          <h2>MT Bazar</h2>
+          <div class="card-actions">
+            <button class="action-btn features-btn" type="button"
+              data-title="MT Bazar" data-features="Multi-category product layout|Category navigation|Promotional product sections">🔗 Features</button>
+            <a class="action-btn" href="https://example.com/mtbazar" target="_blank" rel="noopener">◉ Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <a class="preview" href="https://example.com/shajsojia" target="_blank" rel="noopener">
+          <img src="images/shajsojia.jpg" alt="Shajsojia website preview" loading="lazy">
+        </a>
+        <div class="card-footer">
+          <h2>Shajsojia</h2>
+          <div class="card-actions">
+            <button class="action-btn features-btn" type="button"
+              data-title="Shajsojia" data-features="Beauty and skincare storefront|Discount and campaign banners|Product discovery sections">🔗 Features</button>
+            <a class="action-btn" href="https://example.com/shajsojia" target="_blank" rel="noopener">◉ Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <a class="preview" href="https://example.com/hafill" target="_blank" rel="noopener">
+          <img src="images/hafill.jpg" alt="Hafill website preview" loading="lazy">
+        </a>
+        <div class="card-footer">
+          <h2>Hafill</h2>
+          <div class="card-actions">
+            <button class="action-btn features-btn" type="button"
+              data-title="Hafill" data-features="Furniture and interior showcase|Room and product galleries|Clean editorial layout">🔗 Features</button>
+            <a class="action-btn" href="https://example.com/hafill" target="_blank" rel="noopener">◉ Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <a class="preview" href="https://example.com/abrard" target="_blank" rel="noopener">
+          <img src="images/abrard.jpg" alt="Abrard website preview" loading="lazy">
+        </a>
+        <div class="card-footer">
+          <h2>Abrard</h2>
+          <div class="card-actions">
+            <button class="action-btn features-btn" type="button"
+              data-title="Abrard" data-features="Art and craft supplies catalog|Product category grid|Featured products and promotions">🔗 Features</button>
+            <a class="action-btn" href="https://example.com/abrard" target="_blank" rel="noopener">◉ Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <a class="preview" href="https://purnotabd.com/products/chest-binder" target="_blank" rel="noopener">
+          <img src="images/demo/chest-binder.png" alt="Chest Binder website preview" loading="lazy">
+        </a>
+        <div class="card-footer">
+          <h2>Chest Binder</h2>
+          <div class="card-actions">
+            <button class="action-btn features-btn" type="button"
+              data-title="Sf Fabignstyle" data-features="Fashion and clothing storefront|Collection and discount sections|Product listing layout">🔗 Features</button>
+            <a class="action-btn" href="https://purnotabd.com/products/chest-binder" target="_blank" rel="noopener">◉ Live Demo</a>
+          </div>
+        </div>
+      </article>
     </section>
+  </main>
+
+  <div class="modal" id="featuresModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" type="button" aria-label="Close" data-close>&times;</button>
+      <h2 id="modalTitle">Project Features</h2>
+      <ul id="modalFeatures"></ul>
+    </section>
+  </div>
+  <script>
+        const modal = document.getElementById("featuresModal");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalFeatures = document.getElementById("modalFeatures");
+
+        document.querySelectorAll(".features-btn").forEach((button) => {
+          button.addEventListener("click", () => {
+            modalTitle.textContent = `${button.dataset.title} - Features`;
+            modalFeatures.replaceChildren();
+
+            (button.dataset.features || "")
+              .split("|")
+              .filter(Boolean)
+              .forEach((feature) => {
+                const item = document.createElement("li");
+                item.textContent = feature;
+                modalFeatures.appendChild(item);
+              });
+
+            modal.classList.add("open");
+            modal.setAttribute("aria-hidden", "false");
+          });
+        });
+
+        function closeModal() {
+          modal.classList.remove("open");
+          modal.setAttribute("aria-hidden", "true");
+        }
+
+        modal.querySelectorAll("[data-close]").forEach((element) => {
+          element.addEventListener("click", closeModal);
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && modal.classList.contains("open")) {
+            closeModal();
+          }
+        });
+  </script> 
+</section>
+
+
+
 
                     
     <section class="py-12 sm:py-16 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50">
@@ -90,17 +482,17 @@
                     
                         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 sm:mb-6">
                             <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-2 sm:mb-0">
-                                ল্যান্ডিং পেজ প্যাকেজ
+                                ল্যান্ডিং পেজ ডোমেইন হোস্টিং সহ
                             </h3>
 
-                            <span class="bg-red-100 text-blue-600 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold self-start">
+                            <!-- <span class="bg-red-100 text-blue-600 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold self-start">
                                 Advanced
-                            </span>
+                            </span> -->
                         </div>
 
                         <div class="mb-4 sm:mb-6">
                             <div class="text-2xl sm:text-3xl font-bold text-green-600 mb-2">
-                                ৫,০০০ টাকা
+                                ৪,০০০ টাকা
                             </div>
                         </div>
 
@@ -131,7 +523,7 @@
                             
                             <li class="flex items-start space-x-3">
                                 <i class="fas fa-check text-green-500 mt-1"></i>
-                                <span>১০ জিবি হোস্টিং + ডোমেইন ( ১ বছর মেয়াদী)</span>
+                                <span>হোস্টিং + .xyz ডোমেইন ( ১ বছর মেয়াদী)</span>
                             </li>
                             <!-- <li class="flex items-start space-x-3">
                                 <i class="fas fa-check text-green-500 mt-1"></i>
@@ -176,7 +568,7 @@
 
                         <div class="mb-4 sm:mb-6">
                             <div class="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">
-                                ৩,০০০ টাকা
+                                ২,০০০ টাকা
                             </div>
                         </div>
 
@@ -195,10 +587,10 @@
                                 <i class="fas fa-check text-green-500 mt-1"></i>
                                 <span>১ টি অর্ডার প্যানেল</span>
                             </li>
-                            <li class="flex items-start space-x-3">
+                            <!-- <li class="flex items-start space-x-3">
                                 <i class="fas fa-check text-green-500 mt-1"></i>
                                 <span>৩ মাস টেকনিক্যাল সাপোর্ট</span>
-                            </li>
+                            </li> -->
                             <li class="flex items-start space-x-3">
                                 <i class="fas fa-check text-green-500 mt-1"></i>
                                 <span>কাস্টম ফিচার অ্যাড করার সুযোগ রয়েছে। (চার্জ প্রযোজ্য)</span>
@@ -227,103 +619,118 @@
         <div class="container mt-10 mx-auto px-4 relative z-10 max-w-full">
             <div class="mx-auto max-w-4xl bg-white border border-gray-200 rounded-2xl shadow-lg p-6 sm:p-8">
                 <!-- <div class="bg-white rounded-3xl shadow-lg p-6 sm:p-8 card-hover border-t-4 border-blue-500 max-w-md w-full"> -->
-                    
+                        <style>
+                            .lama{
+                                padding: 15px;
+                                border: 1px solid #ccc;
+                                color: #111;
+                            }
+                        </style>
                         <div class="mb-4 sm:mb-6">
                             <h4 class="font-semibold mb-3 text-sm sm:text-base">Live Demos:</h4>
                             <div class="flex flex-wrap gap-2 demo-scroll">
-                                <a href="https://landing.topperit.com.bd/step/modhu/"
-                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                <a target="_blank" href="https://priyodairy.com/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                    > ঘি ১ </a>
+                                <a target="_blank" href="https://baghabari.com/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                    > ঘি ২ </a>
+                                <a target="_blank" href="https://landing.topperit.com.bd/step/modhu/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
                                     > মধু </a>
-                                <a href="https://landing.topperit.com.bd/step/modhucombo/"
-                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap">মধু কম্বো</a>
-                                <a href="https://landing.topperit.com.bd/step/modhucombo/"
-                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                <a target="_blank" href="https://supremefoodbd.com/step/honey-combo/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap">মধু কম্বো</a>
+                                <a target="_blank" href="https://supremefoodbd.com/step/honey-combo/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
                                     > আম </a>
-                                <a href="https://landing.topperit.com.bd/step/sukkari-khejur/"
-                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
-                                    > খেজুর </a>
-                                <a href="https://landing.topperit.com.bd/step/khejurgur/"
-                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                <a target="_blank" href="https://landing.topperit.com.bd/step/sukkari-khejur/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                    > খেজুর ১</a>
+                                <a target="_blank" href="https://misadmart.com/mabrum-khejur/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                    > খেজুর ২</a>
+                                <a target="_blank" href="https://landing.topperit.com.bd/step/khejurgur/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
                                     > খেজুর গুড় </a>
                                     
-                                <a href="https://landing.topperit.com.bd/step/lalchaul/"
-                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                <a target="_blank" href="https://landing.topperit.com.bd/step/lalchaul/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
                                     > লাল চাউল </a>
-                                <a href="https://landing.topperit.com.bd/step/ghee/"
-                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap">খাঁটি ঘি </a>
-                                <a href="https://landing.topperit.com.bd/step/t-shirt/"
-                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                <a target="_blank" href="https://landing.topperit.com.bd/step/ghee/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap">খাঁটি ঘি </a>
+                                <a target="_blank" href="https://landing.topperit.com.bd/step/t-shirt/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
                                     > টি শার্ট কম্বো </a>
-                                <a href="https://landing.topperit.com.bd/step/premium-classic-polo/"
-                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                <a target="_blank" href="https://landing.topperit.com.bd/step/premium-classic-polo/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
                                     > পলো শার্ট </a>
-                                <a href="https://landing.topperit.com.bd/step/shirt/"
-                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                <a target="_blank" href="https://landing.topperit.com.bd/step/shirt/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
                                     > শার্ট </a>
                                     
                                     
-                                <a href="https://landing.topperit.com.bd/step/trouserformen/"
-                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                <a target="_blank" href="https://landing.topperit.com.bd/step/trouserformen/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
                                     > ট্রাউজার (পুরুষ) </a>
                                     
-                                <a href="https://landing.topperit.com.bd/step/hoodiesformen/"
-                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                <a target="_blank" href="https://landing.topperit.com.bd/step/hoodiesformen/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
                                  > হুডি (পুরুষ) </a>
                                     
-                                 <a href="https://landing.topperit.com.bd/step/jacketformen/"
-                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                 <a target="_blank" href="https://landing.topperit.com.bd/step/jacketformen/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
                                     > জ্যাকেট (পুরুষ) </a>
                                     
-                                <a href="https://landing.topperit.com.bd/step/panjabi/"
-                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                <a target="_blank" href="https://landing.topperit.com.bd/step/panjabi/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
                                     > পাঞ্জাবি </a>
-                                <a href="https://landing.topperit.com.bd/step/three-piece/"
-                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                <a target="_blank" href="https://landing.topperit.com.bd/step/three-piece/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
                                     > থ্রি-পিছ </a>
-                                <a href="https://landing.topperit.com.bd/step/three-piece-2/"
-                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                <a target="_blank" href="https://landing.topperit.com.bd/step/three-piece-2/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
                                     > থ্রি-পিছ ২ </a>
                                     
-                                <a href="https://landing.topperit.com.bd/step/premium-sari/"
-                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                <a target="_blank" href="https://landing.topperit.com.bd/step/premium-sari/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
                                    > শাড়ি </a>
                                     
-                                <a href="https://landing.topperit.com.bd/step/watch/"
-                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                <a target="_blank" href="https://landing.topperit.com.bd/step/watch/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
                                     > ঘড়ি </a>
                                     
-                                <a href="https://landing.topperit.com.bd/step/casual-shoes/"
-                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                <a target="_blank" href="https://landing.topperit.com.bd/step/casual-shoes/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
                                    > ক্যাজুয়াল জুতা </a>
                                    
                                    
-                                   <a href="https://landing.topperit.com.bd/step/intelligence-book/"
-                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                   <a target="_blank" href="https://landing.topperit.com.bd/step/intelligence-book/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
                                    > ইন্টেলিজেন্স বুক </a>
                                    
-                                   <a href="https://landing.topperit.com.bd/step/organic-store-checkout/"
-                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                   <a target="_blank" href="https://landing.topperit.com.bd/step/organic-store-checkout/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
                                    > চায়না প্রোডাক্ট </a>
                                    
                                    
-                                  <a href="https://landing.topperit.com.bd/step/intelligence-book/"
-                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                  <a target="_blank" href="https://landing.topperit.com.bd/step/intelligence-book/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
                                    > চায়না প্রোডাক্ট -২ </a>
                                    
-                                   <a href="https://landing.topperit.com.bd/step/intelligence-book/"
-                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                   <a target="_blank" href="https://landing.topperit.com.bd/step/intelligence-book/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
                                    > ইন্টেলিজেন্স বুক </a>
                                    
-                                   <a href="https://landing.topperit.com.bd/step/flying-doll/"
-                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                   <a target="_blank" href="https://landing.topperit.com.bd/step/flying-doll/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
                                  > বাচ্চাদের খেলনা </a>
                                  
-                                  <a href="https://landing.topperit.com.bd/step/cosmetices/"
-                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                  <a target="_blank" href="demo/beauti-product/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
                                 > বিউটি প্রোডাক্ট </a>
                                 
-                                 <a href="https://landing.topperit.com.bd/step/store-checkout-02-2/"
-                                    class="bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
+                                 <a target="_blank" href="demo/cosmatics/"
+                                    class="lama bg-gray-100 hover:bg-blue-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg text-xs sm:text-sm transition whitespace-nowrap"
                                 > কসমেটিক্স </a>
                                 
                                     

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Title -->
-    <title>Digital Wave Tech - বাংলাদেশের সেরা আইটি কোম্পানী</title>
+    <title>Digital Wave Tech</title>
 
     <!-- SEO Meta -->
     <meta name="description" content="Digital Wave Tech provides web design, ecommerce development, SEO and digital marketing services in Bangladesh.">

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>এক বক্সেই সম্পূর্ণ মেকআপ সমাধান</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pur:#a233dd;--pur-d:#7e22ce;--pink:#db4aa6;--yel:#fcc912;--bg:#f4f7fb;--lav:#f9f3fe;--rose:#fdf0f6;--text:#111}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Hind Siliguri',sans-serif;color:var(--text);background:var(--bg);line-height:1.55;overflow-x:hidden}
+img{max-width:100%;display:block}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+section{padding:48px 0;text-align:center}
+h2{font-size:32px;font-weight:600;color:#000}
+h2.u::after{content:"";display:block;width:96px;height:3px;background:var(--pur-d);margin:8px auto 28px}
+.lead{color:#444;font-size:16px;max-width:620px;margin:8px auto 22px}
+.cta{display:inline-flex;align-items:center;gap:10px;margin-top:26px;background:var(--yel);color:#4a1478;font:600 17px 'Hind Siliguri',sans-serif;padding:8px 24px;border-radius:30px;text-decoration:none;border:0;cursor:pointer;transition:.2s}
+.cta:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(0,0,0,.18)}
+.ph{width:100%;background:linear-gradient(135deg,#c98fdc,#f3b3d0);object-fit:cover}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#e060b0 0%,#a74ee0 45%,#9b4be0 100%);color:#fff;padding:36px 0 40px;text-align:left;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:400px 1fr;gap:20px;align-items:start}
+.hero .box{position:relative;background:#fff;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,.3);padding:6px}
+.hero .box .ph{aspect-ratio:1/1.1;border-radius:4px}
+.best{position:absolute;left:8px;bottom:10px;background:#000;color:var(--yel);font-size:14px;font-weight:600;padding:3px 18px;border-radius:20px}
+.hero h1{font-size:36px;line-height:1.3;font-weight:700}
+.hero h1 span{color:var(--yel)}
+.hero p.d{font-size:15px;margin:14px 0 26px;max-width:560px;line-height:1.5}
+.hero ul{list-style:none;background:#7c28d5;border-radius:8px;padding:14px 18px;max-width:390px;margin-bottom:20px;font-size:14px}
+.hero li{padding:2px 0}.hero li::before{content:"✓";display:inline-grid;place-items:center;width:16px;height:16px;border:1.5px solid #6ee7a0;color:#6ee7a0;border-radius:50%;font-size:10px;margin-right:10px}
+.hero .btns{display:flex;gap:14px;flex-wrap:wrap}
+.hero .cta{margin:0;font-size:18px;padding:9px 22px}
+.ghost{background:transparent!important;color:#fff!important;border:2px solid #fff!important}
+
+/* Gallery */
+.gal{max-width:670px;margin:0 auto}
+.gal .main{aspect-ratio:2/2;border-radius:14px}
+.thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+.thumbs img{aspect-ratio:1/1;border-radius:8px;cursor:pointer;opacity:.85;border:2px solid transparent}
+.thumbs img.on,.thumbs img:hover{opacity:1;border-color:var(--pur)}
+
+/* Items */
+.alt{background:#faf5fe}
+.items{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:830px;margin:0 auto}
+.it{background:#fff;border-radius:8px;padding:12px 10px;display:flex;gap:10px;align-items:center;box-shadow:0 1px 4px rgba(0,0,0,.06);text-align:left}
+.it i{flex:none;width:24px;height:24px;border-radius:50%;background:#d7f9e4;color:#16a34a;display:grid;place-items:center;font-style:normal;font-size:12px}
+.it b{display:block;font-size:17px;font-weight:600;line-height:1.2}.it small{color:#666;font-size:12.5px}
+
+/* Special */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center;max-width:830px;margin:0 auto}
+.tilt{background:#fce4f1;border-radius:20px;padding:10px 10px 0}
+.tilt .ph{
+  aspect-ratio:3/3;
+  border-radius:18px;
+  transform:rotate(-3deg);
+  margin-bottom:-4px;
+}
+.list h2{margin-bottom:20px;font-size:28px}
+.list .row{display:flex;align-items:center;gap:12px;background:#fdf0f6;border:1px solid #fadce9;border-radius:6px;padding:10px 12px;margin-bottom:12px;text-align:left;font-size:16px}
+.list .row i{flex:none;width:26px;height:26px;border-radius:50%;background:#c04bdd;color:#fff;display:grid;place-items:center;font-style:normal;font-size:12px}
+
+/* Why buy */
+.why{background:linear-gradient(#f4f7fb 0,#f4f7fb 0)}
+.cards4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:690px;margin:0 auto}
+.c4{background:#fff;border-radius:6px;box-shadow:0 5px 8px rgba(0,0,0,.35);padding:16px 10px 22px;font-weight:600;font-size:16px;line-height:1.3}
+.c4 i{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;margin:0 auto 12px;font-style:normal;font-size:22px}
+.band{background:var(--lav);padding:0}
+
+/* For whom */
+.fw{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:840px;margin:0 auto}
+.fw div{background:#f9f3fe;border-radius:8px;padding:12px 10px 22px;font-weight:600;font-size:15px;line-height:1.3}
+.fw span{width:40px;height:40px;background:#fff;border-radius:50%;display:grid;place-items:center;margin:0 auto 10px;font-size:18px}
+.fw small{display:block;font-weight:400;font-size:12px;color:#777;margin-top:6px}
+
+/* Steps */
+.how{background:#fdf0f6}
+.how .sub{color:#555;margin:6px 0 26px}
+.tl{position:relative;max-width:560px;margin:0 auto;text-align:left;padding-left:50px}
+.tl::before{content:"";position:absolute;left:13px;top:12px;bottom:-34px;width:3px;background:#ee9bd3}
+.tl .s{position:relative;background:#fff;border-radius:8px;padding:10px 16px;margin-bottom:22px;font-size:18px;font-weight:500}
+.tl .s::before{content:attr(data-n);position:absolute;left:-50px;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#a233dd,#db4aa6);color:#fff;font:600 14px/30px Inter;text-align:center}
+
+/* Reviews */
+.slider{position:relative;max-width:830px;margin:0 auto}
+.track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth;padding:4px 0}
+.track::-webkit-scrollbar{display:none}
+.rv{flex:0 0 calc((100% - 36px)/4);scroll-snap-align:start;background:linear-gradient(135deg,#a233dd,#db4aa6);border-radius:10px;padding:4px 4px 6px;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.rv .st{color:#fde047;font-size:15px;letter-spacing:2px;line-height:1.3}
+.rv .body{display:flex;gap:8px;align-items:flex-start;padding:0 4px}
+.rv .av{flex:none;width:44px;height:44px;border-radius:50%;border:2px solid #fff;object-fit:cover;background:#e9c1ef}
+.rv .t{flex:1;background:rgba(255,255,255,.22);border-radius:8px;padding:6px 8px;font-size:12px;text-align:left;line-height:1.35;min-height:92px}
+.rv .t b{display:block;text-align:right;font-weight:500;font-size:11px;margin-top:4px}
+.dots{display:flex;justify-content:center;gap:8px;margin-top:12px}.dots i{width:5px;height:5px;border-radius:50%;background:#bbb;cursor:pointer}.dots i.on{background:#000}
+
+/* Offer */
+.offer{background:linear-gradient(110deg,#6b1fc4,#8a1fbf 50%,#b3167c);padding:60px 0 70px}
+.offer .card{max-width:740px;margin:0 auto;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.4);border-radius:8px;padding:30px 30px 34px;color:#fff}
+.tag{display:inline-block;background:#f00;font-weight:700;padding:2px 18px;border-radius:20px;font-size:15px}
+.offer h3{color:var(--yel);font-size:36px;line-height:1.25;font-weight:600;margin:14px 0 10px}
+.offer p{font-size:16px;margin-bottom:22px}
+.offer .g{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:590px;margin:0 auto}
+.offer .f{display:flex;gap:12px;align-items:center;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.45);border-radius:6px;padding:12px;text-align:left}
+.offer .f i{flex:none;width:40px;height:40px;border-radius:50%;background:#4ade80;display:grid;place-items:center;font-style:normal;color:#14532d}
+.offer .f b{display:block;font-size:19px;font-weight:600;line-height:1.2}.offer .f small{font-size:13px;color:#e5cffa}
+
+/* Final CTA */
+.late{padding:36px 0 28px}
+.late .cta.p{background:linear-gradient(90deg,#a233dd,#db4aa6);color:#fff;margin-top:12px}
+.late .cta.o{background:#fff;border:2px solid var(--pur);color:var(--pur-d);margin-top:12px;margin-left:8px}
+.late small{display:block;color:#e11;font-weight:700;font-size:13px;margin-top:18px}
+
+/* Form */
+.fhead{background:linear-gradient(90deg,#a233dd,#db4aa6);color:#fff;font-size:32px;font-weight:600;text-align:center;padding:2px 10px;border-bottom:3px solid #5b6cf0;border-bottom:0;box-shadow:0 3px 0 #5b6cf0}
+.formbg{background:#fff;padding:30px 16px 50px}
+.form{max-width:1000px;margin:0 auto;background:#f9e5fd;border:1px solid #c26be0;border-radius:12px;padding:24px 22px 28px;text-align:left;font:13px Inter,'Hind Siliguri'}
+.form h4{font:500 16px 'Hind Siliguri';margin-bottom:12px;padding-left:2px}
+.form .up{text-transform:uppercase;font:500 14px Inter;margin-bottom:10px}
+.prow{background:#fff;border:1px solid #ddd;display:flex;align-items:center;gap:12px;padding:6px 14px;margin-bottom:24px}
+.prow .th{width:38px;height:38px;border-radius:3px;object-fit:cover;background:#7e22ce}
+.prow .n{flex:1;font-weight:500}
+.qty{display:flex;border:1px solid #ddd;margin-right:180px}.qty button,.qty span{width:22px;height:22px;border:0;background:#fff;text-align:center;line-height:22px;cursor:pointer}.qty span{border-inline:1px solid #ddd;width:28px;cursor:default}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+label.f2{display:block;font:15px 'Hind Siliguri';margin:12px 0 5px}label.f2 b{color:red}
+.form input[type=text],.form input[type=tel]{width:100%;height:36px;border:1px solid #ddd;border-radius:3px;padding:0 12px;font:15px 'Hind Siliguri'}
+.form input:focus{outline:2px solid var(--pur);border-color:var(--pur)}.form input.err{border-color:red;background:#fff5f5}
+table{width:100%;border-collapse:collapse;font-family:Georgia,serif;margin-top:6px}
+th{text-align:left;font-weight:700;padding:12px 0 8px;border-bottom:1px dashed #bbb}
+th:last-child,td:last-child{text-align:right}
+td{padding:10px 0;border-bottom:1px dashed #bbb;font-size:12.5px}
+td .it2{display:flex;align-items:center;gap:8px}td .it2 .th{width:38px;height:38px;border-radius:3px;background:#7e22ce}
+.pay{background:#f4f7fb;padding:14px;margin-top:22px;font-family:Georgia,serif;font-size:12.5px}
+.pay label{display:flex;align-items:center;gap:8px;cursor:pointer}.pay .box{background:#fff;padding:10px 12px;margin:10px 0 12px}
+.bk{width:22px;height:22px;background:#e2136e;border-radius:3px;display:inline-block}
+.priv{font:11px Georgia,serif;margin:12px 0}
+.place{width:100%;height:42px;background:#000;color:#fff;border:0;border-radius:3px;font:600 15px 'Hind Siliguri';cursor:pointer}.place:hover{background:#333}
+.msg{text-align:center;margin-top:10px;font:600 15px 'Hind Siliguri'}
+
+/* FAQ */
+.faq{max-width:530px;margin:0 auto;text-align:left}
+.faq details{background:#fff;border:1px solid #c26be0;border-radius:3px;margin-bottom:12px}
+.faq summary{padding:9px 10px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;font-size:16px}
+.faq summary::after{content:"⌄";color:var(--pur);font-size:15px}.faq details[open] summary::after{content:"⌃";color:#000}
+.faq p{border-top:1px solid #555;padding:10px 16px;color:#555;font-size:15px}
+
+/* Footer */
+footer{background:linear-gradient(90deg,#a233dd,#d35ec0);color:#fff;padding:32px 0 22px;text-align:center}
+.fi{display:grid;grid-template-columns:repeat(3,1fr);max-width:780px;margin:0 auto 22px;text-align:left;gap:20px}
+.fi div{display:flex;gap:10px;align-items:flex-start}
+.fi i{flex:none;width:32px;height:32px;background:#1a1226;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:14px}
+.fi b{display:block;font-size:20px;font-weight:500;line-height:1.2}.fi small{font-size:12.5px;display:block;line-height:1.35}
+footer .lk a{color:#fff;text-decoration:none;margin:0 7px;font-size:14px;font-weight:500}
+footer .dv{margin-top:16px;font:600 12px Inter}footer .dv em{font-style:normal;color:#4ade80}
+
+/* Mobile */
+@media(max-width:820px){
+  section{padding:34px 0}
+  h2{font-size:25px}
+  .hero{padding:22px 0 30px}.hero .wrap{grid-template-columns:1fr;gap:22px}
+  .hero h1{font-size:27px}.hero ul{max-width:none}
+  .items,.cards4,.fw{grid-template-columns:1fr 1fr}
+  .split{grid-template-columns:1fr}
+  .rv{flex-basis:calc((100% - 12px)/2)}
+  .offer h3{font-size:26px}.offer .card{padding:22px 14px}.offer .g{grid-template-columns:1fr;gap:12px}
+  .fhead{font-size:21px;padding:6px 10px}
+  .cols{grid-template-columns:1fr;gap:8px}
+  .prow{flex-wrap:wrap}.qty{margin-right:0}
+  .fi{grid-template-columns:1fr}
+  .late .cta.o{margin-left:0}
+}
+@media(max-width:480px){
+  .items,.fw,.cards4{grid-template-columns:1fr}
+  .rv{flex-basis:100%}
+}
+@media(prefers-reduced-motion:reduce){html,.track{scroll-behavior:auto}.cta:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="box">
+      <img class="ph" src="images/2.jpg" alt="মেকআপ বক্স" onerror="this.removeAttribute('src')">
+      <span class="best">বেস্ট সেলার 🔥</span>
+    </div>
+    <div>
+      <h1>✨ এখনই পান পারফেক্ট গ্লো – <span>এক বক্সেই সম্পূর্ণ</span> মেকআপ সমাধান</h1>
+      <p class="d">দৈনন্দিন লুক থেকে পার্টি গ্ল্যাম – সবকিছুর জন্য একদম পারফেক্ট কসমেটিক্স সেট। আলাদা করে কিছু কেনার ঝামেলা নেই !</p>
+      <ul><li>১০০% অরিজিনাল প্রোডাক্ট</li><li>সব ধরনের ত্বকের জন্য উপযোগী</li><li>লং-লাস্টিং ও স্কিন-ফ্রেন্ডলি</li></ul>
+      <div class="btns">
+        <a href="#order" class="cta">এখনই অর্ডার করুন →</a>
+        <a href="#order" class="cta ghost">আপনারটা আজই নিয়ে নিন ↓</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- SOLUTION + GALLERY -->
+<section>
+  <div class="wrap">
+    <h2>এক বক্সেই আপনার সম্পূর্ণ মেকআপ সল্যুশন</h2>
+    <p class="lead">এই প্রিমিয়াম কসমেটিক্স সেটে রয়েছে আপনার দৈনন্দিন ও বিশেষ দিনের জন্য প্রয়োজনীয় সবকিছু। আলাদা আলাদা করে কিছু কিনতে হবে না—এক সেটেই পাবেন ফুল মেকআপ কমপ্লিট সল্যুশন।</p>
+    <div class="gal">
+      <img class="ph main" id="main" src="images/1.jpg" alt="" onerror="this.removeAttribute('src')">
+      <div class="thumbs" id="thumbs">
+        <img class="ph on" src="images/1.jpg" alt="" onerror="this.removeAttribute('src')">
+        <img class="ph" src="images/2.jpg" alt="" onerror="this.removeAttribute('src')">
+        <img class="ph" src="images/3.jpg" alt="" onerror="this.removeAttribute('src')">
+        <img class="ph" src="images/5.jpg" alt="" onerror="this.removeAttribute('src')">
+      </div>
+    </div>
+    <a href="#order" class="cta">এখনই অর্ডার করুন 🛒</a>
+  </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<section class="alt">
+  <div class="wrap">
+    <h2 class="u">বক্সে যা যা থাকছে</h2>
+    <div class="items" id="items"></div>
+    <a href="#order" class="cta">এখনই অর্ডার করুন 🛒</a>
+  </div>
+</section>
+
+<!-- WHY SPECIAL -->
+<section>
+  <div class="wrap">
+    <div class="split">
+      <div class="tilt"><img class="ph" src="images/4.jpg" alt="" onerror="this.removeAttribute('src')"></div>
+      <div class="list"><h2>কেন এই সেটটি বিশেষ?</h2><div id="special"></div></div>
+    </div>
+    <a href="#order" class="cta">এখনই অর্ডার করুন 🛒</a>
+  </div>
+</section>
+
+<!-- WHY BUY -->
+<section class="why">
+  <div class="wrap">
+    <h2 class="u">কেন আমাদের কাছ থেকে কিনবেন?</h2>
+    <div class="cards4">
+      <div class="c4"><i style="background:#dbeafe;color:#2563eb">🛡</i>প্রিমিয়াম কোয়ালিটি নিশ্চিত</div>
+      <div class="c4"><i style="background:#d9fbe5;color:#16a34a">🏷</i>সাশ্রয়ী দামে সম্পূর্ণ সেট</div>
+      <div class="c4"><i style="background:#f3e3ff;color:#9333ea">👥</i>বিগিনার থেকে প্রফেশনাল—সবার জন্য</div>
+      <div class="c4"><i style="background:#fde3e8;color:#e11d48">🎁</i>গিফট হিসেবে পারফেক্ট 🎁</div>
+    </div>
+    <a href="#order" class="cta">এখনই অর্ডার করুন 🛒</a>
+  </div>
+</section>
+
+<!-- FOR WHOM -->
+<section style="background:#fff">
+  <div class="wrap">
+    <h2 class="u">কার জন্য উপযুক্ত?</h2>
+    <div class="fw">
+      <div><span>👤</span>🙋‍♀️ যারা নতুন মেকআপ শুরু করছেন<small>সহজ ব্যবহারের জন্য পারফেক্ট</small></div>
+      <div><span>💼</span>🙋‍♀️ ব্যস্ত কর্মজীবী নারী<small>দ্রুত রেডি হওয়ার জন্য</small></div>
+      <div><span>🎓</span>🙋‍♀️ কলেজ/ইউনিভার্সিটির ছাত্রী<small>ডেইলি ন্যাচারাল লুকের জন্য</small></div>
+      <div><span>🎉</span>🙋‍♀️ পার্টি বা অনুষ্ঠানে যেতে ভালোবাসেন<small>গ্ল্যামারাস লুকের জন্য</small></div>
+    </div>
+    <a href="#order" class="cta">এখনই অর্ডার করুন 🛒</a>
+  </div>
+</section>
+
+<!-- HOW TO USE -->
+<section class="how">
+  <div class="wrap">
+    <h2>ব্যবহার পদ্ধতি</h2>
+    <p class="sub">খুব সহজেই ধাপে ধাপে তৈরি করুন আপনার পারফেক্ট লুক</p>
+    <div class="tl" id="steps"></div>
+    <a href="#order" class="cta">এখনই অর্ডার করুন 🛒</a>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section>
+  <div class="wrap">
+    <h2 class="u">কাস্টমার রিভিউ</h2>
+    <div class="slider">
+      <div class="track" id="rtrack">
+        <div class="rv"><div class="st">★★★★★</div><div class="body"><img class="av" src="images/a1.png" alt="" onerror="this.removeAttribute('src')"><div class="t">“প্যাকেজিং খুব সুন্দর ছিল, আর প্রোডাক্ট একদম অরিজিনাল মনে হয়েছে। আবার অর্ডার করবো।”<b>— রিমি খাতুন</b></div></div></div>
+        <div class="rv"><div class="st">★★★★★</div><div class="body"><img class="av" src="images/a2.png" alt="" onerror="this.removeAttribute('src')"><div class="t">“প্রোডাক্টটি ব্যবহার করে আমি খুবই সন্তুষ্ট! ত্বকে একদম স্মুথ লুক দেয় এবং অনেকক্ষণ টিকে থাকে।”<b>— সানিনা আক্তার</b></div></div></div>
+        <div class="rv"><div class="st">★★★★★</div><div class="body"><img class="av" src="images/a3.png" alt="" onerror="this.removeAttribute('src')"><div class="t">“এই দামে এত ভালো কোয়ালিটি আশা করিনি! ডেলিভারিও খুব দ্রুত।”<b>— নুসরাত জাহান</b></div></div></div>
+        <div class="rv"><div class="st">★★★★★</div><div class="body"><img class="av" src="images/a4.png" alt="" onerror="this.removeAttribute('src')"><div class="t">“মেকআপ করার পর ত্বকে কোনো সমস্যা হয়নি, খুবই পারফেক্ট ফিনিশ হয়েছে! রিকমেন্ডেড।”<b>— তানজিলা হোসেন</b></div></div></div>
+      </div>
+      <div class="dots"></div>
+    </div>
+    <a href="#order" class="cta">এখনই অর্ডার করুন 🛒</a>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section class="offer">
+  <div class="wrap">
+    <div class="card">
+      <span class="tag">⏱ সীমিত সময়ের অফার!</span>
+      <h3>আজই অর্ডার করলে পাচ্ছেন বিশেষ ডিসকাউন্ট</h3>
+      <p>স্টক খুব দ্রুত শেষ হয়ে যাচ্ছে, তাই দেরি না করে এখনই আপনারটি নিশ্চিত করুন।</p>
+      <div class="g">
+        <div class="f"><i>🚚</i><div><b>ফ্রি হোম ডেলিভারি</b><small>সারা বাংলাদেশে</small></div></div>
+        <div class="f"><i>💵</i><div><b>ক্যাশ অন ডেলিভারি</b><small>প্রোডাক্ট হাতে পেয়ে টাকা দিন</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LATE -->
+<section class="late">
+  <div class="wrap">
+    <h2 style="font-size:28px">আর দেরি কেন?</h2>
+    <p class="lead">আপনার সুন্দর রূপকে আরও আকর্ষণীয় করতে আজই সংগ্রহ করুন এই সম্পূর্ণ মেকআপ কিটটি।</p>
+    <a href="#order" class="cta p">এখনই অর্ডার করুন 🛒</a><a href="#order" class="cta o">স্টক শেষ হওয়ার আগেই নিন ↓</a>
+    <small>* স্টক খুবই সীমিত!</small>
+  </div>
+</section>
+
+<!-- ORDER -->
+<div class="fhead" id="order">অর্ডার করতে নিচের ফর্মটি পূরণ করুন</div>
+<div class="formbg">
+  <div class="form">
+    <h4>আপনার পছন্দের প্রোডাক্ট সিলেক্ট করুন</h4>
+    <div class="prow">
+      <img class="th" src="images/2.jpg" alt="" onerror="this.removeAttribute('src')">
+      <span class="n">১ বক্স মেকআপ</span>
+      <span class="qty"><button type="button" id="minus">−</button><span id="qty">1</span><button type="button" id="plus">+</button></span>
+      <span id="rowAmt">2,500৳</span>
+    </div>
+    <div class="cols">
+      <div>
+        <div class="up">Billing details</div>
+        <label class="f2" for="name">আপনার নাম লিখুন <b>*</b></label><input type="text" id="name" autocomplete="name">
+        <label class="f2" for="phone">আপনার ফোন নম্বর লিখুন <b>*</b></label><input type="tel" id="phone" autocomplete="tel">
+        <label class="f2" for="addr">আপনার সম্পূর্ণ ঠিকানা লিখুন <b>*</b></label><input type="text" id="addr" autocomplete="street-address">
+      </div>
+      <div>
+        <div class="up">Your order</div>
+        <table>
+          <tr><th>Product</th><th>Subtotal</th></tr>
+          <tr><td><div class="it2"><img class="th" src="images/2.jpg" alt="" onerror="this.removeAttribute('src')">১ বক্স মেকআপ <span style="margin-left:auto;padding-right:10px">× <span id="sQty">1</span></span></div></td><td><b id="sAmt">2,500৳</b></td></tr>
+          <tr><td>Subtotal</td><td><b id="sSub">2,500৳</b></td></tr>
+          <tr><td><b>Total</b></td><td><b id="sTot">2,500৳</b></td></tr>
+        </table>
+        <div class="pay">
+          <label><input type="radio" name="pay" value="cod" checked> Cash on delivery</label>
+          <div class="box">Pay with cash upon delivery.</div>
+          <label><input type="radio" name="pay" value="bkash"> bKash <span class="bk"></span></label>
+        </div>
+        <p class="priv">Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
+        <button class="place" id="place" type="button">🔒 অর্ডার সম্পন্ন করুন <span id="btnAmt">2,500৳</span></button>
+        <p class="msg" id="msg" role="status"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section style="padding-top:36px">
+  <div class="wrap">
+    <h2 class="u">প্রশ্ন ও উত্তর</h2>
+    <div class="faq">
+      <details open><summary>এটি কি সব ধরনের ত্বকের জন্য উপযোগী?</summary><p>হ্যাঁ, এটি সব ধরনের ত্বকের জন্য নিরাপদ এবং ডার্মাটোলজিক্যালি টেস্টেড।</p></details>
+      <details><summary>প্রোডাক্টগুলো কি অরিজিনাল?</summary><p>হ্যাঁ, সবগুলো প্রোডাক্ট ১০০% অরিজিনাল।</p></details>
+      <details><summary>নতুনরা কি ব্যবহার করতে পারবে?</summary><p>অবশ্যই! ব্যবহার পদ্ধতি অনুসরণ করলে নতুনরাও সহজেই ব্যবহার করতে পারবেন।</p></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fi">
+      <div><i>📞</i><span><b>যোগাযোগ</b><small>+880 1324-291903</small><small>সকাল ৯টা থেকে রাত ১০টা</small></span></div>
+      <div><i>🚚</i><span><b>ডেলিভারি</b><small>সারা বাংলাদেশ</small><small>২-৫ দিনের মধ্যে ডেলিভারি</small></span></div>
+      <div><i>↺</i><span><b>রিটার্ন পলিসি</b><small>শর্ত প্রযোজ্য</small><small>প্রোডাক্ট ড্যামেজ থাকলে পরিবর্তনযোগ্য</small></span></div>
+    </div>
+    <div class="lk"><a href="#">Privacy Policy</a><a href="#">Refund Policy</a><a href="#">Terms of service</a></div>
+    <div class="dv">Developed by <em>Digital Wave Tech</em></div>
+  </div>
+</footer>
+
+<script>
+const $=id=>document.getElementById(id);
+
+/* Static lists */
+$('items').innerHTML=[['লিকুইড ফাউন্ডেশন','ফ্ললেস বেস তৈরির জন্য'],['কমপ্যাক্ট পাউডার','মেকআপ সেট করার জন্য'],['হাইড্রেটিং স্প্রে','লং-লাস্টিং ফিনিশের জন্য'],['লিপ গ্লস','আকর্ষণীয় ঠোঁটের জন্য'],['আইশ্যাডো প্যালেট','সুন্দর চোখের সাজের জন্য'],['মেকআপ ব্রাশ সেট','পারফেক্ট ব্লেন্ডিংয়ের জন্য'],['আইলাইনার ও কাজল','চোখকে আকর্ষণীয় করতে'],['মাসকারা','ঘন ও বড় পাপড়ির জন্য']]
+  .map(x=>`<div class="it"><i>✓</i><span><b>${x[0]}</b><small>${x[1]}</small></span></div>`).join('');
+$('special').innerHTML=['স্কিনে দেয় স্মুথ ও ফ্ললেস ফিনিশ','দীর্ঘ সময় মেকআপ টিকে থাকে','ত্বককে রাখে হাইড্রেটেড','সহজে বহনযোগ্য (ট্রাভেল ফ্রেন্ডলি)','নতুনদের জন্যও ব্যবহার করা খুব সহজ']
+  .map(x=>`<div class="row"><i>✦</i>${x}</div>`).join('');
+$('steps').innerHTML=['প্রথমে মুখ ভালোভাবে পরিষ্কার করুন','ফাউন্ডেশন সমানভাবে লাগান','কমপ্যাক্ট দিয়ে সেট করুন','আইশ্যাডো দিয়ে চোখের লুক তৈরি করুন','আইলাইনার ও মাসকারা ব্যবহার করুন','লিপ গ্লস লাগান','শেষে হাইড্রেটিং স্প্রে ব্যবহার করুন']
+  .map((x,i)=>`<div class="s" data-n="${i+1}">${x}</div>`).join('');
+
+/* Gallery thumbnails */
+const main=$('main');
+$('thumbs').addEventListener('click',e=>{
+  const t=e.target.closest('img');if(!t)return;
+  [...$('thumbs').children].forEach(i=>i.classList.toggle('on',i===t));
+  if(t.getAttribute('src')){main.src=t.src}
+});
+
+/* Reviews slider */
+(function(){
+  const tr=$('rtrack'),kids=[...tr.children],dots=document.querySelector('.slider .dots');
+  const step=()=>kids[0].offsetWidth+12;
+  const pages=()=>Math.max(1,kids.length-Math.round(tr.clientWidth/step())+1);
+  const mark=()=>{const i=Math.round(tr.scrollLeft/step());[...dots.children].forEach((d,k)=>d.classList.toggle('on',k===i))};
+  const build=()=>{dots.innerHTML='';for(let i=0;i<pages();i++){const d=document.createElement('i');d.onclick=()=>tr.scrollTo({left:i*step()});dots.appendChild(d)}mark()};
+  tr.addEventListener('scroll',mark);addEventListener('resize',build);build();
+  setInterval(()=>{const end=tr.scrollLeft+tr.clientWidth>=tr.scrollWidth-4;tr.scrollTo({left:end?0:tr.scrollLeft+step()})},4500);
+})();
+
+/* Order form */
+const PRICE=2500;let q=1;
+const bn=n=>n.toLocaleString('en-US')+'৳';
+function update(){$('qty').textContent=q;$('sQty').textContent=q;['rowAmt','sAmt','sSub','sTot','btnAmt'].forEach(i=>$(i).textContent=bn(PRICE*q))}
+$('plus').onclick=()=>{q++;update()};
+$('minus').onclick=()=>{q=Math.max(1,q-1);update()};
+$('place').onclick=()=>{
+  const ok={name:$('name').value.trim().length>1,phone:/^(\+?88)?01[3-9]\d{8}$/.test($('phone').value.replace(/[\s-]/g,'')),addr:$('addr').value.trim().length>4};
+  Object.keys(ok).forEach(k=>$(k).classList.toggle('err',!ok[k]));
+  const m=$('msg');
+  if(Object.values(ok).includes(false)){m.style.color='#dc2626';m.textContent='সবগুলো তথ্য সঠিকভাবে দিন (মোবাইল নাম্বার ১১ ডিজিট)।';return}
+  const order={product:'১ বক্স মেকআপ',qty:q,total:PRICE*q,name:$('name').value.trim(),phone:$('phone').value.trim(),address:$('addr').value.trim(),payment:document.querySelector('input[name=pay]:checked').value};
+  console.log('ORDER',order); // TODO: send to your backend with fetch()
+  m.style.color='#166534';m.textContent='ধন্যবাদ! আপনার অর্ডার গ্রহণ করা হয়েছে। শীঘ্রই আমরা যোগাযোগ করবো।';
+};
+</script>
+</body>
+</html>
