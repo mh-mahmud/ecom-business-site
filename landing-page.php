@@ -106,14 +106,15 @@
       min-height: 94px;
       padding: 12px 8px 15px;
       text-align: center;
-      background: #1E3A89;
+      /*background: #1E3A89;*/
+      background: #bbd;
     }
 
     .card-footer h2 {
       margin: 0 0 14px;
-      color: #FFF;
+      color: #111;
       font-size: 16px;
-      font-weight: 500;
+      font-weight: 800;
     }
 
     .card-actions {
@@ -133,7 +134,7 @@
       border: 0;
       border-radius: 4px;
       background: var(--blue);
-      color: #fff;
+      color: #111;
       font: 600 12px Arial, sans-serif;
       text-decoration: none;
       cursor: pointer;
@@ -321,85 +322,99 @@
       </article>
 
       <article class="project-card">
-        <a class="preview" href="https://example.com/believersmark" target="_blank" rel="noopener">
-          <img src="images/believersmark.jpg" alt="Believersmark website preview" loading="lazy">
+        <a class="preview" href="https://greenfarmbd.io/" target="_blank" rel="noopener">
+          <img src="images/demo/gur-1.png" alt="Shahiraj Gur website preview" loading="lazy">
         </a>
         <div class="card-footer">
-          <h2>Believersmark</h2>
+          <h2>Shahiraj Gur</h2>
           <div class="card-actions">
             <button class="action-btn features-btn" type="button"
-              data-title="Believersmark" data-features="Modern ecommerce homepage|Category-based product discovery|Promotional banners and offers">🔗 Features</button>
-            <a class="action-btn" href="https://example.com/believersmark" target="_blank" rel="noopener">◉ Live Demo</a>
+              data-title="Shahiraj Gur" data-features="Modern ecommerce homepage|Category-based product discovery|Promotional banners and offers">🔗 Features</button>
+            <a class="action-btn" href="https://greenfarmbd.io/" target="_blank" rel="noopener">◉ Live Demo</a>
           </div>
         </div>
       </article>
 
       <article class="project-card">
-        <a class="preview" href="https://example.com/startechmart" target="_blank" rel="noopener">
-          <img src="images/star-tech-mart.jpg" alt="Star Tech Mart website preview" loading="lazy">
+        <a class="preview" href="https://www.kiammart.com/landing/step/prestige-kettle/" target="_blank" rel="noopener">
+          <img src="images/demo/ketli.png" alt="Ketli website preview" loading="lazy">
         </a>
         <div class="card-footer">
-          <h2>Star Tech Mart</h2>
+          <h2>Ketli</h2>
           <div class="card-actions">
             <button class="action-btn features-btn" type="button"
-              data-title="Star Tech Mart" data-features="Electronics product catalog|Featured brands and categories|Responsive product browsing">🔗 Features</button>
-            <a class="action-btn" href="https://example.com/startechmart" target="_blank" rel="noopener">◉ Live Demo</a>
+              data-title="Ketli" data-features="Electronics product catalog|Featured brands and categories|Responsive product browsing">🔗 Features</button>
+            <a class="action-btn" href="https://www.kiammart.com/landing/step/prestige-kettle/" target="_blank" rel="noopener">◉ Live Demo</a>
           </div>
         </div>
       </article>
 
       <article class="project-card">
-        <a class="preview" href="https://example.com/mtbazar" target="_blank" rel="noopener">
-          <img src="images/mt-bazar.jpg" alt="MT Bazar website preview" loading="lazy">
+        <a class="preview" href="https://supremefoodbd.com/step/honey-combo/" target="_blank" rel="noopener">
+          <img src="images/demo/honey-1.png" alt="Honey Combo website preview" loading="lazy">
         </a>
         <div class="card-footer">
-          <h2>MT Bazar</h2>
+          <h2>Honey Combo</h2>
           <div class="card-actions">
             <button class="action-btn features-btn" type="button"
-              data-title="MT Bazar" data-features="Multi-category product layout|Category navigation|Promotional product sections">🔗 Features</button>
-            <a class="action-btn" href="https://example.com/mtbazar" target="_blank" rel="noopener">◉ Live Demo</a>
+              data-title="Honey Combo" data-features="Multi-category product layout|Category navigation|Promotional product sections">🔗 Features</button>
+            <a class="action-btn" href="https://supremefoodbd.com/step/honey-combo/" target="_blank" rel="noopener">◉ Live Demo</a>
           </div>
         </div>
       </article>
 
       <article class="project-card">
-        <a class="preview" href="https://example.com/shajsojia" target="_blank" rel="noopener">
-          <img src="images/shajsojia.jpg" alt="Shajsojia website preview" loading="lazy">
+        <a class="preview" href="https://khejur.rajshahiraamwala.com/step/3-kg-liquid-combo/" target="_blank" rel="noopener">
+          <img src="images/demo/gur-combo.png" alt="Gur Combo website preview" loading="lazy">
         </a>
         <div class="card-footer">
-          <h2>Shajsojia</h2>
+          <h2>Gur Combo</h2>
           <div class="card-actions">
             <button class="action-btn features-btn" type="button"
-              data-title="Shajsojia" data-features="Beauty and skincare storefront|Discount and campaign banners|Product discovery sections">🔗 Features</button>
-            <a class="action-btn" href="https://example.com/shajsojia" target="_blank" rel="noopener">◉ Live Demo</a>
+              data-title="Gur Combo" data-features="Beauty and skincare storefront|Discount and campaign banners|Product discovery sections">🔗 Features</button>
+            <a class="action-btn" href="https://khejur.rajshahiraamwala.com/step/3-kg-liquid-combo/" target="_blank" rel="noopener">◉ Live Demo</a>
           </div>
         </div>
       </article>
 
       <article class="project-card">
-        <a class="preview" href="https://example.com/hafill" target="_blank" rel="noopener">
-          <img src="images/hafill.jpg" alt="Hafill website preview" loading="lazy">
+        <a class="preview" href="demo/beauti-product/" target="_blank" rel="noopener">
+          <img src="images/demo/beauti-product.png" alt="Beauti Product website preview" loading="lazy">
         </a>
         <div class="card-footer">
-          <h2>Hafill</h2>
+          <h2>Beauti Product</h2>
           <div class="card-actions">
             <button class="action-btn features-btn" type="button"
-              data-title="Hafill" data-features="Furniture and interior showcase|Room and product galleries|Clean editorial layout">🔗 Features</button>
-            <a class="action-btn" href="https://example.com/hafill" target="_blank" rel="noopener">◉ Live Demo</a>
+              data-title="Beauti Product" data-features="Furniture and interior showcase|Room and product galleries|Clean editorial layout">🔗 Features</button>
+            <a class="action-btn" href="demo/beauti-product/" target="_blank" rel="noopener">◉ Live Demo</a>
           </div>
         </div>
       </article>
 
       <article class="project-card">
-        <a class="preview" href="https://example.com/abrard" target="_blank" rel="noopener">
-          <img src="images/abrard.jpg" alt="Abrard website preview" loading="lazy">
+        <a class="preview" href="demo/cosmatics/" target="_blank" rel="noopener">
+          <img src="images/demo/cosmatics.png" alt="Cosmatics website preview" loading="lazy">
         </a>
         <div class="card-footer">
-          <h2>Abrard</h2>
+          <h2>Cosmatics</h2>
           <div class="card-actions">
             <button class="action-btn features-btn" type="button"
-              data-title="Abrard" data-features="Art and craft supplies catalog|Product category grid|Featured products and promotions">🔗 Features</button>
-            <a class="action-btn" href="https://example.com/abrard" target="_blank" rel="noopener">◉ Live Demo</a>
+              data-title="Cosmatics" data-features="Furniture and interior showcase|Room and product galleries|Clean editorial layout">🔗 Features</button>
+            <a class="action-btn" href="demo/cosmatics/" target="_blank" rel="noopener">◉ Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <a class="preview" href="demo/honey-combo/" target="_blank" rel="noopener">
+          <img src="images/demo/honey.png" alt="Honey website preview" loading="lazy">
+        </a>
+        <div class="card-footer">
+          <h2>Honey</h2>
+          <div class="card-actions">
+            <button class="action-btn features-btn" type="button"
+              data-title="Honey" data-features="Art and craft supplies catalog|Product category grid|Featured products and promotions">🔗 Features</button>
+            <a class="action-btn" href="demo/honey-combo/" target="_blank" rel="noopener">◉ Live Demo</a>
           </div>
         </div>
       </article>
@@ -414,6 +429,62 @@
             <button class="action-btn features-btn" type="button"
               data-title="Sf Fabignstyle" data-features="Fashion and clothing storefront|Collection and discount sections|Product listing layout">🔗 Features</button>
             <a class="action-btn" href="https://purnotabd.com/products/chest-binder" target="_blank" rel="noopener">◉ Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <a class="preview" href="demo/smart-watch/" target="_blank" rel="noopener">
+          <img src="images/demo/smart-watch.png" alt="Smart Watch website preview" loading="lazy">
+        </a>
+        <div class="card-footer">
+          <h2>Smart Watch</h2>
+          <div class="card-actions">
+            <button class="action-btn features-btn" type="button"
+              data-title="Smart Watch" data-features="Art and craft supplies catalog|Product category grid|Featured products and promotions">🔗 Features</button>
+            <a class="action-btn" href="demo/smart-watch/" target="_blank" rel="noopener">◉ Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <a class="preview" href="demo/tooth-paste/" target="_blank" rel="noopener">
+          <img src="images/demo/tooth-paste.png" alt="Tooth Paste website preview" loading="lazy">
+        </a>
+        <div class="card-footer">
+          <h2>Tooth Paste</h2>
+          <div class="card-actions">
+            <button class="action-btn features-btn" type="button"
+              data-title="Tooth Paste" data-features="Art and craft supplies catalog|Product category grid|Featured products and promotions">🔗 Features</button>
+            <a class="action-btn" href="demo/tooth-paste/" target="_blank" rel="noopener">◉ Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <a class="preview" href="demo/oral-care/" target="_blank" rel="noopener">
+          <img src="images/demo/oral-care.png" alt="Oral Care website preview" loading="lazy">
+        </a>
+        <div class="card-footer">
+          <h2>Oral Care</h2>
+          <div class="card-actions">
+            <button class="action-btn features-btn" type="button"
+              data-title="Oral Care" data-features="Art and craft supplies catalog|Product category grid|Featured products and promotions">🔗 Features</button>
+            <a class="action-btn" href="demo/oral-care/" target="_blank" rel="noopener">◉ Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <a class="preview" href="https://chainadeal.com/products/wd-959-1257184" target="_blank" rel="noopener">
+          <img src="images/demo/china-product.png" alt="China Product website preview" loading="lazy">
+        </a>
+        <div class="card-footer">
+          <h2>China Product</h2>
+          <div class="card-actions">
+            <button class="action-btn features-btn" type="button"
+              data-title="China Product" data-features="Art and craft supplies catalog|Product category grid|Featured products and promotions">🔗 Features</button>
+            <a class="action-btn" href="https://chainadeal.com/products/wd-959-1257184" target="_blank" rel="noopener">◉ Live Demo</a>
           </div>
         </div>
       </article>
