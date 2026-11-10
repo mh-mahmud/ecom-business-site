@@ -54,42 +54,13 @@
             <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto rounded-full mb-6"></div>
 
             <!-- Subtitle -->
-            <!-- <p class="text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto mb-8">
-                বাংলাদেশের সেরা আইটি কোম্পানী
-            </p> -->
+            <p class="text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto mb-8">Digital Wave Tech</p>
 
             <!-- Buttons -->
-            <!-- <div class="flex flex-col sm:flex-row gap-3 justify-center">
-                <a href="tel:01730724300"
-                    class="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 px-6 py-3 rounded-lg font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 transition">
-                    <i class="fas fa-phone"></i> <span>Call Now</span>
-                </a>
-                <a href="https://wa.me/8801730724300"
-                    class="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1fb457] active:bg-[#189246] px-6 py-3 rounded-lg font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 transition"
-                    target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i> <span>WhatsApp</span>
-                </a>
-            </div> -->
+            
         </div>
     </section>
 
-    <!-- <div class="page-header parallaxie">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <div class="page-header-box">
-                        <h1 class="wow fadeInUp" data-cursor="-opaque" style="color:#fff;visibility: visible; animation-name: fadeInUp;">যোগাযোগ করুন</h1>
-                        <nav class="wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="./">home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">about us</li>
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
 
     <!-- DIRECT CONTACT -->
     <section
@@ -131,16 +102,16 @@
                                 <span class="absolute inset-0 rounded-2xl border border-white/30 animate-ping"></span>
                             </div>
                             <div>
-                                <h3 class="text-lg sm:text-xl font-bold tracking-tight">+8801730724300</h3>
+                                <h3 class="text-lg sm:text-xl font-bold tracking-tight">+88 01819 396959</h3>
                                 <p class="text-white/90 text-sm">Primary Helpline</p>
                             </div>
                         </div>
                         <div class="flex flex-wrap gap-3">
-                            <a href="tel:+8801730724300"
+                            <a href="tel:+8801819396959"
                                 class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 px-4 py-2 rounded-lg font-medium">
                                 <i class="fas fa-phone"></i> <span>Call</span>
                             </a>
-                            <a href="https://wa.me/8801730724300" target="_blank" rel="noopener"
+                            <a href="https://wa.me/8801819396959" target="_blank" rel="noopener"
                                 class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 px-4 py-2 rounded-lg font-medium">
                                 <i class="fab fa-whatsapp"></i> <span>WhatsApp</span>
                             </a>
@@ -161,16 +132,16 @@
                                     class="absolute inset-0 rounded-2xl border border-white/30 animate-ping [animation-delay:300ms]"></span>
                             </div>
                             <div>
-                                <h3 class="text-lg sm:text-xl font-bold tracking-tight">+8801324291903</h3>
+                                <h3 class="text-lg sm:text-xl font-bold tracking-tight">+88 01819 396959</h3>
                                 <p class="text-white/90 text-sm">Support Line</p>
                             </div>
                         </div>
                         <div class="flex flex-wrap gap-3">
-                            <a href="tel:01324291903"
+                            <a href="tel:01819396959"
                                 class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 px-4 py-2 rounded-lg font-medium">
                                 <i class="fas fa-phone"></i> <span>Call</span>
                             </a>
-                            <a href="https://wa.me/8801324291903" target="_blank" rel="noopener"
+                            <a href="https://wa.me/8801819396959" target="_blank" rel="noopener"
                                 class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 px-4 py-2 rounded-lg font-medium">
                                 <i class="fab fa-whatsapp"></i> <span>WhatsApp</span>
                             </a>
@@ -179,8 +150,8 @@
                 </div>
 
                 <!-- Line 3 (full width on md+) -->
-                <!-- <div
-                    class="md:col-span-2 rounded-2xl p-5 sm:p-6 text-white shadow-xl bg-gradient-to-br from-rose-600 to-pink-700 ring-1 ring-white/10 transition hover:scale-[1.01]">
+                <div
+                    class="md:col-span-2 rounded-2xl p-5 sm:p-6 text-white shadow-xl bg-gradient-to-br from-blue-600 to-green-700 ring-1 ring-white/10 transition hover:scale-[1.01]">
                     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                         <div class="flex items-center gap-4">
                             <div class="relative">
@@ -191,8 +162,8 @@
                                     class="absolute inset-0 rounded-2xl border border-white/30 animate-ping [animation-delay:600ms]"></span>
                             </div>
                             <div>
-                                <h3 class="text-lg sm:text-xl font-bold tracking-tight">+8801730724303</h3>
-                                <p class="text-white/90 text-sm">Emergency Line</p>
+                                <h3 class="text-lg sm:text-xl font-bold tracking-tight">+88 01819 396959</h3>
+                                <p class="text-white/90 text-sm">Contact 24/7</p>
                             </div>
                         </div>
                         <div class="flex flex-wrap gap-3">
@@ -206,7 +177,7 @@
                             </a>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
 
             <!-- office address -->
@@ -266,19 +237,19 @@
                     <p class="text-slate-600 mb-6">আমাদের সাথে যুক্ত থাকুন</p>
 
                     <div class="flex flex-wrap justify-center gap-4 mb-6">
-                        <a href="https://web.facebook.com/topperit24/" aria-label="Facebook"
+                        <a target="_blank" href="https://www.facebook.com/digitalwavetechint" aria-label="Facebook"
                             class="w-12 h-12 grid place-items-center rounded-xl bg-blue-600 text-white hover:bg-blue-700 transition shadow">
                             <i class="fab fa-facebook"></i>
                         </a>
-                        <a href="https://bd.linkedin.com/in/diganta-hasan-rubel-490b1420a" aria-label="LinkedIn"
+                        <a href="#" aria-label="LinkedIn"
                             class="w-12 h-12 grid place-items-center rounded-xl bg-sky-600 text-white hover:bg-sky-700 transition shadow">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="www.youtube.com/@topperit229" aria-label="YouTube"
+                        <a href="#" aria-label="YouTube"
                             class="w-12 h-12 grid place-items-center rounded-xl bg-red-600 text-white hover:bg-red-700 transition shadow">
                             <i class="fab fa-youtube"></i>
                         </a>
-                        <a href="https://wa.me/8801730724303" target="_blank" rel="noopener" aria-label="WhatsApp"
+                        <a href="https://wa.me/8801819396959" target="_blank" rel="noopener" aria-label="WhatsApp"
                             class="w-12 h-12 grid place-items-center rounded-xl bg-[#25D366] text-white hover:bg-[#1fb457] transition shadow">
                             <i class="fab fa-whatsapp"></i>
                         </a>

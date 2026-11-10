@@ -70,19 +70,12 @@
                 <div>
                     <h4 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Services</h4>
                     <ul class="space-y-1 sm:space-y-2">
-                        <li><a href="https://topperit.com/e-commerce-website-development"
+                        <li><a href="ecommerce-website.php"
                                 class="text-gray-300 hover:text-white transition-colors text-sm sm:text-base">eCommerce Website</a></li>
-                        <li><a href="https://topperit.com/landing-page"
-                                class="text-gray-300 hover:text-white transition-colors text-sm sm:text-base">Landing Page</a></li><!-- 
-                        <li><a href="https://yeta.bd/"
-                                class="text-gray-300 hover:text-white transition-colors text-sm sm:text-base">Digital
-                                Marketing (YETA)</a></li>
-                        <li><a href="https://yourhostbd.com"
-                                class="text-gray-300 hover:text-white transition-colors text-sm sm:text-base">Domain
-                                Hosting Service</a></li>
-                        <li><a href="https://w3topper.com"
-                                class="text-gray-300 hover:text-white transition-colors text-sm sm:text-base">E-Learning
-                                Courses</a></li> -->
+                        <li><a href="landing-page.php"
+                                class="text-gray-300 hover:text-white transition-colors text-sm sm:text-base">Landing Page</a></li>
+                        <li><a href="marketing.php"
+                                class="text-gray-300 hover:text-white transition-colors text-sm sm:text-base">Marketing Package</a></li>
                     </ul>
                 </div>
 
@@ -90,13 +83,13 @@
                 <div>
                     <h4 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Important Links</h4>
                     <ul class="space-y-1 sm:space-y-2">
-                        <li><a href="https://topperit.com/terms"
+                        <li><a href="#"
                                 class="text-gray-300 hover:text-white transition-colors text-sm sm:text-base">Terms &
                                 Condition</a></li>
-                        <li><a href="https://topperit.com/terms"
+                        <li><a href="#"
                                 class="text-gray-300 hover:text-white transition-colors text-sm sm:text-base">Return
                                 Policy</a></li>
-                        <li><a href="https://topperit.com/terms"
+                        <li><a href="#"
                                 class="text-gray-300 hover:text-white transition-colors text-sm sm:text-base">Privacy
                                 Policy</a></li>
                     </ul>
@@ -115,20 +108,16 @@
 
                     <!-- Social Links -->
                     <div class="flex space-x-2 sm:space-x-3">
-                        <a href="#"
-                            class="w-7 h-7 sm:w-8 sm:h-8 bg-blue-600 rounded flex items-center justify-center hover:bg-blue-700 transition-colors">
+                        <a href="https://www.facebook.com/digitalwavetechint" class="w-7 h-7 sm:w-8 sm:h-8 bg-blue-600 rounded flex items-center justify-center hover:bg-blue-700 transition-colors" style="border:1px solid #aaa">
                             <i class="fab fa-facebook-f text-xs sm:text-sm"></i>
                         </a>
-                        <a href="#"
-                            class="w-7 h-7 sm:w-8 sm:h-8 bg-blue-500 rounded flex items-center justify-center hover:bg-blue-600 transition-colors">
+                        <a href="#" class="w-7 h-7 sm:w-8 sm:h-8 bg-blue-500 rounded flex items-center justify-center hover:bg-blue-600 transition-colors" style="border:1px solid #aaa">
                             <i class="fab fa-linkedin-in text-xs sm:text-sm"></i>
                         </a>
-                        <a href="#"
-                            class="w-7 h-7 sm:w-8 sm:h-8 bg-green-500 rounded flex items-center justify-center hover:bg-green-600 transition-colors">
+                        <a href="#" class="w-7 h-7 sm:w-8 sm:h-8 bg-green-500 rounded flex items-center justify-center hover:bg-green-600 transition-colors" style="border:1px solid #aaa">
                             <i class="fab fa-whatsapp text-xs sm:text-sm"></i>
                         </a>
-                        <a href="#"
-                            class="w-7 h-7 sm:w-8 sm:h-8 bg-red-600 rounded flex items-center justify-center hover:bg-red-700 transition-colors">
+                        <a href="#" class="w-7 h-7 sm:w-8 sm:h-8 bg-red-600 rounded flex items-center justify-center hover:bg-red-700 transition-colors" style="border:1px solid #aaa">
                             <i class="fab fa-youtube text-xs sm:text-sm"></i>
                         </a>
                     </div>

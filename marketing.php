@@ -67,10 +67,10 @@
             class="text-4xl md:text-6xl font-black text-gray-900 mb-6 tracking-tight"
             style="opacity: 1; transform: none;"
           >
-            আমাদের <span class="text-gradient">ScaleUp প্যাকেজ</span>
+            আমাদের <span class="text-gradient">Marketing প্যাকেজ</span>
           </h2>
           <p class="text-xl md:text-2xl text-gray-600 font-bold max-w-3xl mx-auto">
-            ScaleUp প্রোগ্রামে আমরা আপনার বিজনেসের সম্পূর্ণ দায়িত্ব নিয়ে স্কেল করি
+            আপনার বিজনেসকে অনলাইনে লাইভ করুন
           </p>
         </div>
         <div class="grid lg:grid-cols-3 gap-[15px] items-stretch">

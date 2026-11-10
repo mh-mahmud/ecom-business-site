@@ -228,7 +228,7 @@
                     ওয়েবসাইট থেকে
                 </p>
 
-                <a href="https://topperit.com/pricing"
+                <a href="ecommerce-website.php"
                     class="inline-flex items-center justify-center gap-2 bg-gradient-to-br from-emerald-600 via-cyan-600 to-blue-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold text-base sm:text-lg shadow-lg shadow-cyan-600/20 hover:shadow-xl hover:opacity-95 active:opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-cyan-400">
                     Live Demo & Price
                     <i class="fas fa-arrow-right text-sm"></i>

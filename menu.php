@@ -214,22 +214,22 @@
                                 class="mt-1 block h-0.5 rounded bg-gradient-to-r from-orange-500 to-amber-500 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 "></span>
                         </a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="about.php"
                             class="group inline-flex flex-col items-start justify-center text-gray-700 hover:text-orange-600 transition-colors font-bold text-sm lg:text-base" data-page="about">
                             <span>আমাদের সম্পর্কে</span>
                             <span
                                 class="mt-1 block h-0.5 rounded bg-gradient-to-r from-orange-500 to-amber-500 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                         </a>
-                    </li>
-                    <li>
+                    </li> -->
+                    <!-- <li>
                         <a href="pricing.php"
                             class="group inline-flex flex-col items-start justify-center text-gray-700 hover:text-orange-600 transition-colors font-bold text-sm lg:text-base" data-page="pricing">
                             <span>প্রাইসিং</span>
                             <span
                                 class="mt-1 block h-0.5 rounded bg-gradient-to-r from-orange-500 to-amber-500 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 "></span>
                         </a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="contact.php"
                             class="group inline-flex flex-col items-start justify-center text-gray-700 hover:text-orange-600 transition-colors font-bold text-sm lg:text-base" data-page="contact">
